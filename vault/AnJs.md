@@ -2,7 +2,7 @@
 id: 6ihj6c14gk9fzy4mm96cy9q
 title: Javascript 
 desc: 'Leon class 12, 13'
-updated: 1650940226881
+updated: 1651440308731
 created: 1650508492016
 ---
 
@@ -103,6 +103,8 @@ let user = 'John'
 function name(parameter1, parameter2... parameterN) {
   ... body ...
 }
+//call
+name(arguments)
 ```
 - function is invokved by its name
 - local variable - variable declared inside a function is only visible within that function
@@ -118,9 +120,11 @@ function name(parameter1, parameter2... parameterN) {
 - Return without value is possible - function exits immediately
 - function with empty return or without it returns undefined
 - avoid enter between return and value
-``` return (
+``` 
+return (
   ...
 )
+```
 
 ### Naming a function
 - functions are actions => verb
@@ -141,10 +145,11 @@ function name(parameter1, parameter2... parameterN) {
 - \n - new line
 
 ## Numbers
+- Numbers represent numerical data
 - integers, floats (nums w decimal places)
 - signed numbers - positive and negative
 
-### Arithmetic
+### Arithmetic in Js
 - \+ - * / %
 
     ```
@@ -160,7 +165,7 @@ function name(parameter1, parameter2... parameterN) {
 - comparisons: equality ===
 - booleans 
 
-## Logical Operators 
+## Comparisons /Logical Operators 
 - = 
 - = is assignment
 - == value
@@ -172,7 +177,7 @@ function name(parameter1, parameter2... parameterN) {
 - \>=
 - <=
 
-## Conditional Syntax
+## Conditionals
 ``` javascript
 if (condition is true) {
   //do some shit
@@ -206,7 +211,8 @@ if (condition is true) {
   //query selector - pulls data out of DOM
   let assignedVar = document.querySelector('#day').value
   
-//place text in DOM???
+//place text in DOM
+document.querySelector('h2').innerText
   
 //Enter input
 const input = document.querySelector('#myInput');
@@ -220,8 +226,26 @@ input.addEventListener('click',function(){
   alert('you clicked me!');
 });
 
+
+
   
   ```
+  
+## Loops
+- repeat an action x number of times
+- Js types include for, while, do
+- each type offers a different way to determine start and end points of a loop
+  ### For Loops
+  ```
+  for ([initialExpression]; [ conditionExpression]; [incrementExpression]){
+    //do stuff
+  }
+  
+  for (let i = 1; i < 5; i++) {
+    console.log(i)
+  }
+  ```
+
   
 
   
