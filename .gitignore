@@ -4,4 +4,4 @@ build
 seeds
 .next
 pods/service-connections
-.tmp.driveupload.*
+.tmp.driveupload*
