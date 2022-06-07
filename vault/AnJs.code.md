@@ -2,7 +2,7 @@
 id: h2ge4wr81r78k7t2noh5ug9
 title: Useful Js Examples 
 desc: ''
-updated: 1653421844220
+updated: 1654313493953
 created: 1651440384940
 ---
 ## Useful Js
@@ -198,3 +198,26 @@ function fizzBuzz(num){
     }
 }
 fizzBuzz(15)
+
+## Arrays
+//code wars
+function removeEveryOther(arr){
+  return arr.filter(function(elem, index) {
+    return index % 2 === 0;
+  });
+}
+
+function removeEveryOther(arr){
+  var newArr=[];
+for (var i = 0; i < arr.length; i+=2){
+  newArr.push(arr[i]);
+  }
+return newArr;
+}
+
+const removeEveryOther = arr => arr.filter((_, i) => !(i % 2));
+
+//string fund codewars
+function areYouPlayingBanjo(name) {
+  return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+}
