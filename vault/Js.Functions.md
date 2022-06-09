@@ -1,8 +1,8 @@
 ---
 id: 77z1hygtl1q29yha1kndept
-title: functions
+title: Functions
 desc: ''
-updated: 1654200300595
+updated: 1654743474252
 created: 1653421978749
 ---
 # Functions
@@ -75,7 +75,7 @@ let sayYo = function() {
   
 ## Function expression vs function declaration
 - function declaration gives more freedom in organizing code and is better for readability
-- function declarations are not part of reguarl top to bottom flow of control. They are conceptully moved to top of their scope and can be used by all the code in tat scope
+- function declarations are not part of reguar top to bottom flow of control. They are conceptully moved to top of their scope and can be used by all the code in that scope
 - if need conditional declaration, function expression should be used
 
 ## Callback Functions or Callback
