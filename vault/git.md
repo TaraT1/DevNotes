@@ -2,7 +2,7 @@
 id: ezqnt41qecw5fj03xwrx37p
 title: Git
 desc: ''
-updated: 1653166407998
+updated: 1654918433881
 created: 1653163066368
 ---
 ## Version control system (VCS) for tracking changes in computer files
@@ -54,7 +54,14 @@ git rm --cached <filename> - removes
 git commit //goes to vim
 git commit -m " " //incl msg w commit
 ```
-- .gitignore - put filenames in .gitignore to remove from them git process
+- .gitignore - put filenames in .gitignore to remove them from git process
+
+## Amend Commit
+For those files that should have been in the last commit... After adding files, use 
+```
+git commit --amend --no-edit
+```
+
 
 ## Branches
 - Alternative to main codebase
@@ -76,7 +83,18 @@ $ git push //from cl
 - will need to validate creds
 - Others can clone repo with download or clone
 ``` 
-git clone // copies entire repo into local repo
+git clone <url to repo > // copies entire repo into local repo
 
 ```
+## 5 Essential Git Commands
+git clone
+git status - difference btwn local and remote 
+git add / git add -A (git add all)
+git commit -m " "
+git push - pushes to remote
+git pull - pulls down from remote
+
+## Workflow
+- git pull - integrate changes from others to local repo
+
 
