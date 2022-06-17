@@ -2,7 +2,7 @@
 id: rbar2jbq5o5giyon8ylu4s5
 title: Objects
 desc: 'Class 22 of Leon; ref: javascript.info/object'
-updated: 1654912845133
+updated: 1654984771867
 created: 1654630765740
 ---
 - store keyed colls of various data and more complex entities
@@ -10,41 +10,6 @@ created: 1654630765740
 - represent attrs & behaviors of something used in prgm
 - var attached to object - property
 - func attached to object - method
-
-https://youtu.be/PFmuCDHHpwk 
-- OOP - programming paradigm (vs. procedural programming)
--C#, Java, Ruby, Python, Js, etc.
-
-## OOP 4 Pillars
-- Encapsulation - group related vars & funcs together; 
-    - Benefit: reduces complexity and increases reusability
-Abstraction - reduce complexity & isolate impact of changes
-Inheritance - mechanism allowing eliminate redunant code
-Polymorphism - many forms; technique allowing eliminate if...else or swtich/case statements
-    - Benefit: refactor 
-
-```javascript
-//procedural
-let baseSal = 30_000;
-let overtime = 10;
-let rate = 20;
-
-function getWage(baseSal, overtime, rate){
-    return baseSal + (overtime * rate);
-}
-
-//OOP
-let employee = {
-    baseSal: 30_000,
-    overtime: 10,
-    rate: 20,
-    getWage: function() {
-        return this.baseSal + (this.overtime * this.rate);
-    }  
-};
-employee.getWage():
-
-```
 
 
 ## Creating objects

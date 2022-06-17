@@ -2,7 +2,7 @@
 id: h2ge4wr81r78k7t2noh5ug9
 title: Useful Js Examples 
 desc: ''
-updated: 1654313493953
+updated: 1655257344581
 created: 1651440384940
 ---
 ## Useful Js
@@ -220,4 +220,15 @@ const removeEveryOther = arr => arr.filter((_, i) => !(i % 2));
 //string fund codewars
 function areYouPlayingBanjo(name) {
   return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+}
+//Reverse string
+function solution(str){
+  return str.split('').reverse().join('');  
+}
+//reverse string w arrow function
+const solution = str => str.split('').reverse().join('');
+
+//Remove first & last
+function removeChar(str) {
+  return str.slice(1, -1);
 }
