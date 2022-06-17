@@ -2,7 +2,7 @@
 id: o3v363hmz91lw3o4p38v5jf
 title: arrays
 desc: ''
-updated: 1654911048404
+updated: 1655445021194
 created: 1653422037610
 ---
 
@@ -80,7 +80,9 @@ bestColors.forEach((x,i) => console.log(x)) //no function to collect
 ## Map
 - runs for each element in the array and creates new array with same num of elements
 - map can take other functions
+- syntax with arrow function: map((element) => { /* ... */ })
 ```javascript
+//Ex 1
 let nums = [10,20,30]
 
 let robotNewArr = nums.map( n => n += 10 ) //will run 3x w 3 elements in nums array
@@ -90,12 +92,23 @@ n => 10 += 10 // 20
 n => 20 += 10 // 30
 n => 30 += 10 // 40
 
+//Ex 2
 let months = ['Jan', 'Feb', 'mar']
 
 let lowerCaseMonths = months.map( m => m.toLowerCase() )
 
 console.log(lowerCaseMonths)
 console.log(months)
+
+//Ex 3
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+console.log(materials.map(material => material.length));
 ```
 - original array is untouched
 
@@ -112,7 +125,7 @@ const fifteen = inventors.filter(function(inventor) {
 //console.log(fifteen)
 console.table(fifteen);    
 
-//arrow: let func= (args) => exp
+//arrow: let funcName = (args) => exp
 const fiftHun = inventors.filter( inventor => (inventor.year >= 1500 && inventor.year <= 1599))
     console.table(fiftHun);
 ```
@@ -120,8 +133,9 @@ const fiftHun = inventors.filter( inventor => (inventor.year >= 1500 && inventor
 ## Sort
 - Sorts arr in place, changing element orders
 - function does the comparison
+
 ```javascript
-const birth = inventors.sort(function(a, b){//bubble sort, default is string
+const birth = inventors.sort(function(a, b){ //bubble sort, default is string
     if(a.year > b.year){
     return 1;
     } else {
@@ -145,3 +159,4 @@ let value = arr.reduce(fn(accumulator, item, index, array){
 - item - current array item
 - index - position
 - array - arr
+
