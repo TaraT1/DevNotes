@@ -2,7 +2,7 @@
 id: h2ge4wr81r78k7t2noh5ug9
 title: Useful Js Examples 
 desc: ''
-updated: 1655257344581
+updated: 1656127082038
 created: 1651440384940
 ---
 ## Useful Js
@@ -232,3 +232,25 @@ const solution = str => str.split('').reverse().join('');
 function removeChar(str) {
   return str.slice(1, -1);
 }
+
+//pattern for fetching from APIs
+fetch("https://dog.ceo/api/breeds/image/random")
+  .then(res => res.json())//parse response as json
+  .then(data => {
+    console.log(data)
+  } )
+  .catch(err => {
+    console.log(`error ${err}`)
+  });
+
+//remove whitespace
+function noSpace(x){
+  return x.split(' ').join('')
+  }
+
+
+
+
+  
+```
+

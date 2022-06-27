@@ -2,7 +2,7 @@
 id: ezqnt41qecw5fj03xwrx37p
 title: Git
 desc: ''
-updated: 1654918433881
+updated: 1656290500670
 created: 1653163066368
 ---
 ## Version control system (VCS) for tracking changes in computer files
@@ -20,10 +20,11 @@ created: 1653163066368
 
 ## Basic commits
 ```
-$ git init //initialize local git repo
-$ git add <file> //add file(s) to index
-$ git status //check status of working tree
-$ git commit //commit changes in index
+$ git init //initialize local git repo creates spcl folder to hold snapshots (commits)
+$ git add <file> //(also * and .) add file(s) to staging area
+$ git status //check status of working tree, shows everything in staging area
+$ git rm --cached <filename> //removes <file> from staging area
+$ git commit //commit changes in index, adds everything in staging as snapshot to special folder
 ```
 
 ## Remote repo commands
@@ -31,6 +32,7 @@ $ git commit //commit changes in index
 git push //push to remote repo
 git pull // pull latest from remote repo
 git clone //clone repo into new dir
+git fork //if no write privs, git fork to repo and then git clone to local machine
 ```
 
 ## Install
@@ -66,6 +68,7 @@ git commit --amend --no-edit
 ## Branches
 - Alternative to main codebase
 ```
+git branch -M main //changes name of staging area to main
 git branch <branchname> //create new branch
 git checkout <branchname>
 git merge <branchname> //from branch merge branch that is to be imported
@@ -77,7 +80,7 @@ git merge <branchname> //from branch merge branch that is to be imported
 - From command line, 
 ```
 $ git remote add origin https//github... 
-$ git push -u origin main
+$ git push -u origin main //for initial push, then git push after
 $ git push //from cl
 ```
 - will need to validate creds
@@ -87,13 +90,14 @@ git clone <url to repo > // copies entire repo into local repo
 
 ```
 ## 5 Essential Git Commands
+```
 git clone
 git status - difference btwn local and remote 
 git add / git add -A (git add all)
 git commit -m " "
 git push - pushes to remote
 git pull - pulls down from remote
-
+```
 ## Workflow
 - git pull - integrate changes from others to local repo
 

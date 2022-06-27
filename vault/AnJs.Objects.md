@@ -2,7 +2,7 @@
 id: rbar2jbq5o5giyon8ylu4s5
 title: Objects
 desc: 'Class 22 of Leon; ref: javascript.info/object'
-updated: 1654984771867
+updated: 1656097641369
 created: 1654630765740
 ---
 - store keyed colls of various data and more complex entities
@@ -52,19 +52,20 @@ stopwatch.tellTime(stopwatch.currentTime)
 ## Objects
 - Car factory
 
-Constructor - capitalize func name in constructor
+### Constructor 
+- capitalize func name in constructor
 
 ```javascript
 function MakeCar(carMake, carModel, carColor, numOfDoors){
-this.make = carMake
-this.model = carModel
-this.color =  carColor
-this.doors = numOfDoors
-this.honk = function(){
-    alert(`beep beep`)
-}
-this.lock = function(){
-    alert(`Locked ${this.doors} doors`)
+    this.make = carMake
+    this.model = carModel
+    this.color =  carColor
+    this.doors = numOfDoors
+    this.honk = function(){
+        alert(`beep beep`)
+    }
+    this.lock = function(){
+        alert(`Locked ${this.doors} doors`)
 }
 
 let hondaCivic = new MakeCar('Honda', 'F1', 'Silver', 2)
@@ -80,3 +81,24 @@ console.log( teslaRodadster.doors.toString()) //prototypal inheritance from obje
 - checks self, checks constructor >>> prototype chain to global object prototype
 - everything in Js is an object
 
+## Class
+- syntatical sugar that brings Js constructors in lines with other languages
+- classes are like templates for objects
+```javascript
+class MakeCar {  //no parenths here
+    constructor(carMake, carModel, carColor, numOfDoors){
+        this.make = carMake
+        this.model = carModel
+        this.color = carColor
+        this.doors = numOfDoors
+    }
+    honk(){
+        alert('beep')
+    }
+    lock(){
+        alert('click')
+    }
+}
+
+let hondaCivic = new MakeCar('Honda', 'Civic', 'Silver', 4)
+```

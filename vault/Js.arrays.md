@@ -2,7 +2,7 @@
 id: o3v363hmz91lw3o4p38v5jf
 title: arrays
 desc: ''
-updated: 1655445021194
+updated: 1656119721842
 created: 1653422037610
 ---
 
@@ -151,7 +151,7 @@ console.table(birthTern)
 ## reduce/reduceRight
 - arr.reduce and arr.reduceRight calculate single value based on array
 ```
-let value = arr.reduce(fn(accumulator, item, index, array){
+let value = arr.reduce(fn(accumulator, current value or item, index, array){
     //...
 }, [initial]);
 ```
@@ -159,4 +159,20 @@ let value = arr.reduce(fn(accumulator, item, index, array){
 - item - current array item
 - index - position
 - array - arr
+- initial value
+
+## Reverse string
+```javascript
+str.split('').reverse().join('')
+- split turns string into array; ('delimiter')
+- reverse can reverse individual letters
+- join back together to get string
+```
+## slice
+- extracts txt from one string and returns new string. Changes in one string do not affect other string
+- syntax: slice(beginIndex[0], optional endIndex(not inclusive))
+```javascript
+let str = "The morn is upon us."
+str.slice(-3, -1)//returns 'us.'
+```
 
