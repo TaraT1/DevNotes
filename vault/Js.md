@@ -1,6 +1,6 @@
 ---
 id: 6ihj6c14gk9fzy4mm96cy9q
-title: Js
+title: JS
 desc: 'Leon class 12, 13'
 updated: 1654059401631
 created: 1650508492016

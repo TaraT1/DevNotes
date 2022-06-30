@@ -2,7 +2,7 @@
 id: 125o2e5ety2b1pd18nxewjc
 title: Storage
 desc: Leon class 27
-updated: 1656213478304
+updated: 1656450208652
 created: 1656190930074
 ---
 - Local storage persists across browser sessions unless user clears memory
@@ -17,9 +17,9 @@ localStorage.setItem('key1', 'value1')
 localStorage.getItem('key2', 'value2')
 
 //Remove item in Local Storage
-localStorage.removeItem('key', 'value2')
+localStorage.removeItem('key')
 
-//Clear local storage
+//Clear all local storage
 localStorage.clear()
 
 //create btn that adds 1 to botScore stored in localStorage

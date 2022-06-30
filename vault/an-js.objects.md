@@ -2,9 +2,10 @@
 id: rbar2jbq5o5giyon8ylu4s5
 title: Objects
 desc: 'Class 22 of Leon; ref: javascript.info/object'
-updated: 1656097641369
+updated: 1656470425250
 created: 1654630765740
 ---
+# Objects
 - store keyed colls of various data and more complex entities
 - collection of vars and funcs
 - represent attrs & behaviors of something used in prgm

@@ -2,7 +2,7 @@
 id: ezqnt41qecw5fj03xwrx37p
 title: Git
 desc: ''
-updated: 1656290500670
+updated: 1656290947563
 created: 1653163066368
 ---
 ## Version control system (VCS) for tracking changes in computer files
@@ -13,7 +13,7 @@ created: 1653163066368
 - local & remote repos
 
 ## Concepts
-- keeps track of code istory
+- keeps track of code story
 - snapshots of files making commits
 - can visit snapshots
 - can stage files before committing (add)

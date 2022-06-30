@@ -1,6 +1,6 @@
 ---
 id: o3v363hmz91lw3o4p38v5jf
-title: arrays
+title: Arrays
 desc: ''
 updated: 1656119721842
 created: 1653422037610

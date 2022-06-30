@@ -1,6 +1,6 @@
 ---
 id: h2ge4wr81r78k7t2noh5ug9
-title: Useful Js Examples 
+title: Code
 desc: ''
 updated: 1656127082038
 created: 1651440384940

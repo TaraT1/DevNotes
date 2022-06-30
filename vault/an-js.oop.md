@@ -1,6 +1,6 @@
 ---
 id: ni8kebskl2y4ijz8c6163z9
-title: OOP
+title: Oop
 desc: ''
 updated: 1654989192929
 created: 1654984200676
