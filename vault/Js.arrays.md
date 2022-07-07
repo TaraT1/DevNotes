@@ -2,11 +2,11 @@
 id: o3v363hmz91lw3o4p38v5jf
 title: Arrays
 desc: ''
-updated: 1657218397299
+updated: 1657218578365
 created: 1653422037610
 ---
 
-# Arrays
+# Arrays (toaster)
 - data structure to store ordered collections
 - array elements are numbered starting with 0 (zero indexing)
 - have methods to manage order of elements

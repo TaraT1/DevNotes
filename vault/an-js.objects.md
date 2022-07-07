@@ -2,12 +2,12 @@
 id: rbar2jbq5o5giyon8ylu4s5
 title: Objects
 desc: 'Class 22 of Leon; ref: javascript.info/object'
-updated: 1657217912939
+updated: 1657219148415
 created: 1654630765740
 ---
 # Objects
 - store keyed colls of various data and more complex entities
-- collection of properties and methods (funcs)
+- collection of properties (vars) and methods (funcs)
 - represent attrs & behaviors of something used in prgm
 - var attached to object - property
 - func attached to object - method
@@ -78,13 +78,14 @@ console.log( teslaRodadster.doors.toString()) //prototypal inheritance from obje
 ```
 
 ### prototypal inheritance in Js
-- a prototype is another object used as fallback source of properties or methods
-- checks self, checks constructor >>> prototype chain to global object prototype
+- a prototype is another object used as fallback source of properties and methods
+- checks self, checks constructor >>> prototype chain goes to global object prototype
 - everything in Js is an object
 
 ## Class
-- syntatical sugar that brings Js constructors in lines with other languages
+- syntatical sugar that brings Js constructors in line with other languages
 - classes are like templates for objects
+- has prototypal inheritance
 ```javascript
 class MakeCar {  //no parenths here
     constructor(carMake, carModel, carColor, numOfDoors){
