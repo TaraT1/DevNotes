@@ -2,7 +2,7 @@
 id: h2ge4wr81r78k7t2noh5ug9
 title: Code
 desc: ''
-updated: 1656127082038
+updated: 1657147437266
 created: 1651440384940
 ---
 ## Useful Js
@@ -248,9 +248,41 @@ function noSpace(x){
   return x.split(' ').join('')
   }
 
+//Initialize full name, separate w .
+function abbrevName(name){
 
+    // code away
+  let arrName = name.split(' ')
+  return(arrName[0][0] + '.' + arrName[1][0]).toUpperCase()
+}
 
+//Example fetch using DnD5eAPI - place subclasses in ul (class 28)
+document.querySelector('button').addEventListener('click', getFetch)
 
+function getFetch(){
+    const choice = document.querySelector('input').value
+    const url = `https://www.dnd5eapi.co/api/spells/${choice}`
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.subclasses)
+            data.subclasses.forEach(obj => {//loop thru arr 
+                console.log(obj.name)//info from api
+
+                //create li
+                const li = document.createElement('li')
+                //add txt to li
+                li.textContent = obj.name
+                //append li to ul
+                document.querySelector('ul').appendChild(li)//how remove txt from dom (remove child)
+            })
+        })
+
+        .catch(err => {
+            console.log(`error ${err}`)
+        });
+}
   
 ```
 

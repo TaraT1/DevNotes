@@ -2,7 +2,7 @@
 id: o3v363hmz91lw3o4p38v5jf
 title: Arrays
 desc: ''
-updated: 1656119721842
+updated: 1657218397299
 created: 1653422037610
 ---
 
@@ -10,7 +10,7 @@ created: 1653422037610
 - data structure to store ordered collections
 - array elements are numbered starting with 0 (zero indexing)
 - have methods to manage order of elements
-- can be created by a constructor or literal  notation
+- can be created by a constructor or literal notation
 
 ## Declaring arrays
 - Array Constructor
@@ -78,7 +78,7 @@ bestColors.forEach((x,i) => console.log(x)) //no function to collect
 
 # Built-in Methods for Arrays - Map, forEach
 ## Map
-- runs for each element in the array and creates new array with same num of elements
+- runs for each element in the array and creates new array with same num of elements while forEach does not create new array
 - map can take other functions
 - syntax with arrow function: map((element) => { /* ... */ })
 ```javascript
