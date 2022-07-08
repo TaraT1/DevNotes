@@ -2,7 +2,7 @@
 id: whjhdck8g1w25x3jux00dfi
 title: Apis
 desc: ''
-updated: 1657074685459
+updated: 1657245858410
 created: 1655929860520
 ---
 - simple interface for complex action
@@ -29,7 +29,7 @@ document.querySelector('button').addEventListener('click', getDrank)
 function getDrank(){
   let drink = document.querySelector('input').value
   
-  fetch(`https:\\www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
+  fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
   
   .then(res => res.json())
   .then(data =>{
