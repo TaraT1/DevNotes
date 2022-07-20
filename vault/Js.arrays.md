@@ -2,7 +2,7 @@
 id: o3v363hmz91lw3o4p38v5jf
 title: Arrays
 desc: ''
-updated: 1657218578365
+updated: 1657652705522
 created: 1653422037610
 ---
 
@@ -150,12 +150,14 @@ console.table(birthTern)
  ```   
 ## reduce/reduceRight
 - arr.reduce and arr.reduceRight calculate single value based on array
-```
+```javascript
 let value = arr.reduce(fn(accumulator, current value or item, index, array){
     //...
-}, [initial]);
+}, [initial]);    
+//reduce as arrow function (*A)
+return a.reduce((acc,c) => acc + c**2, 0) > b.reduce((acc,c) => acc + c**3, 0);
 ```
-- accumulator result of previus fn call (initial)
+- accumulator result of previous fn call (initial)
 - item - current array item
 - index - position
 - array - arr
@@ -167,6 +169,8 @@ str.split('').reverse().join('')
 - split turns string into array; ('delimiter')
 - reverse can reverse individual letters
 - join back together to get string
+
+arrays: arr.reverse()
 ```
 ## slice
 - extracts txt from one string and returns new string. Changes in one string do not affect other string
