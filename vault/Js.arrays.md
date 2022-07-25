@@ -2,7 +2,7 @@
 id: o3v363hmz91lw3o4p38v5jf
 title: Arrays
 desc: ''
-updated: 1657652705522
+updated: 1658420046155
 created: 1653422037610
 ---
 
@@ -156,6 +156,11 @@ let value = arr.reduce(fn(accumulator, current value or item, index, array){
 }, [initial]);    
 //reduce as arrow function (*A)
 return a.reduce((acc,c) => acc + c**2, 0) > b.reduce((acc,c) => acc + c**3, 0);
+
+function getAverage(marks){
+    return marks.reduce((acc, c) => acc + c) /marks.length
+}
+
 ```
 - accumulator result of previous fn call (initial)
 - item - current array item

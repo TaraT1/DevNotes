@@ -2,23 +2,37 @@
 id: ni8kebskl2y4ijz8c6163z9
 title: Oop
 desc: ''
-updated: 1654989192929
+updated: 1658293087122
 created: 1654984200676
 ---
 
 https://youtu.be/PFmuCDHHpwk 
-- OOP - programming paradigm (vs. procedural programming)
--C#, Java, Ruby, Python, Js, etc.
+- OOP - Object Oriented Programming - programming paradigm (vs. procedural programming) - C#, Java, Ruby, Python, Js, etc.
+	- system, paradigm, set of rules to structure code that:
+		○ makes easier to add new stuff
+		○ makes it easier to read through what was already coded
+		○ not afraid to make changes
 
 ## OOP 4 Pillars
-- Encapsulation - group related vars & funcs together; 
-    - Benefit: reduces complexity and increases reusability
-Abstraction - Simpler interface, Benefit:
-    - reduce complexity & isolate impact of changes
-Inheritance -  Define generic object and have other objects inherit properties and methods
-    - Benefit: mechanism allowing eliminate redunant code.
-Polymorphism - many forms; technique allowing eliminate if...else or swtich/case statements
-    - Benefit: refactor switch-case statements
+Encapsulation
+	- fusion of data and functionality into one object
+	- process of storing functions (methods) with their associated data (properties) in one object
+	- reason why: makes easier to add new stuff, read through what's already coded, fearlessly make changes
+
+Abstraction
+	- complex or unnecessary details are hidden
+	- makes code more simple, predictable, and manageable
+	- reason why: code is smaller and more manageable; can make changes without worrying
+
+Inheritance
+	- Create new objects based on old ones
+	- make class from another class to share set of properties and methods
+	- reason why: helps eliminate redundant code
+
+Polymorphism
+	- piece of code that automagically works with bunch of different objects instead of conditionals and switch cases
+	- allows override method in every child class 
+	- reason why: helps avoid if/else and switch cases; code is more reusable; helps support other pillars
 
 
 ```javascript
@@ -62,9 +76,6 @@ function Circle(radius){
     }
 }
 const another = new Circle(1); // without new operator, points to global object window
-
-
-
 
 ```
 
@@ -121,3 +132,24 @@ if ('radius' in circle){
 }
 ```
 ## Abstration - hide details, expose only essentials
+
+`# OOP Leon Class 31
+```javascript
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+    speak(){
+        console.log(`${this.name} makes a sound`)
+    }
+}
+
+class Dog extends Animal{
+    constructor(name,breed){
+        super(name)
+        this.breed = breed
+    }
+}
+
+let yoMama = new Dog('Yomama', 'pit')
+
