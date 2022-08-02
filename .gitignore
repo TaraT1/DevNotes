@@ -5,3 +5,5 @@ seeds
 .next
 pods/service-connections
 .tmp.driveupload*
+
+.backup

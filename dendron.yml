@@ -19,6 +19,7 @@ commands:
     insertNoteIndex:
         enableMarker: false
     copyNoteLink: {}
+    templateHierarchy: template
 workspace:
     vaults:
         -
@@ -52,8 +53,12 @@ workspace:
             L: low
         todoIntegration: false
         createTaskSelectionType: selection2link
+        taskCompleteStatus:
+            - done
+            - x
     graph:
         zoomSpeed: 1
+        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -64,6 +69,9 @@ workspace:
     enableEditorDecorations: true
     maxPreviewsCached: 10
     maxNoteLength: 204800
+    enableHandlebarTemplates: true
+    enableFullHierarchyNoteTitle: false
+    enableSmartRefs: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -101,3 +109,4 @@ publishing:
         action: useVault
         payload:
             - vault
+    enableTaskNotes: true
