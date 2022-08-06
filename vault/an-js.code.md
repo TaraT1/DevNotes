@@ -2,7 +2,7 @@
 id: h2ge4wr81r78k7t2noh5ug9
 title: Code
 desc: ''
-updated: 1657147437266
+updated: 1659762104412
 created: 1651440384940
 ---
 ## Useful Js
@@ -283,6 +283,49 @@ function getFetch(){
             console.log(`error ${err}`)
         });
 }
+
+//server code
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const PORT = 8000
+
+app.use(cors())
+
+const rappers = {
+    '21 savage':{
+        'age': 29,
+        'birthName':'Shéyaa Bin Abraham-Joseph',
+        'birthLocation': 'London, England' 
+    },
+    'chance the rapper':{
+        'age': 29,
+        'birthName':'Chancelor Bennett',
+        'birthLocation': 'Chicago, Illinois' 
+    },
+    'dylan':{
+        'age': 29,
+        'birthName':'Dylan',
+        'birthLocation': 'Dylan' 
+    }
+}
+
+app.get('/', (request, response)=>{
+    response.sendFile(__dirname + '/index.html')
+})
+
+app.get('/api/:rapperName', (request,response)=>{
+    const rappersName = request.params.rapperName.toLowerCase()
+    if(rappers[rappersName]){
+        response.json(rappers[rappersName])
+    }else{
+        response.json(rappers['dylan'])
+    }
+})
+
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log(`The server is running on port ${PORT}! You better go catch it!`)
+})
   
 ```
 
