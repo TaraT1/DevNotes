@@ -2,7 +2,7 @@
 id: jk3c8urg6v1od7pf2ggxidl
 title: Node
 desc: ''
-updated: 1659325235242
+updated: 1659986211730
 created: 1659324207105
 ---
 Synchronous programming language waits for response before moving to next task.
@@ -15,6 +15,10 @@ Js running in browser gets access to web APIs that make for operations processed
 
 Js handles responses coming back from web APIs with callbacks, promises, and async/await
 - Previously jquery used and provided cross browser compatiblilty. ECMAScript Council implemented Js in browswer as standard
+-Browser environment gives access to setTimeout and setInterval
+
+Ex code: async-practice
+
 
 Callbacks wait for something to happen and then do something else.
 
