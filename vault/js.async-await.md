@@ -2,7 +2,7 @@
 id: m9plmgzlwfrnvwapaa7ucx6
 title: Async Await
 desc: ''
-updated: 1660182921173
+updated: 1660183568006
 created: 1658541899080
 ---
 Check out: 
@@ -50,7 +50,7 @@ promise
   
   console.log(':=)', user.title))
 
-[[js.node]]
+[[js.node.md]]
 
 
 

@@ -2,7 +2,7 @@
 id: jk3c8urg6v1od7pf2ggxidl
 title: Node
 desc: ''
-updated: 1659986211730
+updated: 1660183801440
 created: 1659324207105
 ---
 Synchronous programming language waits for response before moving to next task.
@@ -39,3 +39,5 @@ Node is Js runtime built on Chrome's V8 Js engine. Can run on server desktop, et
 - http (network access)
 - FS (file system access)
 - access to pkgs via npm
+
+[[js.async-await]]

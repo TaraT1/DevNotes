@@ -1,8 +1,8 @@
 ---
-id: ni8kebskl2y4ijz8c6163z9
-title: Oop
+id: 1v50pg31z8xw91e6r2n8y86
+title: OOP
 desc: ''
-updated: 1658294919710
+updated: 1660184265820
 created: 1654984200676
 ---
 
