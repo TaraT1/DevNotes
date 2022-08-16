@@ -2,7 +2,7 @@
 id: 08q9teip0yyjkw20wo12vzx
 title: Arrays
 desc: ''
-updated: 1658420046155
+updated: 1660273510122
 created: 1653422037610
 ---
 
@@ -183,5 +183,7 @@ arrays: arr.reverse()
 ```javascript
 let str = "The morn is upon us."
 str.slice(-3, -1)//returns 'us.'
+arr.slice(start,end)
+arr.slice(start)
 ```
 
