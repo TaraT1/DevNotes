@@ -2,7 +2,7 @@
 id: m9plmgzlwfrnvwapaa7ucx6
 title: Async Await
 desc: ''
-updated: 1660183568006
+updated: 1660793864222
 created: 1658541899080
 ---
 Check out: 
@@ -51,7 +51,51 @@ promise
   console.log(':=)', user.title))
 
 [[js.node.md]]
+```
+[Async Await, Jake Archibald](https://www.youtube.com/watch?v=vn3tm0quoqE)
+Event loop, callbacks
+Browser and node.js always run single threaded event loop to run code.
+- 1st run synchronous code and might cue up callbacks to run later
+- event loop keeps up and separate thread pool
 
+callback
+- macrotask like setTimeout or setInterval will be executed on next event loop
+- microtask like fulfilled promise will be called back before the start of the next event loop
+
+```js
+//L1
+console.log('Synchronous 1'); //1
+
+//L2
+setTimeout(_ => console.log('Timeout 2')); //4
+
+//L3
+Promise.resolve().then(_ => console.log('Promise 3')); //2
+
+//L4
+console.log('Synchronous 4')'; //2
+
+//output
+
+import fetch from 'node-fetch';
+
+const promise = fetch('url')
+
+promise
+  .then(res => res.json())//map to json
+  .then(user => {
+    throw new Error('uh oh');
+    return user;
+  })
+  .then(user => console.log(' ', user.title))
+  .catch(err => console.error(' ', err));
+
+console.log(' Synchronous')
+
+
+  
+  
+  .then(user => console.log(' ', user.title))
 
 
 
@@ -59,4 +103,8 @@ promise
 
 
 ```
+
+getData(callback)
+getData done
+
 
