@@ -2,7 +2,7 @@
 id: jk3c8urg6v1od7pf2ggxidl
 title: Node
 desc: ''
-updated: 1660918457825
+updated: 1662325165227
 created: 1659324207105
 ---
 Synchronous programming language waits for response before moving to next task.
@@ -128,3 +128,13 @@ github for tut https://github.com/bradtraversy/node_crash_course
 
 Modules include fs, os, path. Examples in /reference
 url module - 
+
+### Morgan.js
+Morgan is middleware that logs http requests and errors; accesses request and response lifecycle methods
+```
+npm install morgan
+```
+invoke in index.js (or such) with
+```
+const morgan = require('morgan')
+```
