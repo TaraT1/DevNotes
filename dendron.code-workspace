@@ -1,16 +1,19 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"dendron.rootDir": ".",
-		"pasteImage.path": "${currentFileDir}/assets/images",
-		"pasteImage.prefix": "/",
-		"editor.snippetSuggestions": "inline",
-		"editor.suggest.snippetsPreventQuickSuggestions": false,
-		"editor.suggest.showSnippets": true,
-		"editor.tabCompletion": "on"
-	}
+    "folders": [
+        {
+            "path": "Prive"
+        },
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "dendron.rootDir": ".",
+        "pasteImage.path": "${currentFileDir}/assets/images",
+        "pasteImage.prefix": "/",
+        "editor.snippetSuggestions": "inline",
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggest.showSnippets": true,
+        "editor.tabCompletion": "on"
+    }
 }

@@ -24,6 +24,8 @@ commands:
 workspace:
     vaults:
         -
+            fsPath: Prive
+        -
             fsPath: vault
     journal:
         dailyDomain: daily
@@ -109,4 +111,5 @@ publishing:
         action: useVault
         payload:
             - vault
+            - Prive
     enableTaskNotes: true
