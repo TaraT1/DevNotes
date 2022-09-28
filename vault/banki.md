@@ -2,7 +2,7 @@
 id: nt7qeprlgw0khh6661s0og3
 title: Banki
 desc: ''
-updated: 1664248285632
+updated: 1664300245768
 created: 1664244742134
 ---
 ## hoisting
@@ -20,6 +20,18 @@ Use: Async functions allow retrieving data without blocking other code from runn
 Example: Browser APIs like setTimeout rely on callbacks to execute once async operation completes. setTimeout code will be set aside to execute once callstack is empty while it waits in callback queue. 
 
 ## event loop
-what is event loop
+What is event loop? What is the difference between call stack and task queue
 
-what is difference between call stack and task queue
+Explain: Js has runtime model based on the event loop, which is a single-threaded loop responsible for executing code, collecting and processing events, and executing queued sub-tasks. The event loop runs continuously
+- Monitors the call stack has frames to execute. (LIFO - pankcake stack)
+- Checks if task queue has callback functions codes to execute (FIFO - cafeterial like)
+
+Use: The callback queue executes async operations which are carried out without blocking code.
+
+Example: Web APIs (like setTimeout) are asynchronous and are sent to the callback queue. Event loop checks main stack. If empty, the callback function is dequeued and pushed onto the call stack to be executed
+
+sources: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#runtime_concepts
+
+![](/assets/images/2022-09-27-12-27-53.png)
+
+
