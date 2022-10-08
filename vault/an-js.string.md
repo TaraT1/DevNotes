@@ -2,7 +2,7 @@
 id: omclh7oa9llj4rrtfwc2rrc
 title: String
 desc: ''
-updated: 1665034009837
+updated: 1665168445288
 created: 1662597980670
 ---
 From [Essential String Methods](https://levelup.gitconnected.com/essential-javascript-string-methods-f1841dad1961)
@@ -24,8 +24,8 @@ console.log(`char @ index ${index} is ${sentence.charAt(index)}`);
 str.charCodeAt(pos) //returns UTF-16 code
 
 ```
-++
-.concat() concatenates string args to calling string, returns new string
+
+.concat() concatenates string args to the calling string, returns new string
 ```js
 str.concat()
 
@@ -33,6 +33,10 @@ str.concat()
 
 .includes() determines if substring is contained within larger string. Returns true or false
 ```js
+str.includes(substr, pos)//optional pos is where to start searching
+str.startsWith() //returns true or false
+str.endsWith() //exact ending true. If not false
+//optional 
 
 ```
 
@@ -48,23 +52,16 @@ alert( str.index(Of('widget') ); //-1 - not found, case sensitive
 ```
 
 
+.match() returns array of matching strings when matcing against regular expression like /[A-Z]/g
 ```js
-indexOf(searchString)
-indexOf(searhString, position)
-str.indexOf()
-```
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
 
-.length returns number of characters
-```js
-
-```
-
-.match() returns array of matching strings when matcing against regex
-```js
+console.log(found);
+// expected output: Array ["T", "I"]
 
 ```
-
-
 
 .repeat() repeats string specified number of times
 ```js
