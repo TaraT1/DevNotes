@@ -2,7 +2,7 @@
 id: 7sjr14qsfomiqpfwyjh7jbk
 title: Resources
 desc: 'Compiling references and resources'
-updated: 1665702801891
+updated: 1666572914213
 created: 1665691685095
 ---
 ## React
@@ -26,7 +26,7 @@ created: 1665691685095
 
 
 ## DS&A
-Complete: [Scoth.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms) 
+Complete: [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms) 
 
 [Mayanwolfe Ultimate Guide to Js Algos Course](https://www.twitch.tv/mayanwolfe)
 
