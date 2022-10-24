@@ -2,14 +2,16 @@
 id: omclh7oa9llj4rrtfwc2rrc
 title: String
 desc: ''
-updated: 1666482666116
+updated: 1666483090238
 created: 1662597980670
 ---
 From [Essential String Methods](https://levelup.gitconnected.com/essential-javascript-string-methods-f1841dad1961)
 
 [MDN string documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-.charAt() returns str character at given index
+.charAt() 
+str.charAt(index) returns str character at given index
+
 ```js
 const sentence = 'Where is the focking letter?';
 const index = 13;
