@@ -2,7 +2,7 @@
 id: dqwhvsw3z6ms92i4bnfwdda
 title: Buildapp
 desc: ''
-updated: 1664211945105
+updated: 1666206693586
 created: 1664210646475
 ---
 
@@ -12,7 +12,7 @@ created: 1664210646475
 - Wireframe
 
 ## Tools
-- MMira
+- Miro
 - Figma
 
 ### ??
