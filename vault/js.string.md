@@ -2,7 +2,7 @@
 id: omclh7oa9llj4rrtfwc2rrc
 title: String
 desc: ''
-updated: 1666483090238
+updated: 1667149678648
 created: 1662597980670
 ---
 From [Essential String Methods](https://levelup.gitconnected.com/essential-javascript-string-methods-f1841dad1961)
@@ -119,3 +119,6 @@ str.toLowerCase()
 .trimStart() - trims whitespace from beginning of string
 
 .trimEnd() - trims whitespace from end of string
+
+.valueOf() - returns string representing value of String object 
+- equivalent to String.prototype.toString()

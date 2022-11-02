@@ -2,7 +2,7 @@
 id: 7sjr14qsfomiqpfwyjh7jbk
 title: Resources
 desc: 'Compiling references and resources'
-updated: 1666572914213
+updated: 1667248403573
 created: 1665691685095
 ---
 ## React
@@ -14,6 +14,11 @@ created: 1665691685095
 - Mayanwolfe [Part 1](https://www.twitch.tv/videos/1601219327), [Part 2](https://www.twitch.tv/videos/1603986282)
 
 
+
+## Git Profile
+https://www.profileme.dev/
+https://github.com/alecortega/portfolio-template
+https://readme.so/editor
 
 
 

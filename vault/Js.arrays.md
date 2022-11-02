@@ -2,7 +2,7 @@
 id: 08q9teip0yyjkw20wo12vzx
 title: Arrays
 desc: ''
-updated: 1660273510122
+updated: 1666644459253
 created: 1653422037610
 ---
 
@@ -113,7 +113,7 @@ console.log(materials.map(material => material.length));
 - original array is untouched
 
 ## Filter
-- looks for element(s) that make(s) function return true
+- looks for element(s) that make(s) function return true, returns new arr
 ```let results = arr.filter(function(item, index, array))```
 
 ``` javascript
