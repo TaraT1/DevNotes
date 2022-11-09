@@ -2,7 +2,7 @@
 id: dqwhvsw3z6ms92i4bnfwdda
 title: Buildapp
 desc: ''
-updated: 1666206693586
+updated: 1667963648124
 created: 1664210646475
 ---
 
@@ -20,3 +20,5 @@ created: 1664210646475
 - daily programming /learning journal
 - iframes
 - handwriting
+
+## MVC architecture
