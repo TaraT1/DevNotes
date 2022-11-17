@@ -2,10 +2,12 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1667250291109
+updated: 1668915634114
 created: 1667248557067
 ---
-Ref: [Travis Media](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
+Refs: 
+- [Travis Media](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
+- [dox](https://reactjs.org/)
 
 React is a library for building UI
 - runs on client as SPA
@@ -19,9 +21,17 @@ Why use?
 - Interactive UIs w vDOM
 - performance, testing, industry popularity
 
+- Declarative Views - view for each state. React updates and renders components when data changes. Makes code more predictable and easier to debug
+- Encapsulated Components that manage their own state to make complex UIs. Component logic written in js instead of templates can pass data and keep state out of DOM
+- React Components - render() method takes input data and returns what to display. Component data can be accessed by render()this.props JSX Babel Js compiler - xml like syntax that is helpful working w UI inside Js
+- Stateful Components
+    - input data: this.props
+    - internal state data: this.state
+    - components state change update by re-invoking render()
+
 ## Components
 Components can be created with Classes (older) or Functions (with hooks)
-- render/return JSX (Js Syntax Extension)
+- render/return JSX (Js Syntax Extension) 
 - can take in props
 
 ## State
