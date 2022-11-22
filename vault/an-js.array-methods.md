@@ -2,7 +2,7 @@
 id: fn7w66mw1ngsahg131pph1p
 title: Array Methods
 desc: ''
-updated: 1666642820144
+updated: 1669175860522
 created: 1662672427860
 ---
 From [Js Array Methods from Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)
@@ -30,6 +30,12 @@ const itemNames = items.map((item) {
     return items.price
 })
 console.log(itemNames)
+
+function invert(array) {
+   return array.map(x => x * -1);
+}
+
+const invert = array => array.map(x => -num);
 
 //.find() - find single item in array; returns first item that returns true
 const foundItem = items.find((item) => {
