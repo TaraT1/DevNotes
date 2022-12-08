@@ -2,7 +2,7 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1667963936757
+updated: 1670517719857
 created: 1664214557269
 ---
 - clone Leon's full-stack-template or Binary Upload Boom
@@ -60,3 +60,16 @@ for ejs files to display to users
 ## models
 database schemas
 
+# Delete
+Avoid using get in routes for delete
+- search engines crawl get routes for indexing. Using a tag to delete, search engine will delete
+```javascript
+router.get('/:id', (req, res) => {
+    res.send('Show' + req.params.id)
+})
+
+//Delete needs method override. Doing with form
+router.delete('/:id', (req, res) => {
+    res.send('Delete ' + req.params.id)
+})
+```
