@@ -2,7 +2,7 @@
 id: 08q9teip0yyjkw20wo12vzx
 title: Arrays
 desc: ''
-updated: 1666644459253
+updated: 1673276243489
 created: 1653422037610
 ---
 
@@ -187,3 +187,4 @@ arr.slice(start,end)
 arr.slice(start)
 ```
 
+[[an-js.array-methods]]

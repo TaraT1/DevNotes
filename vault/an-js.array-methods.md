@@ -2,7 +2,7 @@
 id: fn7w66mw1ngsahg131pph1p
 title: Array Methods
 desc: ''
-updated: 1669175860522
+updated: 1673276565092
 created: 1662672427860
 ---
 From [Js Array Methods from Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)
@@ -67,7 +67,7 @@ const total = items.reduce((currentTotal, item) => {
     return item.price + currentTotal
 }, 0)
 
-consle.log(total) //adds cumulative total
+console.log(total) //adds cumulative total
 
 //.includes()
 const items = [1,2,3,4,5]
@@ -85,7 +85,7 @@ From [javascript.info](https://javascript.info/array-methods)
 
 A cheat sheet of array methods:
 
-    xTo add/remove elements:
+    To add/remove elements:
         push(...items) – adds items to the end,
         pop() – extracts an item from the end,
         shift() – extracts an item from the beginning,
@@ -114,3 +114,5 @@ A cheat sheet of array methods:
         Array.isArray(value) checks value for being an array, if so returns true, otherwise false.
 
 Please note that methods sort, reverse and splice modify the array itself.
+
+[[js.arrays]]
