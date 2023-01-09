@@ -2,7 +2,7 @@
 id: a6vva61wdq6ui1w754cpm6j
 title: imgpic
 desc: ''
-updated: 1673235142777
+updated: 1673274974065
 created: 1673233087372
 ---
 ## When to Use img 
@@ -12,7 +12,7 @@ created: 1673233087372
 ## When to Use background image
 The CSS background-image property is used for stylistic or decorative content.
 - icons, background patterns, and other decorative images
-- c.f. FE.css.backgroundimage
+- c.f. [[FE.css.background-image]] 
 
 ## When to use figure
 <figure> connects text to one or more pictures.
