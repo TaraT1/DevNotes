@@ -2,7 +2,7 @@
 id: fn7w66mw1ngsahg131pph1p
 title: Array Methods
 desc: ''
-updated: 1673276565092
+updated: 1674675791625
 created: 1662672427860
 ---
 From [Js Array Methods from Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)
@@ -114,5 +114,17 @@ A cheat sheet of array methods:
         Array.isArray(value) checks value for being an array, if so returns true, otherwise false.
 
 Please note that methods sort, reverse and splice modify the array itself.
+
+
+The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value. 
+- syntax: element, index, array
+
+```javascript
+smallEnough = (a, l) => a.every(e => e <= l)
+
+function smallEnough(a, limit){
+  return a.every(x => x <= limit);
+}
+```
 
 [[js.arrays]]
