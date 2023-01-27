@@ -2,7 +2,7 @@
 id: ezqnt41qecw5fj03xwrx37p
 title: Git
 desc: ''
-updated: 1674788366719
+updated: 1674788617922
 created: 1653163066368
 ---
 ## Version control system (VCS) for tracking changes in computer files
@@ -54,7 +54,9 @@ git fork //if no write privs, git fork to repo and then git clone to local machi
     ``` git rm --cached <file>
         git rm -r --cached <dir> ``` for directories/folders.
     - cached option deletes file from repo but not the actual file. Omit cached if want to delete from repo & local system
-    - ``` git add .gitignore && git commit -m "update ignored files"```
+    ``` git add .gitignore && git commit -m "update ignored files"
+        git push
+    ```
 
     
 
