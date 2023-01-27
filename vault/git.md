@@ -2,7 +2,7 @@
 id: ezqnt41qecw5fj03xwrx37p
 title: Git
 desc: ''
-updated: 1656290947563
+updated: 1674788366719
 created: 1653163066368
 ---
 ## Version control system (VCS) for tracking changes in computer files
@@ -37,12 +37,27 @@ git fork //if no write privs, git fork to repo and then git clone to local machi
 
 ## Install
 - debian sudo apt-get install git
-- http://git-scm.com/download/win - use git and optional Linuc tools from win cmd
+- http://git-scm.com/download/win - use git and optional Linux tools from win cmd
 
 ## Config
 - right click to get git bash
 - git config --global user.name ' '
 - git config --global user.email ' '
+
+## gitignore
+- ref: https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/
+- files that should not be committed e.g. .env, OS files, config files, etc.
+- best practice: create .gitignore w files to ignore when creating new repo before committing. Git can only ignore untracked files that haven't been committed to repo
+- How to ignore previously committed file
+    - update .gitignore to include file(s) & dir(s) to ignore
+    - remove file from index with
+    ``` git rm --cached <file>
+        git rm -r --cached <dir> ``` for directories/folders.
+    - cached option deletes file from repo but not the actual file. Omit cached if want to delete from repo & local system
+    - ``` git add .gitignore && git commit -m "update ignored files"```
+
+    
+
 
 ## Add Files to Git
 ```
