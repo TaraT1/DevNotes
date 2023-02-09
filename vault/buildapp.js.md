@@ -2,7 +2,7 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1675272948650
+updated: 1675360466469
 created: 1664214557269
 ---
 - clone Leon's full-stack-template or Binary Upload Boom
@@ -149,7 +149,7 @@ const todosController = require('../controllers/todos')
 //+const {ensureAuth} = require('../middleware/auth')
 
 router.get('/', todosController.getTodos)
-router.post('createTodo', todosController.createTodo)
+router.post('/createTodo', todosController.createTodo)
 
 //...
 
