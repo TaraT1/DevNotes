@@ -2,7 +2,7 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1675360466469
+updated: 1679019363562
 created: 1664214557269
 ---
 - clone Leon's full-stack-template or Binary Upload Boom
@@ -184,3 +184,54 @@ module.exports = {
 }//module.exports
 
 ```
+
+Good ref: [mdn Express Framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
+### Route Syntax
+express.Router object
+```js
+// wiki.js - Wiki route module
+
+const express = require("express");
+const router = express.Router();
+
+// Home page route - /URL, callback function (req, res)
+router.get("/", function (req, res) {
+  res.send("Wiki home page");
+});
+
+// About page route
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
+});
+
+module.exports = router;
+
+//To use router in app file:
+const wiki = require(".wiki.js");
+//...
+app.use("/wiki", wiki);
+
+```
+### middleware function
+routes have req, res. Middleware callbacks have req, res, next
+```js
+const midware = function (req, res, next){
+    //...
+    next()//for next middleware func
+}
+
+//for all routes & verbs
+app.use(midware)
+//for specific route
+app.use("/route", midware)
+//for specific http verb
+app.get("/", midware)
+```
+Can declare route handler middleware functions separately and the set as callback or declare callback function when used
+
+- Routes forward supported requests and info encoded in req URLs to controller funcs
+- Controller functions get req from models, create html page, return to user in browser
+- Views or templates render data from controller
+
+![](/assets/images/MVC routes.jpg){max-width: 400px, display: block, margin: 0 auto}
+
