@@ -2,7 +2,7 @@
 id: 7sjr14qsfomiqpfwyjh7jbk
 title: Resources
 desc: 'Compiling references and resources'
-updated: 1682816644790
+updated: 1684161323618
 created: 1665691685095
 ---
 ## React
@@ -35,7 +35,13 @@ Complete: [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/2021
 
 [Mayanwolfe Ultimate Guide to Js Algos Course](https://www.twitch.tv/mayanwolfe)
 
+[Practical Algorithms](https://frontendmasters.com/courses/practical-algorithms)
+
 [Primagen Algo course](https://t.co/k0MCCpmt5U)
 
 ## regexp
 https://regexr.com
+
+## Browser
+[polypane](https://polypane.app) - responsive; can load multiple devices in same view. Great for debugging
+- paid after 14 days trial
