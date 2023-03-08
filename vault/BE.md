@@ -2,7 +2,7 @@
 id: lr8x4jfze8yjffarnjhg62r
 title: BE
 desc: ''
-updated: 1689196429603
+updated: 1689197279951
 created: 1651166097655
 ---
 ## Client-Server Model
@@ -14,3 +14,5 @@ Client
 Server  
 ||  
 DB
+
+[[FE]]
