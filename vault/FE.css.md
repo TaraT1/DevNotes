@@ -2,7 +2,7 @@
 id: 0chrl1iq0vv8tx2919bk63a
 title: css
 desc: ''
-updated: 1649993352212
+updated: 1681737510020
 created: 1649553303701
 ---
 
@@ -60,8 +60,8 @@ What are the 3 forms to use? box-sizing, typescript or webscript?, moz
 Below standardizes sizing more intuitievly
 	* {
 		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-box-sizing: border-box;
+		-moz-box-sizing:	border-box;
+		-box-sizing: 		border-box;
 	}
 When reading technical material, do it hands-on, make active learning.
 
@@ -161,3 +161,4 @@ Typically modern: flex box and grid
 header,footer{
 	height…;
 	clear: both;
+
