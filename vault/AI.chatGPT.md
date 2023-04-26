@@ -2,7 +2,7 @@
 id: npi9caf5ht28gznyb173w06
 title: chatGPT
 desc: ''
-updated: 1682477291493
+updated: 1682477603789
 created: 1682014988305
 ---
 ref: [Traversy Crash Course](https://www.youtube.com/watch?v=o_joulYVndM&t=449s)  
@@ -58,6 +58,7 @@ Youtube has tutorials as well.
 - Note: inputs will be used for training (part of AI lifecycle). Watch using confidential info
 - Usage during peak times can produce internal errors (US work hours)
 - info is outdated in terms of current events. AI tools need to build and compile. Updates every 2-3 months. Faster updates available from paid version
+- lacks regulatory policies (like blockchain)
 - Jac: Always be skeptical of responses and fact check if necessary, it "hallucinates" by making things up because it's language model only. I've heard It is not mandated to produce evidenced based facts, it uses probability to generate language only.  Translate and data analysis can be wrong, so always double-check so you don't get fired!
 
 ### prompt engineering
