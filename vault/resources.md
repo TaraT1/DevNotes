@@ -2,7 +2,7 @@
 id: 7sjr14qsfomiqpfwyjh7jbk
 title: Resources
 desc: 'Compiling references and resources'
-updated: 1667248403573
+updated: 1682816644790
 created: 1665691685095
 ---
 ## React
@@ -16,9 +16,9 @@ created: 1665691685095
 
 
 ## Git Profile
-https://www.profileme.dev/
-https://github.com/alecortega/portfolio-template
-https://readme.so/editor
+https://www.profileme.dev/  
+https://github.com/alecortega/portfolio-template  
+https://readme.so/editor  
 
 
 
@@ -36,3 +36,6 @@ Complete: [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/2021
 [Mayanwolfe Ultimate Guide to Js Algos Course](https://www.twitch.tv/mayanwolfe)
 
 [Primagen Algo course](https://t.co/k0MCCpmt5U)
+
+## regexp
+https://regexr.com
