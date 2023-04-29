@@ -2,10 +2,10 @@
 id: 54qjqs539iba8657mroqw8s
 title: grid
 desc: ''
-updated: 1653951835989
+updated: 1682817032295
 created: 1653948910962
 ---
-- notes from Traversy Meida CSS Grid Crash Course 2022, 'tube
+- notes from Traversy Meida CSS Grid Crash Course 2022, 'tube  
 Flexbox was first. 
 
 - CSS Grid for overall layout 
@@ -16,11 +16,12 @@ Flexbox was first.
 ## Grid Containers & Grid Items
 - grid container holds grid items, which are direct children of grid containers
 
-grid-template-columns: 1fr //fraction, %
-grid-template-rows:
-gap (row, column)
-vh - viewport height
+grid-template-columns: 1fr //fraction, %  
+grid-template-rows:  
+gap (row, column)  
+vh - viewport height  
 
+```css
 body {
     font-family:'
     font-size: ;
@@ -34,7 +35,7 @@ body {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 80px 1fr 70px;
 }
-
+```
 Sandbox from frontendmentor.io
     
     
