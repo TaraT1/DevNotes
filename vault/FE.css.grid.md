@@ -2,7 +2,7 @@
 id: 54qjqs539iba8657mroqw8s
 title: grid
 desc: ''
-updated: 1682817032295
+updated: 1682817409805
 created: 1653948910962
 ---
 - notes from Traversy Meida CSS Grid Crash Course 2022, 'tube  
@@ -39,3 +39,6 @@ body {
 Sandbox from frontendmentor.io
     
     
+
+## Flex & Grid Examples
+c.f. D:\Programming\experiments\responsive card

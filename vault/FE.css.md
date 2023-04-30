@@ -2,11 +2,11 @@
 id: 0chrl1iq0vv8tx2919bk63a
 title: css
 desc: ''
-updated: 1682523306994
+updated: 1682817383274
 created: 1649553303701
 ---
 
-cascading style sheets. Terms are selectors, properties, and values
+cascading style sheets. Terms are selectors, properties, and values  
 - selectors designate which element(s) or attribute value (id or class value) are targeted to apply styles
 	- ex: p {…}
 - properties determine styles applied to element
@@ -26,9 +26,9 @@ cascading style sheets. Terms are selectors, properties, and values
 		}
 	```
 ### Selectors
-Type selectors target elements by their element type (div, p span, etc.) 
+Type selectors target elements by their element type (div, p span, etc.)  
 #### Class Selectors
-Target based on class attribute; can use same class attribute across multiple elements (.)
+Target based on class attribute; can use same class attribute across multiple elements (.)  
  ```css
 	/*css*/
 	.experimental {...}
@@ -38,7 +38,7 @@ Target based on class attribute; can use same class attribute across multiple el
 	<p class="experimental"> … </p>
 ```
 #### ID Selectors
-Provide more precision; target one element at a time; can only be used once on page (#)
+Provide more precision; target one element at a time; can only be used once on page (#)  
 ```css
 	/*css*/
 	#special {…}
@@ -49,7 +49,7 @@ Provide more precision; target one element at a time; can only be used once on p
 	
 ? What is best practice for including css on a webpage
 - format for separate css file
-```
+```html
 	/*html*/
 	<head>
 		<link rel="stylesheet" href="main.css">
@@ -60,13 +60,13 @@ Provide more precision; target one element at a time; can only be used once on p
 - Eric Meyer’s reset - popular and adapted for html5
 - Normalize.css - sets common styles for common elements
 
-In Practice…
+In Practice…  
 
-https://learnlayout.com  web.archive.org
+https://learnlayout.com  web.archive.org  
 
 ? In CSS, what does box-sizing do?  
-What are the 3 forms to use? box-sizing, typescript or webscript?, moz
-Below standardizes sizing more intuitievly
+What are the 3 forms to use? box-sizing, typescript or webscript?, moz  
+Below standardizes sizing more intuitievly  
  
  ```css
 	* {
@@ -83,7 +83,7 @@ CSS - cascade style sheet
 	- Email  
 	- style blocks in head (amazon above fold to gain ms)
 
-Use separate CSS file  
+Use separate CSS file   
 	`<link rel="stylesheet" href="css/style.css">`
 
 ### CSS Syntax
@@ -111,10 +111,10 @@ Cascade - what comes below can override what comes above
 
 #### Fonts
 Font-family  
-google fonts
+google fonts  
 
 Format  
-Why load font before css file?
+Why load font before css file?  
 
 ```
 /*html*/
@@ -153,17 +153,18 @@ p {
 
 2:38:00 HW: rhino w highest level of specificity
 
-Box model
-Horizontal padding border
-Vertical padding border
+Box model  
+Horizontal padding border  
+Vertical padding border  
 
-Layout w CSS
-Floats
-Typically modern: flex box and grid
--floats movement up and in direction
--Size
+Layout w CSS  
+Floats  
+Typically modern: flex box and grid  
+- floats movement up and in direction
+- Size
 
 3:01:00
+```css
 *{
 	box-sizing: border-box;
 } /*ignore border sizing*/
@@ -172,4 +173,6 @@ header,footer{
 	height…;
 	clear: both;
 }
-
+```
+## Flex & Grid Examples
+c.f. D:\Programming\experiments\responsive card
