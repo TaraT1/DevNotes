@@ -2,7 +2,7 @@
 id: zrpr93jzt37u951pd9lu4er
 title: FE
 desc: ''
-updated: 1682969768525
+updated: 1683165037904
 created: 1682960943219
 ---
 ## Template for making 'site  
@@ -20,5 +20,10 @@ created: 1682960943219
         - Starter with vite: https://github.com/kevin-powell/website-starter-template-v2
         - Starter for larger with vite, sass: https://github.com/kevin-powell/demo-starter-template-with-sass
             - fem: frontend mentor
-        - [tube for grid](https://youtu.be/sKFW3wek21Q) & [code for grid tut](https://github.com/kevin-powell/dynamic-grid-layout)
+        - Dynamic grid layout tut
+            - [tube for grid](https://youtu.be/sKFW3wek21Q) 
+            - [code for grid tut](https://github.com/kevin-powell/dynamic-grid-layout)
 - web dev simplified: 
+
+### Resource
+c.f. [[FE.css.naming]]
