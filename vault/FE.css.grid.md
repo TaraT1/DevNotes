@@ -2,7 +2,7 @@
 id: 54qjqs539iba8657mroqw8s
 title: grid
 desc: ''
-updated: 1682817409805
+updated: 1683164469734
 created: 1653948910962
 ---
 - notes from Traversy Meida CSS Grid Crash Course 2022, 'tube  
@@ -41,4 +41,8 @@ Sandbox from frontendmentor.io
     
 
 ## Flex & Grid Examples
-c.f. D:\Programming\experiments\responsive card
+c.f. D:\Programming\experiments\responsive card  
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout  
+- [tube for grid](https://youtu.be/sKFW3wek21Q) 
+- [code for grid tut](https://github.com/kevin-powell/dynamic-grid-layout)
+- KP Learn CSS Grid the easy way ('tube)
