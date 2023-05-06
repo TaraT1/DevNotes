@@ -2,7 +2,7 @@
 id: a7e2sf9pjjsfkwtdkoddath
 title: ARIA
 desc: ''
-updated: 1683774831435
+updated: 1683775321097
 created: 1667967506404
 ---
 Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
@@ -12,3 +12,5 @@ If implemented incorrectly, can do more harm than good.  Use a native HTML eleme
 source https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 
 [accessibility developer guidelines](https://www.accessibility-developer-guide.com/)
+
+[scottaohara/a11y_styled_form_controls](https://github.com/scottaohara/a11y_styled_form_controls)
