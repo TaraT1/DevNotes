@@ -2,7 +2,7 @@
 id: zrpr93jzt37u951pd9lu4er
 title: FE
 desc: ''
-updated: 1683774749384
+updated: 1683775468360
 created: 1682960943219
 ---
 ## Template for making 'site  
@@ -26,5 +26,6 @@ created: 1682960943219
 - web dev simplified: 
 
 ### Resource
-c.f. [[FE.css.naming]]
-[[ARIA]]
+c.f. [[FE.css.naming]]  
+[[ARIA]]  
+c.f. examples in codepen  
