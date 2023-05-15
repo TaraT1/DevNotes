@@ -2,7 +2,7 @@
 id: 7sjr14qsfomiqpfwyjh7jbk
 title: Resources
 desc: 'Compiling references and resources'
-updated: 1684161323618
+updated: 1684161634566
 created: 1665691685095
 ---
 ## React
@@ -45,3 +45,6 @@ https://regexr.com
 ## Browser
 [polypane](https://polypane.app) - responsive; can load multiple devices in same view. Great for debugging
 - paid after 14 days trial
+
+## 100devs
+[Community Taught](https://communitytaught.org/) - very thorough
