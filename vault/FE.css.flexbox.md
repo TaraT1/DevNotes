@@ -2,7 +2,7 @@
 id: vnjvgfnjyqu765l44k64d56
 title: flexbox
 desc: ''
-updated: 1684164351379
+updated: 1684176676386
 created: 1683164171669
 ---
 ## Flexbox
@@ -20,7 +20,7 @@ section {
 ## Terms
 - main axis (Default row; main start, main end)
 - cross axis (Default column; cross start, cross end)
-- flex container properties (parent)
+- flex container properties (parent)  
     display: flex;  
     flex-direction  
     flex-wrap  
@@ -30,7 +30,7 @@ section {
     align-items  
     align-content  
     gap  
-- flex items properties (children)
+- flex items properties (children)  
     order  
     flex-grow  
     flex-shrink  
@@ -45,4 +45,6 @@ section {
 ### Refs Resources
 [Flexbox css tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 [mdn flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-[Traversy](https://www.youtube.com/watch?v=3YW65K6LcIA&t=0s)
+[Traversy](https://www.youtube.com/watch?v=3YW65K6LcIA&t=0s) 
+    - uses straight css
+    - font awesome
