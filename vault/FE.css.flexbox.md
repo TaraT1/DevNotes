@@ -2,7 +2,7 @@
 id: vnjvgfnjyqu765l44k64d56
 title: flexbox
 desc: ''
-updated: 1684176676386
+updated: 1684253209113
 created: 1683164171669
 ---
 ## Flexbox
@@ -35,16 +35,16 @@ section {
     flex-grow  
     flex-shrink  
     flex-basis  
-    flex  (shorthand)
+    flex  (shorthand)  
     align-self
 
-## Flex & Grid Examples
+### Flex & Grid Examples
 * c.f. D:\Programming\experiments\responsive card  
 
-
-### Refs Resources
+## Refs Resources
 [Flexbox css tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 [mdn flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 [Traversy](https://www.youtube.com/watch?v=3YW65K6LcIA&t=0s) 
+    - code: https://codepen.io/bradtraversy/pen/JjrzzOW
     - uses straight css
     - font awesome
