@@ -2,10 +2,10 @@
 id: bzaxf9pjcci4j9kiswdfl3n
 title: angular
 desc: ''
-updated: 1684518155391
+updated: 1684895120668
 created: 1684511430196
 ---
-# Anglar
+# Angular
 - structural framework for dynamic web apps.
 - Typescript-based open source web app opinionated MVC framework
 - Google
@@ -15,7 +15,8 @@ created: 1684511430196
 - full featured framework w own architecture. 
 - high learning curve; can be difficult to learn
 - more comprehensive framework that’s highly customizable and can handle complex applications
-- TypeScript
+- TypeScript https://www.totaltypescript.com/tutorials/beginners-typescript
+
 
 # React
 - Javascript library used to build reusable and scalable UI components that offer real-time functionality and modularity
@@ -26,6 +27,5 @@ created: 1684511430196
 - JSX
 - React Native is foundation block for building mobile apps
 
-### Reference
-- https://www.sitepoint.com/angular-vs-react/#whatisangularthebasics
-- https://www.trio.dev/blog/angular-vs-react
+### References
+- https://www.totaltypescript.com/tutorials/beginners-typescript

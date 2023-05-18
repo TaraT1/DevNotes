@@ -2,7 +2,7 @@
 id: 52anmgl8a3a2b30i5q62n56
 title: react
 desc: ''
-updated: 1681433758711
+updated: 1684894673241
 created: 1679962485382
 ---
 
@@ -15,6 +15,14 @@ React apps are made out of components
     - start w capital letter (html tags are lowercase)
     
     
+# React
+- Javascript library used to build reusable and scalable UI components that offer real-time functionality and modularity
+- facebook
+- minimizes page reloads; primarily aims to provide speed, simplicity, and scalability
+- Composition model; Component based architecture, unidirectional data flow, virtual DOM
+- better choice for projects that need to handle large data sets and be highly interactive
+- JSX
+- React Native is foundation block for building mobile apps
 
 
 
@@ -58,3 +66,6 @@ https://github.com/WebDevSimplified/react-todo-list
 - fragment <>...</>
 - state - useState
 - destructuring (js) 
+
+### Resource
+- https://egghead.io/courses/the-beginner-s-guide-to-react
