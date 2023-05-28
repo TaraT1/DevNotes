@@ -2,7 +2,7 @@
 id: 2djyd9rub8uxdo6cugk4bn8
 title: Wds
 desc: ''
-updated: 1685249693751
+updated: 1685399167814
 created: 1685222749195
 ---
 ## Overview
@@ -78,5 +78,28 @@ const indexRouter = require('./routes/index')
 app.use('/', indexRouter)
 ```
 ## Views
+folder structure:  
+views  
+  /layouts (templates)  
+    layout.ejs  
+    index.ejs  
+  /partials  
+    errorMessage.ejs
+    footer.ejs  
+    header.ejs  
+  /view1  
+    crud.ejs  
+    __form_fields.ejs  
+    
+
 
 ## Models
+
+
+
+
+
+
+
+
+
