@@ -2,7 +2,7 @@
 id: 2djyd9rub8uxdo6cugk4bn8
 title: Wds
 desc: ''
-updated: 1685399167814
+updated: 1685399906225
 created: 1685222749195
 ---
 ## Overview
@@ -94,6 +94,27 @@ views
 
 
 ## Models
+``` javascript
+const mongoose = require("mongoose");
+
+const ProviderSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    specialization: {
+        type: String,
+        required: false,
+    },
+    createdAt: {
+        type: Date,
+        required: true,
+        default: Date.now,
+    },
+});
+
+module.exports = mongoose.model("Provider", ProviderSchema);`
+```
 
 
 
