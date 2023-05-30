@@ -2,7 +2,7 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1679019363562
+updated: 1685469852585
 created: 1664214557269
 ---
 - clone Leon's full-stack-template or Binary Upload Boom
@@ -75,6 +75,10 @@ router.delete('/:id', (req, res) => {
 ```
 
 # Dir Structure
+## Config
+.env
+database.js
+
 ## Routes
 (webdevsimplified)
 ```javascript
