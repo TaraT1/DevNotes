@@ -2,7 +2,7 @@
 id: 2djyd9rub8uxdo6cugk4bn8
 title: Wds
 desc: ''
-updated: 1685399906225
+updated: 1685469985894
 created: 1685222749195
 ---
 ## Overview
@@ -54,6 +54,9 @@ app.use(express.static('public'))
 
 app.listen(process.env.PORT || 2121)
 ```
+## Config
+.env
+database.js
 
 ## Controller /Route 
 - Routes instead of controllers in node.js express land.
