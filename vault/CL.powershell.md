@@ -2,7 +2,7 @@
 id: 8qszpd34fgrgf0suh9uy487
 title: powershell
 desc: ''
-updated: 1686324578772
+updated: 1687200932871
 created: 1686322911552
 ---
 https://www.javatpoint.com/powershell-get-childitem  
