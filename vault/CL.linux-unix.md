@@ -2,7 +2,7 @@
 id: h9dogpny8harxizc09cpop1
 title: linux-unix
 desc: ''
-updated: 1686335023386
+updated: 1687185209970
 created: 1686326284010
 ---
 https://www.tutorialspoint.com/unix/index.htm
