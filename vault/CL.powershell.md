@@ -2,7 +2,7 @@
 id: 8qszpd34fgrgf0suh9uy487
 title: powershell
 desc: ''
-updated: 1687200932871
+updated: 1687201049755
 created: 1686322911552
 ---
 https://www.javatpoint.com/powershell-get-childitem  
@@ -38,3 +38,9 @@ D (Directory)
 H (Hidden)
 R (Read-only)
 S (System)
+
+### WSL 
+``` powershell
+wsl --install
+wsl --shutdown
+```
