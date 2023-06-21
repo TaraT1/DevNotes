@@ -2,7 +2,7 @@
 id: jk3c8urg6v1od7pf2ggxidl
 title: Node
 desc: ''
-updated: 1662325165227
+updated: 1687446889189
 created: 1659324207105
 ---
 Synchronous programming language waits for response before moving to next task.
@@ -138,3 +138,15 @@ invoke in index.js (or such) with
 ```
 const morgan = require('morgan')
 ```
+
+### Install Node
+Can use npm or nvm (manage node versions)
+- reference: [freecodecamp](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) (windmill)
+- https://cloudbytes.dev/snippets/how-to-install-nodejs-and-npm-on-wsl2
+
+### Node Commands
+``` bash
+nvm install node ## installs latest verson of node and npm
+nvm install <version> ## installs specific version of node
+node --version
+npm --version ## check version of npm
