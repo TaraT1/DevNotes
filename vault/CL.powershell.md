@@ -2,7 +2,7 @@
 id: 8qszpd34fgrgf0suh9uy487
 title: powershell
 desc: ''
-updated: 1687201049755
+updated: 1687563220736
 created: 1686322911552
 ---
 https://www.javatpoint.com/powershell-get-childitem  
@@ -25,19 +25,18 @@ get-childitem -Path 'C:\dir' -Name
 
 //get child items in current dir and subdirs
 get-childitem -Recurse
-
 ```
 
 ### Operators
 ! (NOT)  
-+ (AND)  
+\+ (AND)  
 , (OR)  
 
 ### Abbreviations for common attributes
-D (Directory)
-H (Hidden)
-R (Read-only)
-S (System)
+D (Directory)  
+H (Hidden)  
+R (Read-only)  
+S (System)  
 
 ### WSL 
 ``` powershell

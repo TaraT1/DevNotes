@@ -2,7 +2,7 @@
 id: 6l4h865yzb2og94obefpdlb
 title: wsl
 desc: ''
-updated: 1687196055605
+updated: 1687549139248
 created: 1687185783335
 ---
 ## Windows Subsystem for Linux Commands
@@ -78,5 +78,4 @@ sudo do-release-upgrade
 ### Problem 18-20 Upgrade
 - terminal label not updated. 
 - listed in bash, not powershell
-
-https://www.mzonline.com/blog/2022-04/place-upgrade-wsl-ubuntu-1804-2004
+- culprit is snapd ref: https://www.mzonline.com/blog/2022-04/place-upgrade-wsl-ubuntu-1804-2004
