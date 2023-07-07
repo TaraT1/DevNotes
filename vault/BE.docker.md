@@ -2,7 +2,7 @@
 id: h1ncuonitjmz28hklzweh4w
 title: docker
 desc: ''
-updated: 1688053623748
+updated: 1688695167045
 created: 1687868149484
 ---
 Refs:   
@@ -85,4 +85,28 @@ docker-compose.yml inside root dir
 docker-compose up
 ## shut down
 docker-compose down
+```
+
+## Have Image, Build Container
+Linux: Dockerfile => img => container
+https://www.youtube.com/watch?v=C-bX86AgyiA
+
+### STEPS
+1. Create a Dockerfile
+2. Add instructions in Dockerfile to create Docker image
+3. Run Dockerfile to create Docker image
+4. Run Docker image to create Docker container
+5. Access the application running in Docker container
+
+- Dockerfile ＞ Docker Image ＞ Docker Container ＞ Access the App
+- Docker commands
+``` bash
+//build new Docker img with tag "myapp" in current dir
+docker build -t myapp .
+//run docker container from img. Map local port 8080 to docker port 80
+docker run -p 8080:80 myapp
+// run detached 
+docker run -d -p 8080:80 myapp
+//access app using web browser
+http://localhost:8080
 ```
