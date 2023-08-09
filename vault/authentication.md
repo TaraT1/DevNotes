@@ -2,7 +2,7 @@
 id: p669krwb3vq2q81ckdfqn31
 title: Authentication
 desc: ''
-updated: 1711569870969
+updated: 1713050453584
 created: 1695399712830
 ---
 
@@ -91,3 +91,7 @@ authorized redirect uris; localhost/google/callback
 
 create oauth client id. get client secret
 ```
+
+## Mongo
+Error: MongoServerError: E11000 duplicate key error collection  
+fix: Remove index /unique requirement
