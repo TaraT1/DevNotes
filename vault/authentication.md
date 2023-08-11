@@ -2,9 +2,12 @@
 id: p669krwb3vq2q81ckdfqn31
 title: Authentication
 desc: ''
-updated: 1713050453584
+updated: 1713113809306
 created: 1695399712830
 ---
+
+- Authentication - makes sure user is who they claim to be
+- Authoriztion - govers what the user has access to
 
 ## ChatGPT Overview of Common Authentication Methods:  
 - [Passport.js](https://www.passportjs.org/) with local strategy is suitable for smaller applications where auth is handled on own server
@@ -95,3 +98,28 @@ create oauth client id. get client secret
 ## Mongo
 Error: MongoServerError: E11000 duplicate key error collection  
 fix: Remove index /unique requirement
+ - mongo has indexing tab in collections
+
+## Multiple auth strategies
+- https://github.com/passport/express-3.x-http-basic-and-digest-example/blob/master/server.js
+
+```
+const express = require('express')
+const passport = require('passport')
+...
+const db = require('./db')
+
+//configure strategy1
+passport.use(...)(...)
+
+//configure strategy2
+passport.use(...)(...)
+
+//using OR, passport authenticate fails if no strategy returns success
+passort.authenticate(['strategy1', 'strategy2']...
+    res.json({ username: req.user.username, email: req.user.email[0].value}))
+...
+
+
+```
+- [Multi-Provider OAuth 2 Auth](https://rrawat.com/blog/multi-provider-oauth2-nodejs)
