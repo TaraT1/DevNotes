@@ -2,7 +2,7 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1685469852585
+updated: 1695396592273
 created: 1664214557269
 ---
 - clone Leon's full-stack-template or Binary Upload Boom
@@ -239,3 +239,11 @@ Can declare route handler middleware functions separately and the set as callbac
 
 ![](/assets/images/MVC routes.jpg){max-width: 400px, display: block, margin: 0 auto}
 
+### Dates
+- momentjs.com
+- Modify date object from db. Format it in the controller of the get request for server-side formatting
+- for ejs, send formatted date in a variable to ejs
+### res.render vs res.redirect 
+Ref: https://dev.to/mochafreddo/understanding-resredirect-and-resrender-in-expressjs-usage-and-security-measures-2k60
+- Redirect: redirects to an endpoint. (Typically used for routing it seems)
+- Render: returns the ejs template itself
