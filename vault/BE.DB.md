@@ -2,13 +2,14 @@
 id: 4zw3g50s4oglnuo64p44d27
 title: DB
 desc: ''
-updated: 1724194440626
+updated: 1724203816299
 created: 1651166097624
 ---
 # Databases
 
 ## Express Request Object
 
+[Express dox](https://expressjs.com/en/api.html#req)
 - `req.body` - used in POST/PUT requests
     - used to send sensitve data (form data)
 
@@ -16,3 +17,21 @@ created: 1651166097624
 
 - `req.query` - used for search, sort, filter, pagination
     - key = value
+    
+
+## Express Response Object
+
+[Express Response Dox](https://expressjs.com/en/api.html#res)
+- `res.render(view[, locals] [, callback])` - renders a view and sends the rendered html string to the client
+    - locals is an object whose properties define local vars for the view
+- `res.redirect([status,] path)` - Redirects to the URL derived from the specified pat
+- `res.req` - holds reference to the request object that relates to the resposne object
+- `res.send([body])` - sends http response
+
+# Router
+- router object is an instance of middleware and routes
+
+## Router Methods
+- `router.METHOD(path, [callback, ...] callback)
+    - router.get, router.post, etc.
+- `router.param(name, callback)` - parameters of the callback function; req, res, next, value of the name parameter, name of the parameter
