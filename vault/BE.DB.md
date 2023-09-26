@@ -2,7 +2,7 @@
 id: 4zw3g50s4oglnuo64p44d27
 title: DB
 desc: ''
-updated: 1724203816299
+updated: 1724204204492
 created: 1651166097624
 ---
 # Databases
@@ -27,6 +27,7 @@ created: 1651166097624
 - `res.redirect([status,] path)` - Redirects to the URL derived from the specified pat
 - `res.req` - holds reference to the request object that relates to the resposne object
 - `res.send([body])` - sends http response
+- `res.cookie(name, value [, options])` - sets cookie name to value. Value param may be string or object converted to json. Options param object has properties ranging from macAge, priority, domain, encode, etc.
 
 # Router
 - router object is an instance of middleware and routes
