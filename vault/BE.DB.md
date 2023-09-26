@@ -2,7 +2,7 @@
 id: 4zw3g50s4oglnuo64p44d27
 title: DB
 desc: ''
-updated: 1724204204492
+updated: 1724204501783
 created: 1651166097624
 ---
 # Databases
@@ -25,9 +25,9 @@ created: 1651166097624
 - `res.render(view[, locals] [, callback])` - renders a view and sends the rendered html string to the client
     - locals is an object whose properties define local vars for the view
 - `res.redirect([status,] path)` - Redirects to the URL derived from the specified pat
-- `res.req` - holds reference to the request object that relates to the resposne object
+- `res.req` - holds reference to the request object that relates to the response object
 - `res.send([body])` - sends http response
-- `res.cookie(name, value [, options])` - sets cookie name to value. Value param may be string or object converted to json. Options param object has properties ranging from macAge, priority, domain, encode, etc.
+- `res.cookie(name, value [, options])` - sets cookie name to value. Value param may be string or object converted to json. Options param object has properties ranging from expires, maxAge, priority, domain, encode, etc.
 
 # Router
 - router object is an instance of middleware and routes
