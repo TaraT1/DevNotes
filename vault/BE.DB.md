@@ -2,13 +2,14 @@
 id: 4zw3g50s4oglnuo64p44d27
 title: DB
 desc: ''
-updated: 1724204501783
+updated: 1724205075712
 created: 1651166097624
 ---
 # Databases
 
 ## Express Request Object
 
+[Dev article](https://dev.to/gathoni/express-req-params-req-query-and-req-body-4lpc) - Focus on req.body, req.params, req.query  
 [Express dox](https://expressjs.com/en/api.html#req)
 - `req.body` - used in POST/PUT requests
     - used to send sensitve data (form data)
