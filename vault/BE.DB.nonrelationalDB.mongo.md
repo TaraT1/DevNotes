@@ -2,10 +2,49 @@
 id: pavk5nyvisfr8bhg9yx0fku
 title: mongo
 desc: ''
-updated: 1720926704902
+updated: 1724209157455
 created: 1693859150944
 ---
+## MongoDB Schema Design
+Ref: mongodb [Schema Design Best Practices](https://www.youtube.com/watch?v=leNCfU5SYR8)
+- Schema dzn is critical for improving performance and scalability of db
+- no rules, process, or prescribed algo. Design schema that will work well with app
+  - how store data
+  - query performance
+  - using reasonable amount of hardware
+- Approaches: Embed vs Reference 
+- embedding - saving data the way use; join
+  - pro: retrieve data w single query. 
+    - Avoids expense of joins or $lookup. (Joins are expensive time and memory wise)
+    - Update all data w sgl atomic operation; is ACID compliant
+  - con: large dox === more overhead
+    - 16MB doc size limit per doc
+- Reference - reference other dox from within another doc
+  - allows for smaller dox while keeping refs to other data not as actively used
+  - less likely to reach 16MB limit
+  - no duplication of data. Normalizing or avoiding duplication of data is not a big concern
+  - Avoids accessing infrequently accessed data
+  - Con: 2 queries or $lookup required to retrieve all data
+  
+### Types of Relationships
+- 1 to 1: using key-value pair
+- 1 to Few: Embedded or nested object
+- 1 to Many: Reference preferred 
+- 1 to Squillions - e.g. server farm log files - unbounded amt of data per machine, reverse object id lookup
+- Many to Many - Embed in each model. 2 way reference for 2 separate collections
+
+### Recommendations for Schema Dzn
+- Favor embedding unless compelling reason not to
+- Needing to access object on its own is compelling reason
+- Avoid joins and $lookups unless they can provide better schema dzn
+- arrays should not grow without bound. Use reverse referencing in separate document
+- how model data depends on application's data access patterns
+
+### Hybrid
+- outlier pattern: overflow
+
 ## MongoDB
+
 - reference: 'tube:  wds MongoDB Crash Course
 - cheatsheet: webdevsimplified.com/mongodb-cheat-sheet.html
 
