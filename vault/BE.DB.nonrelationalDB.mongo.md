@@ -2,7 +2,7 @@
 id: pavk5nyvisfr8bhg9yx0fku
 title: mongo
 desc: ''
-updated: 1724209157455
+updated: 1724209532881
 created: 1693859150944
 ---
 ## MongoDB Schema Design
@@ -44,8 +44,13 @@ Ref: mongodb [Schema Design Best Practices](https://www.youtube.com/watch?v=leNC
 - outlier pattern: overflow
 
 ## MongoDB
-
-- reference: 'tube:  wds MongoDB Crash Course
+Refs: 
+- Modeling: https://university.mongodb.com/course...
+- 6 Rules of Thumb for MongoDB Schema Design: Part 1: https://www.mongodb.com/blog/post/6-r...
+- Data Model Design: https://docs.mongodb.com/manual/core/...
+- Data Model Examples and Patterns: https://docs.mongodb.com/manual/appli...
+- Building with Patterns: A Summary: https://www.mongodb.com/blog/post/bui...
+- 'tube:  wds MongoDB Crash Course
 - cheatsheet: webdevsimplified.com/mongodb-cheat-sheet.html
 
 ### _id and id
