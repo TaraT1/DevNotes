@@ -2,7 +2,7 @@
 id: pavk5nyvisfr8bhg9yx0fku
 title: mongo
 desc: ''
-updated: 1724808580253
+updated: 1725821848710
 created: 1693859150944
 ---
 [Learning Resource from MongoDB](https://learn.mongodb.com/)
@@ -53,6 +53,12 @@ Refs:
 - Building with Patterns: A Summary: https://www.mongodb.com/blog/post/bui...
 - 'tube:  wds MongoDB Crash Course
 - cheatsheet: webdevsimplified.com/mongodb-cheat-sheet.html
+
+### req, res
+req: 
+- req.params - gets properties attached to named route params (URL)
+- req.body - used in PUT/POST txns, i.e., for forms
+- req.query - sort, filter, search, pagination
 
 ### _id and id
 
@@ -224,7 +230,8 @@ https://www.digitalocean.com/community/tutorials/how-to-use-aggregations-in-mong
 - Mongo's query mechanism doesn't allow grouping or transforming data returned from queries. Thus options for performing meaningful data analysis with mongo's query mechanism is limited.
 - MongoDB provides aggregation operations through aggregation pipelines - series of operations that process data documents sequentially
 - [How to Create Queries in mongodb](https://www.digitalocean.com/community/tutorials/how-to-create-queries-in-mongodb)
-#### Aggreation Pipelines
+
+#### Aggregation Pipelines
 - built as sequential series of declarative data processing operations known as stages
 - each stage inspects and transforms documents as they pass through pipeline and feed into subsequent stages for further processing
 - Stages can perform operations on data like filtering, sorting, transforming, grouping
