@@ -2,7 +2,7 @@
 id: 52anmgl8a3a2b30i5q62n56
 title: react
 desc: ''
-updated: 1684894673241
+updated: 1727053396475
 created: 1679962485382
 ---
 
@@ -51,7 +51,7 @@ React - library for web and native user interfaces
 - break UI into component hierarchy
 
 - js is imperative. do this then this then this. (recipe w instructions)
-- React is declaritive programming. (sammich from sammich shop. Name what is wanted)
+- React is declarative programming. (sammich from sammich shop. Name what is wanted)
 - jsx
 
 ### Starting  Project
@@ -69,3 +69,132 @@ https://github.com/WebDevSimplified/react-todo-list
 
 ### Resource
 - https://egghead.io/courses/the-beginner-s-guide-to-react
+
+## Js Needed for React
+from PedroTech https://www.youtube.com/watch?v=m55PTVUrlnA
+
+### Arrow Functions
+- declarative function:   
+    ```function doSomething(){...}```
+    - export: export default function doSomething...
+    
+- arrow function:  
+    ```const doSomething = () => {...}```
+    - export const doSomething...
+
+- In React, define components, which are functions that take in props and return html  
+    ```javascript
+    const MyComponent = () => {
+        return <div> </div>
+    }
+    ```
+### Anonymous Functions
+- 
+```html
+<button onClick={}>//pass name of function in {} with js
+</button>
+```
+- with React can pass name of function in {} or can create anon func
+
+```js
+<button 
+    onClick={() => {
+        console.log('Hey Now')
+        }}
+></button>
+```
+- with React can pass name of function in {} or can create anon func
+- Allows execute commands without declaring function
+
+### Conditionals
+- jsx
+- minimize code using UI
+
+#### Short Circuit Evaluation Using Logical Operators || and &&
+```js
+let age = 16
+let name = age > 10 && "Pedro" //let name = "Pedro" if condition is true
+// x || y returns first arg that is truthy or the last arg
+// x && y returns first arg that is falsy or the last arg
+```
+#### Ternary Operator
+```js
+// condition ? truthy : falsy
+let name = age > 10 ? "Pedro" : "Jack"
+
+const Component = () => {
+    return age > 10 ? <div> Pedro </> : <div> Jack </div>
+}
+``` 
+### Objects
+dictionaries
+#### destructuring objects - use for brevity
+```js
+const person = {
+    name: "t",
+    age: 61,
+    isMarried: true,
+}
+
+const name = person.name
+const age = person.age
+const isMarried = person.isMarried
+
+//using destructuring
+const {name, age, isMarried} = person
+```
+#### Shorthand for object key and variable /value pairs
+```
+//Vars = var in objects
+const name = "t"
+const age = 61
+
+const person = {
+    name, //shorthand notation for name(key): name(variable /value)
+    age, //age(key): age(var)
+    isMarried: true
+}
+```
+#### Spread Operator in Objects and Arrays
+```js
+//Object
+const person = {
+    name: 't',
+    age: 61,
+    isMarried: true
+}
+
+const person2 = {...person, name: "t2"} //Changes name value in person object; Keeps other values of object
+
+//Array
+const names = ['a', 'b', 'c']
+const names2 = [...names, 'd'] //Can use to add and manipulates arrays inside of states 
+```
+### Important Array Methods to know
+- .map()
+- .filter()
+- .reduce()
+
+```js
+let names = ['a', 'b', 'c']
+
+names.map((name) => {
+    return <h1> {name} </h1>
+}) //Generates header for each name in list
+
+let names = ['Pedro', 'Jessica', 'Carol', 'Pedro', 'Pedro']
+names.filter((name) => {
+    return name !== 'Pedro'
+})//names = ['Jessica', 'Carol']
+```
+### Async + Await + Fetch
+- Axios is a React api
+
+PedroTech js for React https://www.youtube.com/watch?v=ACaT1Gfhe6I&t=0s
+### DOM
+Document object Model - representation of web page js can interact with. Tree-like structure with nodes js can interact with. 
+- React creates virtual representation of the DOM. Uses jsx. Html goes inside the jsx.
+### Import/Export
+React: `import axios from "axios"`
+
+
