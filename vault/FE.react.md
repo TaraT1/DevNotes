@@ -2,7 +2,7 @@
 id: 52anmgl8a3a2b30i5q62n56
 title: react
 desc: ''
-updated: 1727053396475
+updated: 1727103089534
 created: 1679962485382
 ---
 
@@ -125,7 +125,14 @@ let name = age > 10 ? "Pedro" : "Jack"
 const Component = () => {
     return age > 10 ? <div> Pedro </> : <div> Jack </div>
 }
+
+//Example: setting color of button
+let color = "green"
+let isCorrect = false
+
+color = isCorrect ? "green" : "red"
 ``` 
+
 ### Objects
 dictionaries
 #### destructuring objects - use for brevity
@@ -189,6 +196,14 @@ names.filter((name) => {
 ```
 ### Async + Await + Fetch
 - Axios is a React api
+#### Fetch
+- ? - will only try to access key in object if it exists
+```js
+const fetchData = async () => {
+    const data = await fetch("imaginaryapi.com")
+    const name = data.person?.name //? -if doesn't exist, will not try to access and will not break app
+}
+```
 
 PedroTech js for React https://www.youtube.com/watch?v=ACaT1Gfhe6I&t=0s
 ### DOM
@@ -197,4 +212,66 @@ Document object Model - representation of web page js can interact with. Tree-li
 ### Import/Export
 React: `import axios from "axios"`
 
+### Template Literals
 
+```
+const fetchData = async (animalName) => {
+    const data = await fetch("imaginaryapi.com/searchterm=???+animalName") //not sure what would be here to be replaced by template literal 
+    const name = data.animal?.name
+
+    const dataUpdate = await fetch(`imaginaryapi.com/searchterm=${animalName}`)
+}
+```
+### More advanced js concepts
+- closure - callback function accesses outer function's scope even after execution
+    - Example: custom hook in React
+- currying - take function with multiple arguments and separating each arg into single function. Makes code cleaner, more modular, and more reusable
+- memoization - use memo hook and use callback hook; 
+    - Deprecated for new usage. In use in codebases.
+
+
+## React Roadmap
+[How To Learn React In 2024 - React Roadmap](https://www.youtube.com/watch?v=bBuaKlv56P0)
+
+
+- understand why and what React is used for
+    - developed by fb 
+### Beginner, Build
+-  Use vite, create react app is obsolete
+-  jsx; (vs html); functional components, props, how to reuse components, why divide project into different components
+-  handle user inputs inside app 
+- what is reuse state hooks
+
+### More advanced beginner:  (few weeks)
+- Conditional rendering (!important)
+- how to use lists -using map function and displaying list (using component); 
+- how to handle form in app - get data, how to submit, how to put into states
+- CSS in react - inline styling, import css file
+
+### Intermediate: (month)
+- use state
+- use effect hook
+- life cycle methods
+- state mgt with use context hook and context api as a whole
+- how to make website with multiple routes using react route or dom. Build site
+- fetch data from api and display in screen. External libs: Check out react query, fetch api, use effect hook
+- Build projects. Refer to docs and AI as learning 
+### Advanced 
+- remaining useful hooks. use graph hook?
+- complex state mgt (react query)
+- optimizing for performance
+- best practices
+- ts - translate from js to ts
+- ~testing (job or startup)
+- Introduce graphQL api (still had momentum). (can integrate using apollo client library). 
+- something other than vite. nextjs is gaining momentum
+
+Using concept >>> implement something a little different with the concept 70-80%
+
+### Obsolete Learning Topics
+- class components (2018 introduction of hooks and functional components)
+- higher order components
+- prop types (Using typescript instead of js)
+- redux used for state mgt. Not necessary for the beginning
+
+- Newer version of React is v19
