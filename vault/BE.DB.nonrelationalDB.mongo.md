@@ -14,7 +14,17 @@ Ref: mongodb [Schema Design Best Practices](https://www.youtube.com/watch?v=leNC
   - query performance
   - using reasonable amount of hardware
 - Approaches: Embed vs Reference 
-- embedding - saving data the way use; join
+
+- embedding /nesting - saving data the way use; join
+  - Method: [Mongo Nested Doc](https://www.youtube.com/watch?v=hjsCd3sy0Ns)
+    - Embedded or nested json object OR array of documents
+    ```javascript
+    db.books.insertOne([ //can also use insertMany for inserting multiple documents
+      {title: "title1", author: "author1", pages: 100, genres: ["genre1"], 
+      reviews: [ {name: "namerev1", body: "rev1"}, {name: "namerev2", body: "rev2"} ], }
+      ])
+    ```
+    
   - pro: retrieve data w single query. 
     - Avoids expense of joins or $lookup. (Joins are expensive time and memory wise)
     - Update all data w sgl atomic operation; is ACID compliant
@@ -212,8 +222,62 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
   }
 })
 
-
 ```
+## Mongo Methods and Commands
+### Insert
+- insertOne
+- insertMany
+
+### Find
+- find
+- findOne
+- 
+
+### Operators - Filters
+- $gt - greater than /$gte - greater than or equal to
+- $lt - lesser than / $lte - less than or equal to 
+- $or - [{ rating: 7}, {rating: 9}] //return objects with rating of 7 or 9
+- $in - find documents within stated range 
+- $nin - find documents not in array of values
+- $all - Get all within array of values
+```javascript
+//Mongo Doc
+_id: ObjectId("...")
+title: "title1"
+author: "authro1"
+rating: 9
+pages: 250
+genres: Array
+  0: "fantasy"
+  1: "magic"
+reviews: Array
+  0 Object
+    name: "nameIt"
+    body: "lovely"
+  1 Object
+    name: "namenameIt"
+    body: "lovelylovely"
+
+
+db.books.find({ rating: {$gt: 6}}) //greater than, non-inclusive
+db.books.find({ rating: {$lt: 6}}) //less than db.books.find({ rating: {$lte: 7}}) //less than or equal to; gte: greater than or equal to
+db.books.find({ rating: {$gte: 7}, author: 'authorQ'}) //Additional filter 
+//Filters
+db.books.find({$or: [{pages: {$lt: 300}}, {pages: {$gt: 400}} ] })
+db.books.find({ rating: {$in: [7,8,9] }})
+db.books.find({ rating: {$nin: [7,8] }})
+```
+### Querying within array
+genres: ["fantasy", "magic"] (array)
+``` javascript
+db.books.find({genres: "fantasy"}) //finds documents containing "fantasy"
+db.books.find({genres: ["fantasy", "match"]} ) //finds documents where it's exact match 
+db.books.find({genres: {$all: ["fantasy", "sci-fi"]}})
+```
+### Querying within Nested Objects
+db.books.find({"reviews.name": "nameIt"}) //Using .notation, put property name in quotations; returns object 1
+
+
 ### Populate
 https://dev.to/paras594/how-to-use-populate-in-mongoose-node-js-mo0
 - Replaces path in document with documents from other collections
