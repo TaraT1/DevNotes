@@ -223,7 +223,7 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
 })
 
 ```
-## Mongo Methods and Commands
+## Mongo Methods and Operators
 ### Insert
 - insertOne
 - insertMany
@@ -231,20 +231,26 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
 ### Find
 - find
 - findOne
-- 
 
-### Operators - Filters
-- $gt - greater than /$gte - greater than or equal to
-- $lt - lesser than / $lte - less than or equal to 
-- $or - [{ rating: 7}, {rating: 9}] //return objects with rating of 7 or 9
-- $in - find documents within stated range 
-- $nin - find documents not in array of values
-- $all - Get all within array of values
+### Operators 
+- Filters
+  - $gt - greater than /$gte - greater than or equal to
+  - $lt - lesser than / $lte - less than or equal to 
+  - $or - [{ rating: 7}, {rating: 9}] //return objects with rating of 7 or 9
+  - $in - find documents within stated range 
+  - $nin - find documents not in array of values
+  - $all - Get all within array of values
+- Document Modifiers
+  - $set - allows setting of as many fields as want in document
+  - $inc - increment - can be positive or decrement - negative - db.books.updateOne({_id: ObjectId("...")}, {$inc: {pages: 2}}) //or {$inc: {pages: -2}}
+  - $push - push items or values to array
+  - $pull - take items or values out of array 
+  - $each - takes array as value, allows to push several values
 ```javascript
 //Mongo Doc
 _id: ObjectId("...")
 title: "title1"
-author: "authro1"
+author: "author1"
 rating: 9
 pages: 250
 genres: Array
@@ -277,7 +283,6 @@ db.books.find({genres: {$all: ["fantasy", "sci-fi"]}})
 ### Querying within Nested Objects
 db.books.find({"reviews.name": "nameIt"}) //Using .notation, put property name in quotations; returns object 1
 
-
 ### Populate
 https://dev.to/paras594/how-to-use-populate-in-mongoose-node-js-mo0
 - Replaces path in document with documents from other collections
@@ -285,7 +290,6 @@ https://dev.to/paras594/how-to-use-populate-in-mongoose-node-js-mo0
   - if no docs found, returns null
   - can chain populate method for populating multiple fields
   - if 2 populate methods populate same field, second populate overrides first one
-
 
 ### Aggregate
 https://learn.mongodb.com/learn/course/mongodb-aggregation/lesson-1-introduction-to-mongodb-aggregation/learn  
@@ -300,3 +304,14 @@ https://www.digitalocean.com/community/tutorials/how-to-use-aggregations-in-mong
 - each stage inspects and transforms documents as they pass through pipeline and feed into subsequent stages for further processing
 - Stages can perform operations on data like filtering, sorting, transforming, grouping
 - analogy: restaurant kitchen preparing vegetables
+
+### Delete
+- deleteOne({_id: ObjectId("...")})
+- deleteMany
+  ```javascript
+  db.books.deleteMany({author: "author1"}) //deletes books with author author1
+  ```
+
+### Update
+- updateOne() - db.books.updateOne({_id: ObjectId("...")}, {$set: {rating: 8}})
+- updateMany() - db.books.updateMany({author: "author2" }, {$set: {author: "auteur"}})
