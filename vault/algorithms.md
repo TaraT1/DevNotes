@@ -12,20 +12,26 @@ Resources:
 - [Codevolution Js Algos](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiRYB4-HHKHblh3_bQNJTMa) [code](https://replit.com/@Codevolution/JavaScript-Algorithms#index.js)
 - js.ds&a  [[DS&A|js.ds&a]] 
 - [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) 
+- [100devs slides](https://slides.com/leonnoel/100devs-ds-and-algorithms#/26)
+- [Big O Time Complexity & Why it Matters](https://levelup.gitconnected.com/big-o-time-complexity-what-it-is-and-why-it-matters-for-your-code-6c08dd97ad59)
+- [github resource](https://github.com/trekhleb/javascript-algorithms/tree/master) - Note B(eginner) label
 
 ## Big-O Notation
 - describes complexity of an algorithm using algebraic terms
 - expressed in terms of input
 - focuses on bigger picture without getting caught up in details
+- Space: how much memory is being used
+- Time: how many operations are executed per input
 
 
 ## Big-O Time Complexity
 - Linear time complexity
     - O(n) - Linear
+    - For all inputs, there will be one operation per input
     - as size of input increases, the time complexity also increases
     - ex: loops
 - Constant Time Complexity
-    - O(1) - Constant
+    - O(1) - Constant Time
     - Irrespective of value of n, expression is executed once
 - Quadratic Time Complexity
     - O(n^2) - Quadratic
@@ -39,8 +45,9 @@ Resources:
 ## Big-O Space Complexity
 - Constant Space complexity
     - O(1) - constant
+    - For all inputs there is and will always be one operation required
     - algo does not need extra memory or the memory needed does not depend on input size (constant space complexity)
-    - ex: sorting algos. Sort within array w/o using additonal arrays
+    - ex: sorting algos. Sort within array w/o using additional arrays
     
 - Linear Space Complexity
     - O(n) - Linear
@@ -70,6 +77,7 @@ Resources:
 - push/pop - O(1)
 - shift / unshift / concat / slice / splice - O(n)
 - forEach / map / filter / reduce - O(n)
+- Note: any method that requires indexes within the array to move around or change >>> Big O(n) - computer must then shift index of each element
 
 ## Big-O Guide
 [Know Thy Complexities](https://www.bigocheatsheet.com/)
@@ -278,3 +286,21 @@ console.log(binarySearch([-5, 2, 4, 6, 10], 6)) //3
 console.log(binarySearch([-5, 2, 4, 6, 10], 20)) //-1
 ```
 - Big-O=O(log(n))
+
+## Algorithmic Pattern
+### Gauss - O(1)
+- Summing function for a sorted, contiguous array of integers that starts with number 1
+last num * (last num +1) /2
+```javascript
+const sumContiguousArray = function(arr){
+    //get last item
+    const lastItem = arr.length - 1
+    //Gauss's trick
+    return lastItem * (lastItem + !) / 2
+}
+const nums = [1,2,3,4,5]
+const sumOfArray = sumContiguousArray(nums)
+
+```
+
+https://github.com/trekhleb/javascript-algorithms - Ones with label B good to pay attention to
