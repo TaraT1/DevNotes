@@ -118,4 +118,6 @@ git pull - pulls down from remote
 ## Workflow
 - git pull - integrate changes from others to local repo
 
-
+## References
+https://graphite.dev/guides/topic/git
+https://graphite.dev/guides/how-to-remove-a-file-from-a-git-commit
