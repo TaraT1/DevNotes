@@ -2,7 +2,7 @@
 id: 08q9teip0yyjkw20wo12vzx
 title: Arrays
 desc: ''
-updated: 1673276243489
+updated: 1737342526641
 created: 1653422037610
 ---
 
@@ -188,3 +188,9 @@ arr.slice(start)
 ```
 
 [[an-js.array-methods]]
+
+## arr.from()
+Array.from() - produces new shallow copy from iterable or array like object
+
+ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+
