@@ -2,7 +2,7 @@
 id: udpfqzo0cdiambfnkp63215
 title: Recursion
 desc: ''
-updated: 1684160508865
+updated: 1707840925522
 created: 1684160101514
 ---
 - programming techniue in which the intention is to reduce the problem into smaller instances of the same problem until it is completely solved. e.g. function calls itself repeatedly
@@ -13,9 +13,9 @@ created: 1684160101514
 function reverseString(text) {
     if (text === ''){
         return ''
-    } else [
+    } else {
         return reverseString(text.substr(1)) + text[0]
-    ]
+    }
 }
 ```
 - terminal case - case that ends recursion. (Check to see if empty string). Otherwise could be endless loop.
