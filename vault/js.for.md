@@ -2,13 +2,15 @@
 id: pogmxvdud885qagqs0l04zu
 title: For
 desc: ''
-updated: 1684159625058
+updated: 1709137792637
 created: 1684156300400
 ---
 ## for statement
-~ creates a loop to be executed
+
+~ creates a loop to be executed as long as condition is met
 ~ syntax
-``` javascript
+
+```javascript
 for (initialization; condition; afterthought) {
     ...
 }
@@ -17,13 +19,15 @@ for (initialization; condition; afterthought) {
 for (let i=0; i < 9; i++) {
     console.log(i)
 }
-
+```
 
 ## for...of
-~ executes loop that operates on a sequence of values sourced from an iterable object like arrays, strings, map, set, nodelist, etc   
+
+~ executes loop that operates on a sequence of values sourced from an iterable object like arrays, strings, map, set, nodelist, etc
 ~ each loop operation on a value is called an iteration. The loop iterates over the iterable.
 ~ Iterable has `@@iterator()` method that returns iterator and repeatedly calls resulting iterators `next()` to produce sequence of values to be assigned to variable
 ~ syntax
+
 ```javascript
 for (variable of iterable){
     ...
@@ -40,8 +44,50 @@ for (let value of iterable) {
 // 21
 // 31
 
+//another example
+function reverseString(text){
+    let result = ''
+  
+    for(let char of text){
+        result = char + result
+    }
+    return result
+}
+
+reverseString(yxt2)//2txy
 ```
 
-## for...in / for...of
-~ iterates over enumerable string properties of an object.  (for...of iterates over values an iterable object defines to be iterated over)
-- in-string
+## for...in
+
+~ iterates over enumerable (countable) string properties of an object ignoring properties keyed by symbols.
+~ syntax: `for(variable in object)`
+
+```javascript
+const object = { a: 1, b: 2, c: 3 }
+
+for (const property in object){
+   console.log(`${property}: ${object[property]}`) 
+}
+
+//expected output:
+//'a: 1'
+//'b: 2'
+//'c: 3'
+```
+
+## forEach
+
+~ array method executes function once for each array element
+~ expects synchronous function (does not wait for promises)
+~ always returns undefined and is not chainable
+
+```javascript
+const arr = ['a', 'b' 'c']
+
+arr.forEach((element) => console.log(element))
+
+//output: 
+//'a'
+//'b'
+//'c'
+```
