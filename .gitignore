@@ -8,3 +8,4 @@ pods/service-connections
 
 .backup
 Prive
+.dendron.cache.*
