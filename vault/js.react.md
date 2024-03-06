@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1708449390241
+updated: 1709920426363
 created: 1667248557067
 ---
 Refs: 
@@ -135,13 +135,9 @@ Course also covers:
 ### React dev tools
 use to inspect React apps. Install in browser.
 
-
-
-
-
-
-
-
-
-
+## React Versions
+- Docs in https://react.dev/learn 
+- modern - more function based.
+    - uses hooks, import export js functions
+- older: components are class based. 
 
