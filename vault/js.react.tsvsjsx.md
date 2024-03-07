@@ -2,10 +2,11 @@
 id: vpcwky4qt37byo9dwr5za0h
 title: Tsvsjsx
 desc: ''
-updated: 1709660630972
+updated: 1709917745963
 created: 1709659418494
 ---
 [reference](https://www.typescriptsos.com/basics/typescript-vs-jsx/)
+- Note: React projects can be setup with vite and typescript
 - ts can be used with jsx
 
 ## Typescript
