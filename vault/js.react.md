@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1709920426363
+updated: 1709920951454
 created: 1667248557067
 ---
 Refs: 
@@ -66,6 +66,7 @@ interfaces
     - developed in 2011 by fb 
     - most widely used Js library for FE dev
 - Using TypeScript, a superset of Js that adds static typing, can catch errors early in dev process
+- c.f. [[js.react.tsvsjsx]] 
 
 ### Why was React created
 - Browser takes html and creates document object model (DOM), a tree-like structure. Allows use of Js and change page content responding to user actions
