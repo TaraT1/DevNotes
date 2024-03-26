@@ -2,13 +2,38 @@
 id: p669krwb3vq2q81ckdfqn31
 title: Authentication
 desc: ''
-updated: 1695587019467
+updated: 1711569870969
 created: 1695399712830
 ---
-Refs: https://www.freecodecamp.org/news/a-quick-introduction-to-oauth-using-passport-js-65ea5b621a/  
-https://www.freecodecamp.org/news/how-to-dance-the-oauth-a-step-by-step-lesson-fd2364d89742/
 
-Implementing authentication with js/express from Raffy's nodejs notes project
+## ChatGPT Overview of Common Authentication Methods:  
+- [Passport.js](https://www.passportjs.org/) with local strategy is suitable for smaller applications where auth is handled on own server
+- JSON Web Tokens (JWT) - stateless auth mechanism commonly used to secure APIs. 
+    - Upon successful auth, the server generates a token which is sent to client
+    - the client includes the token in subsequent requests to access protected resources
+    - suitable for building scalable and stateless apps
+    - Libraries like jsonwebtoken are available in nodejs to implement jwt based auth
+- OAuth2 - industry std protocol for auth. Allows users to log in using existing accounts on third-party services. [freecodecamp OAuth Dance](https://www.freecodecamp.org/news/how-to-dance-the-oauth-a-step-by-step-lesson-fd2364d89742/)
+    - Libraries like passport-oauth2 can be used to implement in node ([freecodecamp intro to oauth using passport](https://www.freecodecamp.org/news/a-quick-introduction-to-oauth-using-passport-js-65ea5b621a/))
+- Session based auth - user sessions are maintained on server side
+    - session identifier such as local storage (cookie is not recommended) is sent to client and included in subsequent requests
+    - commonly used in traditional web apps
+    - Libraries like express-session in node are used in node for session mgt
+
+## Considerations
+- Consider security best practices like salting and hashing pwords
+- protecting against common vulnerabilities lie cross-site scripting (xss) and cross-site request forgery (CSRF)
+- implementing proper error handling
+- user input validation
+- https to encrypt communication between client and server to ensure data privacy and integrity
+
+## [Passport.js](https://www.passportjs.org/)
+Passport is middleware which implements auth on express based web apps
+- provides over 500 strategies which are used to authenticate requests
+- each strategy has its own npm pkg
+
+## Implementing OAuth with passportjs/express from Raffy's nodejs notes project
+
 ```js
 //** Add packages to app.js/server.js
 //after connectDB
@@ -36,10 +61,12 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 module.exports - router;
 ```
-- will need to get client id, client secret. From google: [Google's Developers Console](https://console.developers.google.com/)
-- look up how to create a new project 
+
+- will need to get client id, client secret. From google: [Google&#39;s Developers Console](https://console.developers.google.com/)
+- look up how to create a new project
 - select project > dashboard > api overview > credentials > create credential (OAuth client id)
-- configure consent screen 
+- configure consent screen
+
 ```
 user type: external
 app name
