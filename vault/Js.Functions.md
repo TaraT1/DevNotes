@@ -2,13 +2,14 @@
 id: 77z1hygtl1q29yha1kndept
 title: Functions
 desc: ''
-updated: 1654743474252
+updated: 1713812909921
 created: 1653421978749
 ---
 # Functions
 - A function is a block of organized, reusable code that is used to perform a single, related action. 
 - main building blocks of a program, where code can be called many times without repetition
 - functions are values. They can be assigned, copied, or declared in any piece of code
+- Js functions are objects. Can assigne vars and pass them as args to other funcs
 
 ## Function Declaration
 - holds space for function in memory
@@ -79,7 +80,21 @@ let sayYo = function() {
 - if need conditional declaration, function expression should be used
 
 ## Callback Functions or Callback
+- References: 
+  - [FCC cb in js](https://www.freecodecamp.org/news/what-is-a-callback-function-in-javascript/)
+  - [MDN docs glossary cb in js](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+  - [Wikipedia](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+  
 - pass function and expect it to be called back later
+- function that is passed as an arg to another function to be called back at a later time
+- often used to continue code execution after an asynchronous operation has completed
+
+  ### 2 Types of Callbacks
+  - synchronous - called immediately after the invocation of the outer function, with no intervening asynchronous tasks
+    - synchronous callbacks include the callbacks passed to [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),  
+      [Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), etc.
+  - asynchronous - called at some point later after asynchronous op has completed
+    -  asynchronous callbacks include the callbacks passed to [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) and [Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
 
 ## Arrow Function
 - simple, concise syntax for creating functions
