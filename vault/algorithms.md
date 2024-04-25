@@ -1,0 +1,121 @@
+---
+id: y2xzpakn8cmjtrwy7e5ftrl
+title: Algorithms
+desc: ''
+updated: 1714582789851
+created: 1714068959019
+---
+
+Resources: 
+- [Mayanwolfe Ultimate Guide to Js Algos Course 10.12.22]
+(https://www.twitch.tv/mayanwolfe)
+- [Codevolution Js Algos](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiRYB4-HHKHblh3_bQNJTMa) [code](https://replit.com/@Codevolution/JavaScript-Algorithms#index.js)
+- js.ds&a  [[DS&A|js.ds&a]] 
+- [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) 
+
+## Big-O Notation
+- describes complexity of an algorithm using algebraic terms
+- expressed in terms of input
+- focuses on bigger picture without getting caught up in details
+
+
+## Big-O Time Complexity
+- Linear time complexity
+    - O(n) - Linear
+    - as size of input increases, the time complexity also increases
+    - ex: loops
+- Constant Time Complexity
+    - O(1) - Constant
+    - Irrespective of value of n, expression is executed once
+- Quadratic Time Complexity
+    - O(n^2) - Quadratic
+- Cubic Time Complexity
+    - O(n^3) - Cubic
+- Logarithmic Time Complexity
+    - O(logn) - Logarithmc
+    - input size reduces by half every iteration 
+    
+
+## Big-O Space Complexity
+- Constant Space complexity
+    - O(1) - constant
+    - algo does not need extra memory or the memory needed does not depend on input size (constant space complexity)
+    - ex: sorting algos. Sort within array w/o using additonal arrays
+    
+- Linear Space Complexity
+    - O(n) - Linear
+    - Extra space needed grows as input size grows
+    
+- Logarithmic Space Complexity
+    - O(logn) - logarithmic
+    - extra space needed grows but not at the same rate as the input size
+    
+## Big-O Complexity of Objects, Arrays, & Methods
+### Objects
+- object - collection of key value pairs; not ordered
+- insert - O(1) (constant)
+- Remove - O(1)
+- Access - O(1)
+- Search - O(n) (linear)
+- Object.keys() - O(n)
+- Object.values() - O(n)
+- Object.entries() - O(n)
+
+### Arrays
+- array - ordered collection of values; start at index [0] and increment by 1
+- insert/remove at end - O(1)
+- indert/remove at beginning - O(n). (b/c index has to be reset for every remiaing element in the array)
+- access - O(1)
+- searching - O(n)
+- push/pop - O(1)
+- shift / unshift / concat / slice / splice - O(n)
+- forEach / map / filter / reduce - O(n)
+
+## Big-O Guide
+[Know Thy Complexities](https://www.bigocheatsheet.com/)
+- Calculation not dependent on input size - O(1)
+- 1 loop - O(n)
+- 2 nested loops - O(n^2)
+- input size reduced by half - O(logn)
+
+## Math Algorithms
+### Fibonacci sequence
+- Problem: given a number n, find the first n elements of the Fibonacci sequence
+    - fibonacci sequence is a sequence in which each number is the sum of the two preceding ones
+        - fibonacci(2) = [0,1]
+        - fibonacci(3) = [0,1,1]
+        - fibonacci(7) = [0,1,1,2,3,5,8]
+        
+    ```javascript
+    function fibonacci(n) {
+        const fib = [0,1]
+        
+        for(let i = 2; i <  n; i++){//i < 2 >>> NaN
+            fib[i] = fib[i-1] + fib[i-2]
+        }
+        return fib
+    }
+    ```
+    - Big-O = O(n) (linear) - the number of times n increases, the number of times expression for fib[i] increases
+
+### Factortial of a Number
+- Problem: given integer n, find factorial of that int
+    - in mathematics, the factorial of a non-negative integer (n!) is the product of all positive integers <= n    
+    - factorial(0) = 1 ???
+    - factorial(4) = 4*3*2*1 = 24
+    - factorial(5) = 5*4*3*2*1 = 120
+    ``` javascript
+    function factorial(n) {
+        let result = 1
+        for(let i=1; i <= n; i++ ) {
+            result = result * i
+        }
+        return result
+    }
+    console.log(factorial(0))
+    console.log(factorial(4)) //24
+    console.log(factorial(5)) //120
+
+
+    ```
+    

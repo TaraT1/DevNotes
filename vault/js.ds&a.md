@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1708011449942
+updated: 1714066878075
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
@@ -50,7 +50,9 @@ Properties:
 Considerations for efficency:
 
 - time complexity (execution time of an operation)
+ - amount of time taken by an algorithm to run as a function of input size
 - space complexity (memory usage of an operation)
+  - amount of memory taken by an algorithm to run as a function of input size
 
 ## SWE's responsibility
 
