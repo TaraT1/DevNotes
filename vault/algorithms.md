@@ -2,7 +2,7 @@
 id: y2xzpakn8cmjtrwy7e5ftrl
 title: Algorithms
 desc: ''
-updated: 1714582789851
+updated: 1715213966981
 created: 1714068959019
 ---
 
@@ -90,7 +90,7 @@ Resources:
     function fibonacci(n) {
         const fib = [0,1]
         
-        for(let i = 2; i <  n; i++){//i < 2 >>> NaN
+        for(let i = 2; i <  n; i++){ // Note: i < 2 >>> NaN
             fib[i] = fib[i-1] + fib[i-2]
         }
         return fib
@@ -115,7 +115,46 @@ Resources:
     console.log(factorial(0))
     console.log(factorial(4)) //24
     console.log(factorial(5)) //120
-
-
     ```
+### Test for Prime Number
+- Problem: integer greater than 1 that is not the produt of 2 natural numbers (numbers used for counting and ordering)
+    - isPrime(5) = true( 1*5 or 5*1 )
+    - isPrime(4) = false ( 1*4 or 2*2 or 4*1)
+```javascript
+function isPrime(n){
+    if(n < 2){ // every num is divisible by 1
+        return false
+    }
+    for(let i=2; i < n; i++){
+        if(n % i === 0) {
+            return false
+        }
+        return true
+    }
+}
+console.log(isPrime(1)) //false
+console.log(isPrime(5)) //true
+console.log(isPrime(2)) //false
+```
+- Big-O: O(n) - Linear - as input increases, time complexity increases
+### Test for Prime Number Optimized
+- ints larger than sqrt can be eliminated. Whenever n=a*b one of the two factors is <= sqrt of n. For a composite number, there will be a divisor less than or equal to sqrt
+```javascript
+function isPrimeOptimized(n){
+    if(n<2){
+        return false
+    }
+    for(let i=2; i<= Math.sqrt(n); i++) {
+        if(n%i === 0){
+            return false
+        }
+    }
+    return true
+}
+console.log(isPrime(1)) //false
+console.log(isPrime(5)) //true
+console.log(isPrime(2)) //false
+```
+## Recursion
+
     
