@@ -2,7 +2,7 @@
 id: y2xzpakn8cmjtrwy7e5ftrl
 title: Algorithms
 desc: ''
-updated: 1715213966981
+updated: 1715220425205
 created: 1714068959019
 ---
 
@@ -97,8 +97,9 @@ Resources:
     }
     ```
     - Big-O = O(n) (linear) - the number of times n increases, the number of times expression for fib[i] increases
+    - [[#recursion]]
 
-### Factortial of a Number
+### Factorial of a Number
 - Problem: given integer n, find factorial of that int
     - in mathematics, the factorial of a non-negative integer (n!) is the product of all positive integers <= n    
     - factorial(0) = 1 ???
@@ -156,5 +157,42 @@ console.log(isPrime(5)) //true
 console.log(isPrime(2)) //false
 ```
 ## Recursion
+Recursion is a problem solving technique where the solution depends on solutions to smaller instances of the same problem
+- Function calls itself
+- Recursive solutons need to have a base case -- a condition to terminate the recursion
+- Recursion may simplify solving a problem, but it does not always translate to a faster solution
+- Tips
+    - Breakdown problem into smaller versions of same problem
+    - figure  out a case for recursion
 
-    
+### Recursive Fibonacci Sequence
+```javascript
+function recursiveFibonacci(n){
+    //Fn = F(n-1) + F(n-2)
+    if(n < 2){
+        return n
+    }
+    return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
+}
+console.log(recursiveFibonacci(2)) // [0,1]
+console.log(recursiveFibonacci(3)) // [0,1,1]
+console.log(recursiveFibonacci(7)) // [0,1,1,2,3,5,8]
+```
+- Big-O = O(2^n) (quadratic)
+- [[#fibonacci-sequence]]
+
+### Recursive Factorial of a Number
+```javascript
+function recursiveFactorial(n){
+    //n! = n * (n-1)!
+    if(n === 0){ //base case
+        return 1
+    }
+    return n * recursiveFactorial(n-1)
+}
+console.log(recursiveFactorial(0)) //1
+console.log(recursiveFactorial(1)) //1
+console.log(recursiveFactoral(5)) //120
+```
+- Big-O=O(n)
+- [[#factorial-of-a-number]]
