@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1714583797507
+updated: 1715378535875
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
