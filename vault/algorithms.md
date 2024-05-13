@@ -2,7 +2,7 @@
 id: y2xzpakn8cmjtrwy7e5ftrl
 title: Algorithms
 desc: ''
-updated: 1715377599619
+updated: 1715647323224
 created: 1714068959019
 ---
 
@@ -64,7 +64,7 @@ Resources:
 ### Arrays
 - array - ordered collection of values; start at index [0] and increment by 1
 - insert/remove at end - O(1)
-- indert/remove at beginning - O(n). (b/c index has to be reset for every remiaing element in the array)
+- insert/remove at beginning - O(n). (b/c index has to be reset for every remaining element in the array)
 - access - O(1)
 - searching - O(n)
 - push/pop - O(1)
@@ -76,7 +76,7 @@ Resources:
 - Calculation not dependent on input size - O(1)
 - 1 loop - O(n)
 - 2 nested loops - O(n^2)
-- input size reduced by half - O(logn)
+- input size reduced by half - O(log(n))
 
 ## Math Algorithms
 ### Fibonacci sequence
@@ -251,4 +251,30 @@ console.log(binarySearch([-5, 2, 4, 6, 10], 10)) //4
 console.log(binarySearch([-5, 2, 4, 6, 10], 6)) //3
 console.log(binarySearch([-5, 2, 4, 6, 10], 20)) //-1
 ```
-- Big-O=O(logn) - Within while loop, the input size is reduced by half
+- Big-O=O(log(n)) - Within while loop, the input size is reduced by half
+
+### Recursive Binary Search
+Guidelines for solving recursive problems: 
+- Breakdown into smaller version  
+- Establish base case
+
+ ``` javascript
+ function recursiveBinarySearch(arr, target) {
+    return search(arr, target, 0, arr.length -1)
+ }
+ function search(arr, target, leftIndex, rightIndex) {
+    let middleIndex === Math.floor((leftIndex + rightIndex)/2) 
+    if (target = arr[middleIndex]){
+        return middleIndex
+    }
+    if (target < arr[middleIndex]){
+        return search(arr, target, leftIndex, middleIndex -1)
+    } else {
+        return search(arr, target, middleIndex + 1, rightIndex)
+    }
+ }
+console.log(binarySearch([-5, 2, 4, 6, 10], 10)) //4
+console.log(binarySearch([-5, 2, 4, 6, 10], 6)) //3
+console.log(binarySearch([-5, 2, 4, 6, 10], 20)) //-1
+```
+- Big-O=O(log(n))
