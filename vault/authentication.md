@@ -2,7 +2,7 @@
 id: p669krwb3vq2q81ckdfqn31
 title: Authentication
 desc: ''
-updated: 1713113809306
+updated: 1716152791187
 created: 1695399712830
 ---
 
@@ -123,3 +123,5 @@ passort.authenticate(['strategy1', 'strategy2']...
 
 ```
 - [Multi-Provider OAuth 2 Auth](https://rrawat.com/blog/multi-provider-oauth2-nodejs)
+- Traversy Storybooks ['tube](https://www.youtube.com/watch?v=SBvmnHTQIPY&list=PLillGF-RfqbZ2ybcoD2OaabW2P7Ws8CWu&index=32&t=3605s) [github](https://github.com/bradtraversy/storybooks)
+ - [Implementing with AuthO](https://auth0.com/blog/create-a-simple-and-secure-node-express-app/)
