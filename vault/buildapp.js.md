@@ -2,7 +2,7 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1695396592273
+updated: 1716227610568
 created: 1664214557269
 ---
 - clone Leon's full-stack-template or Binary Upload Boom
@@ -217,7 +217,7 @@ app.use("/wiki", wiki);
 
 ```
 ### middleware function
-routes have req, res. Middleware callbacks have req, res, next
+routes have req, res. Middleware callbacks access req, res, next
 ```js
 const midware = function (req, res, next){
     //...
@@ -240,10 +240,16 @@ Can declare route handler middleware functions separately and the set as callbac
 ![](/assets/images/MVC routes.jpg){max-width: 400px, display: block, margin: 0 auto}
 
 ### Dates
-- momentjs.com
+- From momentjs, [Alternatives to momentjs](https://momentjs.com/docs/#/-project-status/recommendations/)
+    - momentjs.com - not recommend to use going forward. Legacy project in maintenance mode. 
+        - built on previous era of js ecosystem
+        - [ref](https://momentjs.com/docs/#/-project-status/)
 - Modify date object from db. Format it in the controller of the get request for server-side formatting
 - for ejs, send formatted date in a variable to ejs
 ### res.render vs res.redirect 
 Ref: https://dev.to/mochafreddo/understanding-resredirect-and-resrender-in-expressjs-usage-and-security-measures-2k60
 - Redirect: redirects to an endpoint. (Typically used for routing it seems)
 - Render: returns the ejs template itself
+ ### Contact Forms
+ - [netlify forms](https://www.netlify.com/platform/core/forms/)
+ - [formspree](https://formspree.io)
