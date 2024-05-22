@@ -2,7 +2,7 @@
 id: p669krwb3vq2q81ckdfqn31
 title: Authentication
 desc: ''
-updated: 1716152791187
+updated: 1717195896182
 created: 1695399712830
 ---
 
@@ -125,3 +125,14 @@ passort.authenticate(['strategy1', 'strategy2']...
 - [Multi-Provider OAuth 2 Auth](https://rrawat.com/blog/multi-provider-oauth2-nodejs)
 - Traversy Storybooks ['tube](https://www.youtube.com/watch?v=SBvmnHTQIPY&list=PLillGF-RfqbZ2ybcoD2OaabW2P7Ws8CWu&index=32&t=3605s) [github](https://github.com/bradtraversy/storybooks)
  - [Implementing with AuthO](https://auth0.com/blog/create-a-simple-and-secure-node-express-app/)
+ 
+ ## Passport.js
+ Passport is authentication middleware for Node.js. Extremely flexible and modulear. Passport can be unobtrusively dropped into any Express-based web app
+ - has strategies or authentication mechanisms, which are packaged as individual modules
+ 
+ ## OpenID Connect Protocol
+ - used by Azure AD (Azure Active Directory)
+ - OSS simple identity layer atop OAuth 2.0 protocol
+ - allows clients to verify the identity of the end user based on the authentication performed by an authorization server
+ - also obtains basic profile information about the end user in an interoperable and REST-like manner
+    - interoperable - of or related to the ability to share data between different computer systems
