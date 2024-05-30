@@ -2,7 +2,7 @@
 id: p669krwb3vq2q81ckdfqn31
 title: Authentication
 desc: ''
-updated: 1717195896182
+updated: 1718131477589
 created: 1695399712830
 ---
 
@@ -136,3 +136,8 @@ passort.authenticate(['strategy1', 'strategy2']...
  - allows clients to verify the identity of the end user based on the authentication performed by an authorization server
  - also obtains basic profile information about the end user in an interoperable and REST-like manner
     - interoperable - of or related to the ability to share data between different computer systems
+    
+## Cookies, Sessions, etc
+Express uses a cookie to store a session id with an encryption signature in the user's browser and then, on subsequent requests, uses the value of that cookie to retrieve session information stored on the server.
+- This server side storage can be a memory store (default) or any other store which implements the required methods
+- Find the cookie using browser inspect Application/Cookies. The cookie is stored on the client. Storing session in db, session persists.
