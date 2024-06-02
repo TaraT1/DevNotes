@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1709920951454
+updated: 1718309079591
 created: 1667248557067
 ---
 Refs: 
@@ -48,7 +48,7 @@ functions that allow us to hook into the React state and lifecycle features from
 - useEffect performs side effects in function components (make http reqs when page loads)
 - Also useContext, useReducer, useRef, etc. and can create custom hooks
 
-## Create New React App
+## Create New React App - DEPRECATED
 npm create-react-app. Install using npm
 react dev tools in browser
 ```
