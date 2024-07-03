@@ -2,7 +2,7 @@
 id: pogmxvdud885qagqs0l04zu
 title: For
 desc: ''
-updated: 1709137792637
+updated: 1719935903600
 created: 1684156300400
 ---
 ## for statement
@@ -11,7 +11,7 @@ created: 1684156300400
 ~ syntax
 
 ```javascript
-for (initialization; condition; afterthought) {
+for (initialization; condition; final expression) {
     ...
 }
 
@@ -23,10 +23,10 @@ for (let i=0; i < 9; i++) {
 
 ## for...of
 
-~ executes loop that operates on a sequence of values sourced from an iterable object like arrays, strings, map, set, nodelist, etc
-~ each loop operation on a value is called an iteration. The loop iterates over the iterable.
-~ Iterable has `@@iterator()` method that returns iterator and repeatedly calls resulting iterators `next()` to produce sequence of values to be assigned to variable
-~ syntax
+- executes loop that operates on collections rather than all objects. (for...of executes on a sequence of values sourced from an iterable object like arrays, strings, map, set, nodelist, etc)
+- each loop operation on a value is called an iteration. The loop iterates over the iterable.
+- Iterable has `@@iterator()` method that returns iterator and repeatedly calls resulting iterators `next()` to produce sequence of values to be assigned to variable
+- syntax
 
 ```javascript
 for (variable of iterable){
@@ -59,8 +59,8 @@ reverseString(yxt2)//2txy
 
 ## for...in
 
-~ iterates over enumerable (countable) string properties of an object ignoring properties keyed by symbols.
-~ syntax: `for(variable in object)`
+- iterates over enumerable (countable) properties of an object 
+- syntax: `for(variable in object)`
 
 ```javascript
 const object = { a: 1, b: 2, c: 3 }
