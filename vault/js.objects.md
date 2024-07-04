@@ -2,7 +2,7 @@
 id: rbar2jbq5o5giyon8ylu4s5
 title: Objects
 desc: 'Class 22 of Leon; ref: javascript.info/object'
-updated: 1719272933287
+updated: 1719947042100
 created: 1654630765740
 ---
 # Objects
@@ -103,6 +103,17 @@ class MakeCar {  //no parenths here
 }
 
 let hondaCivic = new MakeCar('Honda', 'Civic', 'Silver', 4)
+
+//class with static keyword
+class Class {
+    static number = 1
+
+    static getNumber() {
+        const result = this.number
+        this.number *= 2
+        return result
+    }
+}
 ```
 
 ref: [brocode js full course](https://www.youtube.com/watch?v=lfmg-EJ8gm4&t=15498s)
@@ -255,6 +266,17 @@ user1.sayHello()
 user2.sayHello()
 console.log(User.getUserCount) //errors - reprints method
 user.getUserCount() //There be 2 dragons
+
+//class with static keyword
+class Class {
+    static number = 1
+
+    static getNumber() {
+        const result = this.number
+        this.number *= 2
+        return result
+    }
+}
 ```
 
 # Inheritance
