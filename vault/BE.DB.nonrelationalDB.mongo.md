@@ -2,7 +2,7 @@
 id: pavk5nyvisfr8bhg9yx0fku
 title: mongo
 desc: ''
-updated: 1717599080673
+updated: 1720926704902
 created: 1693859150944
 ---
 ## MongoDB
@@ -163,4 +163,24 @@ router.get('/user/:userId', ensureAuth, async (req, res) => {
 
 
 ```
+### Populate
+https://dev.to/paras594/how-to-use-populate-in-mongoose-node-js-mo0
+- Replaces path in document with documents from other collections
+- define refs in schema and mongoose uses refs to look for docs in other collection
+  - if no docs found, returns null
+  - can chain populate method for populating multiple fields
+  - if 2 populate methods populate same field, second populate overrides first one
 
+
+### Aggregate
+https://learn.mongodb.com/learn/course/mongodb-aggregation/lesson-1-introduction-to-mongodb-aggregation/learn  
+
+https://www.digitalocean.com/community/tutorials/how-to-use-aggregations-in-mongodb
+- Mongo's query mechanism doesn't allow grouping or transforming data returned from queries. Thus options for performing meaningful data analysis with mongo's query mechamism is limited.
+- MongoDB provides aggregation operations through aggregation pipelines - series of operations that process data documents sequentially
+- [How to Create Queries in mongodb](https://www.digitalocean.com/community/tutorials/how-to-create-queries-in-mongodb)
+#### Aggreation Pipelines
+- built as sequential series of declarative data processing operations known as stages
+- each stage inspects and transforms documents as they pass through pipeline and feed into subsequent stages for further processing
+- Stages can perform operations on data like filtering, sorting, transforming, grouping
+- analogy: restaurant ktichen preparing vegetables
