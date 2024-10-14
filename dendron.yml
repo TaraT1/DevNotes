@@ -24,6 +24,9 @@ commands:
 workspace:
     vaults:
         -
+            fsPath: ../Prive
+            name: Prive
+        -
             fsPath: Prive
         -
             fsPath: vault
@@ -73,6 +76,7 @@ workspace:
     maxPreviewsCached: 10
     maxNoteLength: 204800
     enableFullHierarchyNoteTitle: false
+    enablePersistentHistory: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -103,11 +107,12 @@ publishing:
     enableFrontmatterTags: true
     enableHashesForFMTags: false
     enableRandomlyColoredTags: true
+    enableTaskNotes: true
     enablePrettyLinks: true
+    searchMode: lookup
     duplicateNoteBehavior:
         action: useVault
         payload:
             - vault
             - Prive
-    enableTaskNotes: true
-    searchMode: lookup
+            - Prive
