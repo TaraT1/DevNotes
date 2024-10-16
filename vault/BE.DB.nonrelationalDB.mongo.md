@@ -51,6 +51,10 @@ Ref: mongodb [Schema Design Best Practices](https://www.youtube.com/watch?v=leNC
 - arrays should not grow without bound. Use reverse referencing in separate document
 - how model data depends on application's data access patterns
 
+### Schema Validation
+[WDS Mongoose crash Course](https://www.youtube.com/watch?v=DZBGEVgL2eE&t=838s)
+- Schema validation only works with create() or save(). Other methods work directly on the mongodb database (findByIdAndUpdate, etc.) Workaround: findById, then use save()
+
 ### Hybrid
 - outlier pattern: overflow
 
@@ -96,6 +100,10 @@ Syntax: `db.collection.findOneAndUpdate(filter, update)`
 - reference for learning: 'tube: wds Mongoose Crash Course - Beginner Through Advanced
 - It is a wrapper around mongodb that works in nodejs
 - cheatsheet: webdevsimplified.com/mongodb-cheat-sheet.html
+
+### Dates
+- schema dzn: createdAt, updatedAt: ( {schema...}, {timestamps: true} )
+Mongoose will then set createdAt when the document is first inserted, and update updatedAt whenever you update the document using save(), updateOne(), updateMany(), findOneAndUpdate(), update(), replaceOne(), or bulkWrite(). [mongoose dox for timestamps](https://mongoosejs.com/docs/timestamps.html)
 
 ### Concepts
 - Schema - defines structure of data. E.g. User has name, email, etc
