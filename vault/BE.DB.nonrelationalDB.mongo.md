@@ -97,18 +97,26 @@ Syntax: `db.collection.findOneAndUpdate(filter, update)`
 - Mongoose is an Object Data Modeling (ODM) library for MongoDB and Javascript. 
 - It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB. 
 - Reference: https://www.geeksforgeeks.org/mongoose-vs-mongodb/
-- reference for learning: 'tube: wds Mongoose Crash Course - Beginner Through Advanced
+- reference for learning: 'tube: wds [Mongoose Crash Course - Beginner Through Advanced](https://www.youtube.com/watch?v=DZBGEVgL2eE&t=536s)
 - It is a wrapper around mongodb that works in nodejs
 - cheatsheet: webdevsimplified.com/mongodb-cheat-sheet.html
-
-### Dates
-- schema dzn: createdAt, updatedAt: ( {schema...}, {timestamps: true} )
-Mongoose will then set createdAt when the document is first inserted, and update updatedAt whenever you update the document using save(), updateOne(), updateMany(), findOneAndUpdate(), update(), replaceOne(), or bulkWrite(). [mongoose dox for timestamps](https://mongoosejs.com/docs/timestamps.html)
 
 ### Concepts
 - Schema - defines structure of data. E.g. User has name, email, etc
 - Model - Schema in actual form that can be used
 - Query -  query against db
+
+### Validation on the Model only works with create() or save()
+- validation only works with create or save methods. Other methods don't go through validation. They go directly on mongodb database
+- findOneAndUpdate, findByIdAndUpdate skip validation
+- soln: User.findById().save()
+
+### Dates
+- schema dzn: createdAt, updatedAt: ( {schema...}, {timestamps: true} )
+Mongoose will then set createdAt when the document is first inserted, and update updatedAt whenever you update the document using save(), updateOne(), updateMany(), findOneAndUpdate(), update(), replaceOne(), or bulkWrite(). [mongoose dox for timestamps](https://mongoosejs.com/docs/timestamps.html)
+
+### Query Basics, Schema Methods/Virtuals, Schema Middleware
+'tube: wds [Mongoose Crash Course - Beginner Through Advanced](https://www.youtube.com/watch?v=DZBGEVgL2eE&t=536s)
 
 ## Errors and (Hopefully) Fixes
 Errors arise with authentication and validation because of different methods needed in handling different objects. Check for null or undefined values.
