@@ -5,6 +5,10 @@ desc: 'Leon class 12, 13'
 updated: 1654059401631
 created: 1650508492016
 ---
+- Linting reference for js: https://dev.to/hkp22/optimizing-javascript-development-a-guide-to-eslint-prettier-and-vscode-setup-for-code-linting-formatting-37b3
+(prettier?)
+- why use linter
+- Recommended VS Code extensions for js: https://www.30secondsofcode.org/js/s/10-vs-code-extensions-for-js-developers/
 
 # Reference (homework): 
 - [Js variables] (https://javascript.info/variables) 
