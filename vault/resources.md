@@ -5,6 +5,15 @@ desc: 'Compiling references and resources'
 updated: 1684161634566
 created: 1665691685095
 ---
+## Implementing Auth in Web Pages
+- [The Copenhagen Book](https://thecopenhagenbook.com/) - FOSS, community maintained; opionionAted or incomplete at times
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html) - use along side Copenhagen Book
+
+[[authentication]]
+
+## Vim
+[Practical Vim](https://digtvbg.com/files/LINUX/Practical%20Vim%20-%20Drew%20Neil_1241.pdf) looks amazing
+
 ## React
 - [ ] [React dox](https://reactjs.org/docs/getting-started.html)
     - [ ] Lifecycle
