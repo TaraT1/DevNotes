@@ -94,8 +94,8 @@ Syntax: `db.collection.findOneAndUpdate(filter, update)`
 ### findByIdAndUpdate
 
 ## Mongoose
-- Mongoose is an Object Data Modeling (ODM) library for MongoDB and Javascript. 
-- It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB. 
+- Mongoose is an Object Data Modeling (ODM) or Object Relational Mapping (ORM) library for MongoDB and Javascript. 
+- It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB; forces semi-rigid schema
 - Reference: https://www.geeksforgeeks.org/mongoose-vs-mongodb/
 - reference for learning: 'tube: wds [Mongoose Crash Course - Beginner Through Advanced](https://www.youtube.com/watch?v=DZBGEVgL2eE&t=536s)
 - It is a wrapper around mongodb that works in nodejs
@@ -105,6 +105,22 @@ Syntax: `db.collection.findOneAndUpdate(filter, update)`
 - Schema - defines structure of data. E.g. User has name, email, etc
 - Model - Schema in actual form that can be used
 - Query -  query against db
+```javascript
+//reference: mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose
+const blogSchema = new Schema({
+  title: String,
+  content: String,
+  comments: [{
+    user: String,
+    content: String,
+    votes: Number
+  }]
+})
+
+const Blog = model('Blog', blogSchema)
+export default Blog
+
+```
 
 ### Validation on the Model only works with create() or save()
 - validation only works with create or save methods. Other methods don't go through validation. They go directly on mongodb database
