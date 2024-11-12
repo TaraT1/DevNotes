@@ -65,8 +65,17 @@ git fork //if no write privs, git fork to repo and then git clone to local machi
 ```
 git add <filename> . or *
 git status - what's in staging area
-git rm --cached <filename> - removes
 ```
+## Remove files from git
+```
+// remove files from git repo and the filesystem
+git rm file1.txt && git commit -m 'Remove file'
+// remove file only from git repo and not from filesystem
+git rm --cached file1.txt && git commit -m 'Remove file from repo and not filesystem'
+//push changes to remote repo
+git push origin branch_name
+```
+[Ref to delete file](https://stackoverflow.com/questions/2047465/how-do-i-delete-a-file-from-a-git-repository)
 
 ## Commit
 ```
