@@ -2,7 +2,7 @@
 id: 77z1hygtl1q29yha1kndept
 title: Functions
 desc: ''
-updated: 1713812909921
+updated: 1734038081770
 created: 1653421978749
 ---
 # Functions
@@ -144,4 +144,21 @@ let favPoke = pokemon[0]
 pokemon.forEach( (x,i)=>console.log(x) )
 
 ```
+## this, call, bind, apply
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
+- With arrow funcs, scope is global and assumes `this` is the globalThis
+- `this` value is inherited from lexical scope
+
+```
+var checkThis = {
+  normalFunction: function () { console.log(this); },
+  arrowFunction: () => console.log(this)
+};
+
+checkThis.normalFunction(); //Object {}
+checkThis.arrowFunction(); //Window {external: Object, chrome: Object, document: document, tmpDebug: "", j: 0…}
+
+```
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
