@@ -2,12 +2,13 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1718309079591
+updated: 1739550078479
 created: 1667248557067
 ---
 Refs: 
 - [Travis Media](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
 - [dox](https://reactjs.org/)
+- [tech w tim 'tube](https://www.youtube.com/watch?v=G6D9cBaLViA)
 
 React is a library for building UI
 - runs on client as SPA
@@ -141,4 +142,75 @@ use to inspect React apps. Install in browser.
 - modern - more function based.
     - uses hooks, import export js functions
 - older: components are class based. 
+
+### React Tech w Tim 'tube
+- jsx 
+- component - function that returns jsx code (html)
+    - starts with capital letter
+    - returns need to have parent element
+        - can use fragment <>...</>
+- state shows change; something where once changed componenet will change and re-render itself to show nwe state
+    - syntax:
+    ``` javascript
+    function Home(){
+        const [searchQuery, setSearchQuery] = useState("")
+        //submit btn by default refreshes page
+        e.preventDefault()
+        setSearchQuery('')
+    }
+    ```
+    - when state changes then component is re-rendered
+- hook
+- page routing
+    - React Router
+- API calls
+    - good practice to use separate file for API calls
+    - fetch() - function to send network request
+- useEffect - allows adding side effects to functions /components & define when run
+- contexts
+    - React context
+    - storage: localStorage; sessionStorage
+    - context allows state to be available globally to anything that's within provided context
+- children - reserved property of written or rendered component
+
+## Scrimba Learn React
+## React is a Library
+- library - collection of reusable code
+    - reduces need to write repetitive/complex things from scratch
+    - dev controls how/when used. Few boundaries
+- framework - predetermined architcture - follow specified pattern of development
+    - work within boundaries set by framework
+    - opinionated - right and wrongb ways to use It
+### History
+- 2006  jQuery - bridge browsers
+- 2010  Angular.js (v1), ember, backbone.js
+- 2013  React, Angular v2, Vue.js
+- 2016  svelt, nextjs - fs framework using React as its UI library
+- 2020  ...
+
+### Composable /Declarative
+- composable - composable code is code that can be combined to create more powerful higher-level constructs. Easily reusable and interchangeable pieces of the web that can be combined in various ways to create complex systems (Lego bricks are composable unlike the statue of David)
+    - component -identifiable part of a larger program or construction. Usually provides specific functionality or group of related functions 
+- Declarative - can lean on React library to handle manual, tedious tasks
+- imperative - in contrast to declarative - Describe every step how task should be done
+
+### Code 
+- Save files as jsx if there's any jsx
+- img may need absolute path when using vite
+- vite
+- file/content structure
+    - index.css
+    - index.html - contains html element with "root" id
+    - index.jsx
+
+```javascript
+import {createRoot} from "react-dom/client"
+
+//Initialize root, which is element in the body
+const root = createRoot(document.getElementById("root"))
+root.render(
+    <h1>...</h1>
+)
+```
+
 
