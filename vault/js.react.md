@@ -2,13 +2,14 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1739550078479
+updated: 1739744591323
 created: 1667248557067
 ---
 Refs: 
 - [Travis Media](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
 - [dox](https://reactjs.org/)
 - [tech w tim 'tube](https://www.youtube.com/watch?v=G6D9cBaLViA)
+- [roadmap](https://www.onepin.io/roadmap/A-visual-timeline-roadmap-to-master-React-in-03-months-679266451dd9295920315d17)
 
 React is a library for building UI
 - runs on client as SPA
@@ -174,6 +175,8 @@ use to inspect React apps. Install in browser.
 - children - reserved property of written or rendered component
 
 ## Scrimba Learn React
+[Scrimba tut with Bob Ziroll](https://www.youtube.com/watch?v=x4rFhThSX04&t=781s)
+- https://github.com/scrimba/learn-react 
 ## React is a Library
 - library - collection of reusable code
     - reduces need to write repetitive/complex things from scratch
@@ -210,6 +213,124 @@ import {createRoot} from "react-dom/client"
 const root = createRoot(document.getElementById("root"))
 root.render(
     <h1>...</h1>
+)
+```
+### Components
+A component is a function that returns React elements. 
+- A React element is react version of what we see in the DOM. 
+- When returning React elements (html elements) 
+    - jsx to calls to createElement 
+    - turns to js objects that react interprets and turns into DOM nodes under the hood. 
+    - Hence, a React component is a function that returns React elements (UI)
+``` javascript
+import {createRoot} from "react-dom/client"
+const root = createRoot(document.getElementById("root"))
+
+function Page() {
+    return (
+        <div>
+            <header>
+                ...
+            </header>
+            <main>
+                ...
+            </main>
+        </div>
+    )
+}
+```
+
+- Functions give power of reusability - encapsulating reusable pieces of code, adding params allows flexibility, call func when need to accomplish task
+``` javascript
+function TemporaryName() {
+    return  ( //Can start html on same line w/o ()
+        html for root...
+    )
+}
+
+root.render(
+   <TemporaryName /> //self-closing tag
+)
+
+```
+- Custom components use pascal case: TemporaryName
+- Call with < /> - self-closing angle brackets
+
+### Fragments
+- Avoid adding unnecessary html elements in the dom mode by using fragments
+- <>...</> - **New**
+- **Old**
+```javascript
+import {Fragment} from "react" 
+
+<Fragment>
+    ...
+</Fragment>
+
+### Parent/Child Components
+wsl: learn-react/challenges 
+Breakdown elements into separate components and call them
+``` javascript
+/* Challenge
+Move header element from Page component into its own component Header
+
+Render instance of Header compoent insde Page component where header used to be
+
+2: Move main content to its own component Main
+
+3: Move footer content to its own component Footer
+
+
+*/
+import {createRoot} from "react-dom/client"
+
+const root = createRoot(document.getElementById("root"))
+
+
+function Page() {
+    return (
+        <>
+            <Header />
+            <MainContent />
+            <Footer />
+        </>
+    )
+}
+
+function Header() {
+    return (
+        <header>
+            <img src="./react-logo.png" alt="React logo" width="50rem"/>
+        </header>
+    )
+}
+
+function MainContent() {
+    return (
+        <>
+          <main>
+                <h1>Reason Excited for Learning React </h1>
+                <h2>(this is slick)</h2>
+                <ol>
+                    <li>React is a popular library, so I too can be a cool kid</li>
+                    <li>Money magnet skill</li>
+                    <li>It will be more better to implement my fantastic ideas</li>
+                </ol>
+            </main> 
+        </>
+    )
+}
+
+function Footer () {
+    return (
+            <footer>
+                <small>Copr. 2025 Thierry Development. All rights reserved.</small>
+            </footer>
+    )
+}
+
+root.render(
+    <Page />
 )
 ```
 
