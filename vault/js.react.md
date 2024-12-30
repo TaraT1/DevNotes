@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1739744591323
+updated: 1739745912002
 created: 1667248557067
 ---
 Refs: 
@@ -183,7 +183,7 @@ use to inspect React apps. Install in browser.
     - dev controls how/when used. Few boundaries
 - framework - predetermined architcture - follow specified pattern of development
     - work within boundaries set by framework
-    - opinionated - right and wrongb ways to use It
+    - opinionated - right and wrong ways to use It
 ### History
 - 2006  jQuery - bridge browsers
 - 2010  Angular.js (v1), ember, backbone.js
@@ -266,6 +266,7 @@ import {Fragment} from "react"
 <Fragment>
     ...
 </Fragment>
+```
 
 ### Parent/Child Components
 wsl: learn-react/challenges 
@@ -279,9 +280,8 @@ Render instance of Header compoent insde Page component where header used to be
 2: Move main content to its own component Main
 
 3: Move footer content to its own component Footer
-
-
 */
+
 import {createRoot} from "react-dom/client"
 
 const root = createRoot(document.getElementById("root"))
@@ -293,8 +293,7 @@ function Page() {
             <Header />
             <MainContent />
             <Footer />
-        </>
-    )
+        </>)
 }
 
 function Header() {
@@ -333,5 +332,12 @@ root.render(
     <Page />
 )
 ```
-
+### Styling with Classes
+- Add classes to jsx elements and access classes in css in order to style them. 
+- React creates DOM elements from jsx. className accesses native DOM properties in jsx.
+- In React use className because it accesses DOM properties, not because class is a reserved js keyword
+```
+const ul = document.createElement("ul")
+ul.className = ""
+```
 
