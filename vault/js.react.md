@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1739745912002
+updated: 1740265083711
 created: 1667248557067
 ---
 Refs: 
@@ -340,4 +340,22 @@ root.render(
 const ul = document.createElement("ul")
 ul.className = ""
 ```
+### Organizng Classes
+- Can separate components in index.jsx for modularity. Hence change file structure: Header.jsx, MainContent.jsx, Footer.jsx
+- export using `export default function FunctionName from "./FileName"
+- In index.jsx: `import Header from ... "./fileName`
 
+### Mental Models
+
+### Initial Project
+- Create App comp in separate App.jsx file (sibling to index.jsx)
+- `components` folder
+- Create components in sep files inside components folder. Navbar, Main
+- export and import Navbar and Main composable
+- import and render App comp inside index.jsx using ReactDOM
+- from google fonts, get "Inter" font with weights 400, 600, 700. Put links above style.css link in index.html
+
+### Reusability
+
+### Props
+ 
