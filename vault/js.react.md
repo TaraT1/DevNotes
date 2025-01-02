@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1740265083711
+updated: 1740352722967
 created: 1667248557067
 ---
 Refs: 
@@ -356,6 +356,65 @@ ul.className = ""
 - from google fonts, get "Inter" font with weights 400, 600, 700. Put links above style.css link in index.html
 
 ### Reusability
+- Places for data that can be nested, repeated.
 
 ### Props
- 
+- prop or property
+- Makes components reusable 
+
+### Aside: JS inside
+- {} - embed parameters  for React
+```javascript
+import ReactDOM from "react-dom/client"
+
+function App() {
+    const hours = new Date().getHours()
+    let timeOfDay
+
+    if (hours < 12) {
+        timeOfDay = "moanin'"
+    } else if (hours >= 12 && hours < 18 ) {
+        timeOfDay = "afternoon"
+    } else if (hours < 21 ) {
+        timeOfDay = "eve"
+    } else {
+        timeOfDay = "night"
+    }
+
+    return (
+        <h1>Good {timeOfDay}</h1> //renders Good timeOfDay
+    )
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+```
+### Receiving Props in a Component
+- function Component(props){...} In Component, label {props.var} that concurs with App.jsx data
+
+### Quiz
+- What do props help us help us accomplish?
+    - Props help to customize components and make them reusable
+
+- How do you pass a prop into a component?
+    - Establish the props name as the component function's parameter, e.g., props. 
+    - Like attr to html element <img src="???"> 
+
+- Can you pass custom prop to a native DOM element? Why or why not?
+    - I don't think so. Is there a way to get to the native DOM?
+    - No, jsx describing native DOM elements will be turned into real DOM elements by React. Real DOM elements only have properties/attrs specified in HTML specs.
+
+- How receive props in component?
+```javascript
+function Navbar() {
+    return (
+        <header>
+        ...
+        </header>
+    )
+}
+function Navbar(props)
+<div>props.data</div>
+```
+
+- what data type is `props` when component receives it?
+    - The data type of `props` when component receives it is an object, which uses . syntax.
