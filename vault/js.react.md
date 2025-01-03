@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1740352722967
+updated: 1740353801416
 created: 1667248557067
 ---
 Refs: 
@@ -418,3 +418,16 @@ function Navbar(props)
 
 - what data type is `props` when component receives it?
     - The data type of `props` when component receives it is an object, which uses . syntax.
+
+## Destructuring Props
+```javascript
+const person = {
+    img: "image file",
+    name: "name name",
+    phone: "ph#"
+    email: "emailaddy"
+}
+
+const {img, name} = person
+const {img: image, name} = person // : renames img to image
+```
