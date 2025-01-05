@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1740353801416
+updated: 1740679929934
 created: 1667248557067
 ---
 Refs: 
@@ -430,4 +430,94 @@ const person = {
 
 const {img, name} = person
 const {img: image, name} = person // : renames img to image
+```
+
+### Map Component
+Using dir structure: 
+- Component.jsx - holds structure, props, attrs, 
+- App.jsx holds pointers to where data is on page. External data can be accessed via .map()
+- dataFile.js - holds specific detailed data e.g. data for each entry
+```javascript
+//Component.jsx
+export default function Entry(props) {
+    return (
+        <article className="journal-entry">
+            <div className="main-image-container">
+                <img 
+                    className="main-image"
+                    src={props.img.src} 
+                    alt={props.img.alt}
+                />
+            </div>
+            <div className="info-container">
+                <img 
+                    className="marker"
+                    src="../images/marker.png" 
+                    alt="map marker icon"
+                />
+                <span className="country">{props.country}</span>
+                <a href={props.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.title}</h2>
+                <p className="trip-dates">{props.dates}</p>
+                <p className="entry-text">{props.text}</p>
+            </div>
+            
+        </article>
+    )
+}
+
+//Data
+    {
+        id: 1,
+        img: {
+            src: "https://scrimba.com/links/travel-journal-japan-image-url",
+            alt: "Mount Fuji"
+        },
+        title: "Mount Fuji",
+        country: "Japan",
+        googleMapsLink: "https://maps.app.goo.gl/6RLYZDuuuqJ7kNGZ9",
+        dates: "12 Jan, 2021 - 24 Jan, 2021",
+        text: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+    },
+    {
+        id: 2,
+        img: {
+            src: "https://scrimba.com/links/travel-journal-australia-image-url",
+            alt: "Sydney Opera House"
+        },
+        title: "Sydney Opera House",
+        country: "Australia",
+        googleMapsLink: "https://maps.app.goo.gl/Zr17SCrsJeCEKMd36",
+        dates: "27 May, 2021 - 8 Jun, 2021",
+        text: "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings."
+    },
+
+//App.js
+import Header from "./components/Header"
+import Entry from "./components/Entry"
+import data from "./data"
+
+export default function App() {
+    const dataEntries = data.map(entry => { //destructure, declare
+        return (
+            <Entry 
+                img={entry.img}
+                title={entry.title}
+                country={entry.country}
+                googleMapsLink={entry.googleMapsLink}
+                dates={entry.dates}
+                text={entry.text}
+                />
+        )
+    })
+
+    return (
+        <>
+            <Header />
+            <main className="container">
+                {dataEntries}
+            </main>
+        </>
+    )
+}
 ```
