@@ -2,7 +2,7 @@
 id: 6ihj6c14gk9fzy4mm96cy9q
 title: JS
 desc: 'Leon class 12, 13'
-updated: 1654059401631
+updated: 1738371714186
 created: 1650508492016
 ---
 - Linting reference for js: https://dev.to/hkp22/optimizing-javascript-development-a-guide-to-eslint-prettier-and-vscode-setup-for-code-linting-formatting-37b3
@@ -98,7 +98,23 @@ let user = 'John'
   - visible from any function unless shadowed by locals
   - capital-named constants are only used as aliases for “hard-coded” values. (Values are known prior to execution)
   ```const BIRTHDAY = '05.02.1963';
-- var is now  old-school
+- var declares function-scoped or globally-scoped variables, optionally initializing each to a value [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+
+### Difference between 2 loops with `let` & `var`
+
+```javascript
+const b = [1,2,3,4,5,6,7,8,9,10]
+for(let i = 0; i < 10; i++) {
+  setTimeout(() => console.log(b[i]), 1000)
+}
+for (var i = 0; i < 10; i++) {
+  setTimeout(() =>  console.log(b[i]), 1000)
+}
+```
+- let is block-scoped; setTimeout() logs b[0] to b[9]
+- var is global or function scoped; setTimeout() logs to 10, the first value where loop condition isn't met, after loop finishes resulting in "undefined." setTimeout is asynchronous and is executed after the loop has executed. Callback functions from setTimeout will capture final value of i=10
+- 
+- [discord discussion](https://discord.com/channels/735923219315425401/1095865515290919062/1331574494451466271) 
 
 ## Strings
 - " or ' surrounded text
