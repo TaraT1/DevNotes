@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1740679929934
+updated: 1740775681067
 created: 1667248557067
 ---
 Refs: 
@@ -432,10 +432,10 @@ const {img, name} = person
 const {img: image, name} = person // : renames img to image
 ```
 
-### Map Component
+### Map Component in App
 Using dir structure: 
 - Component.jsx - holds structure, props, attrs, 
-- App.jsx holds pointers to where data is on page. External data can be accessed via .map()
+- App.jsx holds pointers to where data is on page. Import components and external data. Data can be accessed via .map()
 - dataFile.js - holds specific detailed data e.g. data for each entry
 ```javascript
 //Component.jsx
@@ -466,7 +466,7 @@ export default function Entry(props) {
     )
 }
 
-//Data
+//data.js
     {
         id: 1,
         img: {
@@ -492,7 +492,7 @@ export default function Entry(props) {
         text: "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings."
     },
 
-//App.js
+//App.jsx
 import Header from "./components/Header"
 import Entry from "./components/Entry"
 import data from "./data"
@@ -521,3 +521,84 @@ export default function App() {
     )
 }
 ```
+
+### Unique key props
+    - "Each child in a list should have a unique "key" prop." Pass unique prop in key field: key: {}. (Best generated from db ids and not map index method)
+    - Using .map() to create unique id, is not recommended 
+
+### Pass object as props.
+Rather than putting in each property of an object or component. Can pass object as single prop plus its associated key
+
+```javascript
+export default function App() {
+    const dataEntries = data.map(entry => { //destructure, declare
+        return (
+            <Entry 
+                key={entry.id} //from datafile
+                entry={entry} //refers to the whole object. Passing object thru props. Props in component need additional pointer
+            />
+        )
+    })
+}
+
+export default function Entry(props){
+        return (
+        <article className="journal-entry" >
+            <div className="main-image-container">
+                <img 
+                    className="main-image"
+                    src={props.entry.img.src} //<Entry entry={entry}
+                    alt={props.entry.img.alt}
+                />
+            </div>
+            <div className="info-container">
+                <img 
+                    className="marker"
+                    src="../images/marker.png" 
+                    alt="map marker icon"
+                />
+                <span className="country">{props.entry.country}</span>
+                <a href={props.entry.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.entry.title}</h2>
+                <p className="trip-dates">{props.entry.dates}</p>
+                <p className="entry-text">{props.entry.text}</p>
+            </div>
+            
+        </article>
+    )
+}
+
+//* Syntatic sugar with object spread notation {...entry}
+export default function App() {
+    const dataEntries = data.map(entry => { //destructure, declare
+        return (
+            <Entry
+                key={entry.id}
+                {...entry} 
+            />
+        )}}
+
+export default function Entry(props){
+        return (
+        <article className="journal-entry" >
+            <div className="main-image-container">
+                <img 
+                    className="main-image"
+                    src={props.img.src} //<Entry entry={entry}
+                    alt={props.img.alt}
+                />
+            </div>
+            <div>
+                <span className="country">{props.country}</span>
+                <a href={props.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.title}</h2>
+                <p className="trip-dates">{props.dates}</p>
+                <p className="entry-text">{props.text}</p>
+            </div>
+
+```
+{...}: Syntatic sugar with object spread notation
+- verbose syntax for component but not on App()
+
+
+
