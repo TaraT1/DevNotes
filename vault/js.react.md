@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1740963611386
+updated: 1741104974207
 created: 1667248557067
 ---
 Refs: 
@@ -597,7 +597,7 @@ export default function Entry(props){
             </div>
 
 ```
-{...}: Syntatic sugar with object spread notation
+{...}: Syntactic sugar with object spread notation
 - verbose syntax for component but not on App()
 ## State
 State is a component's memory. 
@@ -614,6 +614,7 @@ State is a component's memory.
 ## Event Listeners
 - can be placed in javascript DOM
 - in html script tag
+- [react documentation Responding to Events](https://react.dev/learn/responding-to-events)
 
 ```javascript
 //App.jsx
@@ -629,14 +630,35 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 <script src="./index.jsx"...</script>
 </div>
 ```
-For React, event listeners are placed inside the component as an attribute added to elements. 
+For React, event listeners 
+- can be placed inside the component above the return as an attribute added to elements. 
+- can also define event handler inline in jsx as function declaration or anonymous or arrow function
+- By convention event handler functions start with `handle` followed by name of the event. handleClick, handleMouseEnter, &c
+- passing vs calling a function. Functions passed to event handlers must be passed and not called. When a function is called, it fires with rendering and not when triggered.
+```javascript
+//pass function
+<button onClick={() => alert('Passing a function')}>Passing onClick</button>
+<button onClick={handleClick}>Passes handleClick function</button>
+
+//calling function
+<button onClick={alert('Rendering without clicking')}></button>
+```
+
+
 ```
 function App() {
+
+    function handleClick() {
+        console.log("Clicked")
+    }
+
     return (
         <>
             <div></div>
-            <button onClick>Click this</button> //note: onClick not onclick
-        </>
+            <button onClick={function() {console.log("Clicked!")}}>Click this inline function</button> {/* inline event listener function. Note: onClick in React - not onclick*/}
+        
+            <button onClick={}>Click & function above component's return 
+        </button>
 
     )
 }
@@ -644,3 +666,11 @@ function App() {
 - [React dox adding interactivity](https://react.dev/learn/adding-interactivity)
 - [React dox mouse events](https://react.dev/reference/react-dom/components/common#mouseevent-handler)
 - Example proj11 event list c.f. Event Listener in proj /home/tarat/React/first-react/
+
+## React State
+- Props refers to properties being passed into a component - as in how a function receives parameters. A component receiving props is not allowed to modify props. Props are immutable.
+- State refers to values that are managed by the component, similar to variables declared inside a function. Would use state any time saving/displaying changing values.  
+### View as a function of state
+1. Render
+2. `setState`
+3. view = function(state)  
