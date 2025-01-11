@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1740775681067
+updated: 1740963611386
 created: 1667248557067
 ---
 Refs: 
@@ -599,6 +599,48 @@ export default function Entry(props){
 ```
 {...}: Syntatic sugar with object spread notation
 - verbose syntax for component but not on App()
+## State
+State is a component's memory. 
 
+### Static Web Pages
+- For the most part are read only. Ex: blogs, news sites, recipes
 
+### Dynamic Web Pages
+- User has ability to change data - read/write
+- highly interactive
+- displays specialized data
+- Ex: bank website, airbnb, ecommerce sites
 
+## Event Listeners
+- can be placed in javascript DOM
+- in html script tag
+
+```javascript
+//App.jsx
+function App(){...}
+
+someElement.addEventListener("click", function() {})
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+
+//html
+<div id='root'>
+<button onclick="handleClick()">Trigger event</button> //handleClick() in js file
+<script src="./index.jsx"...</script>
+</div>
+```
+For React, event listeners are placed inside the component as an attribute added to elements. 
+```
+function App() {
+    return (
+        <>
+            <div></div>
+            <button onClick>Click this</button> //note: onClick not onclick
+        </>
+
+    )
+}
+```
+- [React dox adding interactivity](https://react.dev/learn/adding-interactivity)
+- [React dox mouse events](https://react.dev/reference/react-dom/components/common#mouseevent-handler)
+- Example proj11 event list c.f. Event Listener in proj /home/tarat/React/first-react/
