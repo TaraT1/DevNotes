@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1741104974207
+updated: 1741632027806
 created: 1667248557067
 ---
 Refs: 
@@ -671,6 +671,43 @@ function App() {
 - Props refers to properties being passed into a component - as in how a function receives parameters. A component receiving props is not allowed to modify props. Props are immutable.
 - State refers to values that are managed by the component, similar to variables declared inside a function. Would use state any time saving/displaying changing values.  
 ### View as a function of state
-1. Render
-2. `setState`
+1. Render - runs function and displays what gets returned.
+    - function runs again if prop value changes or its internal state values change
+2. `setState` function changes state, which causes React to re-render component 
+    - In contrast, changing local, non-state var does not cause React to re-render
 3. view = function(state)  
+    - When state changes >>> React re-renders component
+    - Something new gets returned, replacing what used to be on the page
+
+```javascript
+import React from "react"
+
+export default function App(){
+    let [isImportant, setIsImportant] = React.useState("Yes") //using destructuring; convention of function is setVarName (isImportant in this case)
+
+    function handleClick() {
+        setIsImportant("Definitely")
+    }
+
+    return (
+        <main>
+            <h1 className="title">Is state important to know?</h1>
+            <button onClick={handleClick} className="value">{isImportant}</button>
+        </main>
+    )
+}
+
+```
+React limits the number of re-renders to prevent an infinite loop
+
+### Set state 
+`React.useState()` e.g., `const [count, setCount] = React.useState(0)`
+    - [var, setter func]
+- To set state that relies on previous value, use callback function. Naming convention: prev + var name
+```javascript
+const [count, setCount] = React.useState(0)
+function add() {
+    setCount(prevCount => prevCount + 1)
+}
+```
+
