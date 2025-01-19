@@ -2,17 +2,17 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1715378535875
+updated: 1742311711807
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
 https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms
 
 Resources: 
-- [Mayanwolfe Ultimate Guide to Js Algos Course 10.12.22]
-(https://www.twitch.tv/mayanwolfe)
+- [Mayanwolfe Ultimate Guide to Js Algos Course 10.12.22](https://www.twitch.tv/mayanwolfe)
 - [Codevolution Js Algos](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiRYB4-HHKHblh3_bQNJTMa)
 - [Know Thy Complexities](https://www.bigocheatsheet.com/)
+- [Types of Asymptotic Notations in Complexity Analysis of Alogorithms](https://www.geeksforgeeks.org/types-of-asymptotic-notations-in-complexity-analysis-of-algorithms/)
 
 A library for books is like data with the need for effectively storing data and showing relationships like genre, author, fiction/non-fiction, etc. Data is organized/structured efficiently using various techniques (departments, catalogs, shelves, etc.)
 
@@ -42,15 +42,14 @@ container object used to hold a list of items usually of the same type (like lis
 
 well defined computational procedures that take input and produce output
 
-Properties:
+Properties
 
 - input - 0 or more externally provided
 - output - 1 or more
 - correctness - every step
-- definiteness
-- finiteness
+- definiteness - finiteness
 
-Considerations for efficency:
+Considerations for efficiency:
 
 - time complexity (execution time of an operation)
  - amount of time taken by an algorithm to run as a function of input size
@@ -85,7 +84,7 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
 
 ## 100devs
 
-- A data sctructure is an organized way of storing data. It is a pattern of collecting and organizing data for performing various operations correctly and efficiently
+- A data structure is an organized way of storing data. It is a pattern of collecting and organizing data for performing various operations correctly and efficiently
 - An algorithm is the steps one takes to solve a problem
 - Thinking through appropriate algorithms is how to efficiently solve problems
 
@@ -94,13 +93,13 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
 - Use Big-O Notation to determine efficiency of solutions
 
   - mathematically describes the complexity of algo in terms of time and space
-  - provides rough estiamtes
+  - provides rough estimates
 - Common Complexities (MIT's CS curriculum are online)
 
   - O(1) - Order 1, Constant Time
 
     - for all inputs only one operation required
-    - Example: access array
+    - Example: access element in array
 
     ```js
     const nums = [1,2,3,4,5]
@@ -127,7 +126,7 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
           //get last item
           const lastItem = arr[arr.length - 1]
           //Gauss' trick
-          return lastItem * (lastItem + 1) / 2
+          return lastItem * (lastItem + 1) / 2 //constant time
       }
       const nums = [1,2,3,4,5]
       const sumOfArray = sumContiguousArray(nums)
@@ -147,8 +146,7 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
             }
             if(otherNum === thisNum) return true
         }
-        return false
-    }
+        return false }
 
     const nums = [1,2,3,4,5]
     hasDupes(nums) //true
@@ -236,3 +234,58 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
   - higher order funcs that take in callback lead to other complexities
 
 [[algorithms#math-algorithms]]
+
+## Frontend Masters, Bianca Gandolfo
+https://frontendmasters.com/courses/practical-algorithms/introducing-space-time-complexity/
+With respect to input size and assuming worst case scenarios: 
+- space complexity - how much memory is used
+- time complexity - how we reason about the speed of an algo; how many primitive operations
+
+Big pic estimation, so drop non-significant nums that are not in major time-space complexity
+
+slow|---|to|---|fast |   
+---|---|---|---|---|  
+constant|logarithmic|linear|quadratic|exponential|
+O(1)|O(logn)|O(n)| O(n^2)| O(k^n)|
+
+
+
+
+- Sometimes need tradeoffs
+- For log solns, it grows and then tapers off
+- Time complexity not so key when data set small: focus on readability
+- Implement for space-time complexity when data set is large and  performance lags. Avoid pre-optimization
+
+Function with multiple expressions  
+- Not inside of loop: add together. Ex: constant time: 1+1+1
+- Inside of loop: multiply. Ex: linear: n * n * n (depends on methods used inside of loop)
+
+Logarithmic time 
+-  different bases (base 10, bAse 2)
+- As input increases, # of operations that need to be done decrease by fraction
+
+N Log N
+- have linear, cutting in half
+
+### Complexity of Common Operations
+Complexity | Operation
+---|---
+O(1) Constant | math, lookups, saving(in js)
+O(logn) Logarithmic | Loop that cuts in half every iteration
+O(n) Linear|Looping through vals of an arr
+O(n^2) Quadratic| Double nested loops
+O(n^3) | Triple nested loops
+
+- Be mindful of what is n. What is data set that's growing. 
+
+## Space Complexity
+- Space taken up in memory
+- Making new data structure: how often in comparison to input
+- Consider call stack. Recursion takes up space in memory
+
+### Asymptotic Notations
+- [Types of Asymptotic Notations in Complexity Analysis of Alogorithms](https://www.geeksforgeeks.org/types-of-asymptotic-notations-in-complexity-analysis-of-algorithms/)
+- Big-O - represents the upper bound of running time of an algo; worst-case time complexity
+- Omega - represents the lower bound of algo's time complexity; provides best case complexity
+- Theta - Used for analyzing average case complexity of an algorithm
+
