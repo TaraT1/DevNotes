@@ -2,12 +2,14 @@
 id: kmutrdb8h4tpnbtlxvs59zq
 title: JS
 desc: ''
-updated: 1716227610568
+updated: 1738448764156
 created: 1664214557269
 ---
+New Ref: [perplexity for arr of objects](https://www.perplexity.ai/search/for-a-crud-app-using-mongodb-e-uJ6bGzBWQ865mWn004S9Hw)
+
 - clone Leon's full-stack-template or Binary Upload Boom
 - !!! clone Leon's template
-- modify
+- modify Update deps
 
 I think clone is the way to go. I think writing from scratch with copy paste...
 
