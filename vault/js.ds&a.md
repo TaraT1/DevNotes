@@ -344,10 +344,10 @@ console.log(isUnique([1,1,3]) === false)
 - https://frontendmasters.com/courses/practical-algorithms/unique-sort-exercise/
 ```javascript
 const uniqSort = function (arr) {
-  const breadcrumbs = {}
+  const breadcrumbs = {}//key of object is string (json.stringify, map)
   const result = []
   for (let i=0; i < arr.length; i++) {
-    if(!breadcrumbs(arr[i])) {
+    if(!breadcrumbs(arr[i])) {//Lookup - not saving
       results.push(arr[i])
       breadcrumbs[arr[i]] = true
     }
@@ -358,7 +358,8 @@ uniqSort([4,2,2,3,2,2,2]) //[2,3,4]
 ```
 ### Caching
 - saving something into array or object
-  - http request (browser execution environment)
+- U: Optimization technique storing frequently accessed data so subsequent requests can be served quickly
+- ex: Storing and accessing http requests & responses (browser execution environment) 
 
 factorial: n!
 - 5! = 5*4*3*2*1
@@ -368,8 +369,12 @@ factorial: n!
   - caching takes up more space
 
 ### Memoization
-- caching value that function returns
-  - type of caching
+- caching value that function returns. Can significantly reduce processing time
+  - Memoization is a type of caching
+  - closures
+  - higher-order functions operate on other functions  by taking them as arguments or returning them
+  - https://www.geeksforgeeks.org/javascript-memoization/
+  - https://www.freecodecamp.org/news/memoization-in-javascript-and-react/
 ```javascript
 //write function times10. Takes n multiplies n * 10
 //Use object to cache results of times10
@@ -384,14 +389,16 @@ const memoTimes10 = n => {
     return result
   }
 }
+//memoTimes(9) >>> { 9: 90}
 ```
 ### Closure
 - function that retains access to outer function's variables
   - inner function remembers environment
   - enables private variables
   - enables preserving state between function calls
+  - lexical scoping defines scope of a variable by the position of that variable declared in the source code
 ```javascript
-//memoize with closure - Use closure to return function that can be called later
+//Memoize with closure - Uses closure to return function that can be called later
 const memoizedClosureTimes10 = () => {
   let cache = {} //private to function scope
   return n => {
@@ -406,6 +413,61 @@ const memoizedClosureTimes10 = () => {
   }
 }
 ```
+## Recursion
+Recursion is when a function calls itself to solve a problem by breaking it down into smaller subproblems
+- technique, mindset
+- Elegant soln to keep code DRY (do not repeat yourself) as opposed to WET (we enjoy typing /write everything twice)
+- Ex: base case, recursive cases that continue until base case is reached
+- looping
+### Steps for Recursion
+1. Identify base case
+2. Identify recursive case(s)
+3. Set return where appropriate
+4. Write procedure for each cast that brings input closer to base case
+
+```javascript
+var callMyself = function() {
+  if() {
+  //base case
+  return
+  } else {
+    //recursive case
+    callMyself()
+  }
+  return
+}
+
+//Looping with Recursion
+const loopNTimes = n => {
+  console.log('n===', n)
+  if(n <= 1){
+    return 'complete'
+  } 
+  return loopNTimes(n-1)
+}
+
+loopNTimes(3)
+
+```
+
+## Accumulator
+- technique: as build soln, keep passing it
+```javascript
+function joinElements(array, joinString) {
+    //['s', 'cr', 't cod', ' :) :)'], 'e')
+
+    function recurse(index, resultSoFar) {
+      resultSoFar += array[index]
+
+      if(index === array.length -1) {
+        return resultSoFar
+      } else {
+        return recurse(index + 1, resultSoFar + joinString)
+      }//'2 secre'...
+    }
+    return recurse(0, '')
+}
+
 
 
 
