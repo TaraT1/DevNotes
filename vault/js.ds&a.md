@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1745374134444
+updated: 1747357198501
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
@@ -418,7 +418,8 @@ Recursion is when a function calls itself to solve a problem by breaking it down
 - technique, mindset
 - Elegant soln to keep code DRY (do not repeat yourself) as opposed to WET (we enjoy typing /write everything twice)
 - Ex: base case, recursive cases that continue until base case is reached
-- looping
+- looping - recursion can always be implemented as a loop. Sometimes it is simpler to use recursion
+- tail call optimization - allows some funcs to be called without growing the call stack
 ### Steps for Recursion
 1. Identify base case
 2. Identify recursive case(s)
@@ -449,25 +450,83 @@ const loopNTimes = n => {
 loopNTimes(3)
 
 ```
+## Factorial
+- multiplication of result * next consecutive value `result *= i`
+```javascript
+function computedFactorial(num) {// with loop; iterative solution
+  var result = 1
 
-## Accumulator
+  for(var i = 2: i < num; i++) {
+    result *= i
+  }
+  return result
+  /*
+  result = 1 * 2 (2)
+  result = 2 * 3 (6)
+  result = 6 * 4 (24)
+  result = 24 * 5 (120)
+  => 120
+  */
+}
+
+function computedFactorial(num) { 
+  //base case
+  if(num === 1) {
+    console.log('Here lies the base case')
+    return 1
+  } else {
+    console.log(`return ${num} * computedFactorial{num-1})`
+  }
+
+  //recursive case
+
+  //return
+
+}
+
+```
+## Common Patterns for Recursion
+### Wrapper function
+```javascript
+function wrapperFnLoop(start,end) {//closure with recursion
+  function recurse(i) {
+    console.log(`looping from ${start} until ${end}`)
+
+    if(i<end){
+      recurse(i+1)
+    }
+  }
+recurse(start)
+}
+
+function MemoFnLoop(i,end) {
+  console.log(`looping from ${i} until ${end}`
+  if(i<end) {
+    MemoFnLoop(i+1, end)
+  }
+}
+MemoFnLoop(1,3)
+```
+
+### Accumulator
 - technique: as build soln, keep passing it
 ```javascript
 function joinElements(array, joinString) {
     //['s', 'cr', 't cod', ' :) :)'], 'e')
 
     function recurse(index, resultSoFar) {
-      resultSoFar += array[index]
+      resultSoFar += array[index] //'secret cod'
 
-      if(index === array.length -1) {
+      if(index === array.length -1) { //base case
         return resultSoFar
       } else {
         return recurse(index + 1, resultSoFar + joinString)
-      }//'2 secre'...
+      }//2, 'secret'... - accumulating; incrementing index; getting closer 
     }
     return recurse(0, '')
 }
+    joinElements(['s', 'cr', 't cod', ' :) :)'], 'e')
 
-
+```
 
 
