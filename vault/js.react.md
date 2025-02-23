@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1745936868014
+updated: 1750976768008
 created: 1667248557067
 ---
 Refs:
@@ -1013,3 +1013,8 @@ export default function App(){
    Decide which of 2 things to display 
 4. What if need more than 2 options to display
    if...else if...else conditional or switch. Nested ternary is kinda messy
+
+### State & Props in the Component Tree
+- Passing data around React
+- State passes down - from parent to child. Cannot pass state to component sibling or from component child
+- proj 25
