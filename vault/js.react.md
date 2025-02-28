@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1750976768008
+updated: 1751569981685
 created: 1667248557067
 ---
 Refs:
@@ -1017,4 +1017,6 @@ export default function App(){
 ### State & Props in the Component Tree
 - Passing data around React
 - State passes down - from parent to child. Cannot pass state to component sibling or from component child
-- proj 25
+- Solns for passing data include passing down through props. React tool context; 3rd party libraries redux, zoostand
+- proj 25 /03.43 git
+- Best practice is to to keep state locally defined. If state is global, other soln is called for 
