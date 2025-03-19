@@ -2,7 +2,7 @@
 id: 6ihj6c14gk9fzy4mm96cy9q
 title: JS
 desc: 'Leon class 12, 13'
-updated: 1738371714186
+updated: 1742402079160
 created: 1650508492016
 ---
 - Linting reference for js: https://dev.to/hkp22/optimizing-javascript-development-a-guide-to-eslint-prettier-and-vscode-setup-for-code-linting-formatting-37b3
@@ -91,14 +91,14 @@ let user = 'John'
     , message = 'right';
 ```
 
-### Var Scope
-- let - block scope, can change
+### Var Types & Scope
+- let - block scope ({ }), can change
 - const - global, unchanging
   - global variables are declared outside of any function
   - visible from any function unless shadowed by locals
   - capital-named constants are only used as aliases for “hard-coded” values. (Values are known prior to execution)
   ```const BIRTHDAY = '05.02.1963';
-- var declares function-scoped or globally-scoped variables, optionally initializing each to a value [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- var - mutable, declares function-scoped or in strict mode, globally-scoped variables, optionally initializing each to a value [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
 ### Difference between 2 loops with `let` & `var`
 
