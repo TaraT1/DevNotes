@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1741632027806
+updated: 1742764595162
 created: 1667248557067
 ---
 Refs: 
@@ -682,8 +682,7 @@ function App() {
 ```javascript
 import React from "react"
 
-export default function App(){
-    let [isImportant, setIsImportant] = React.useState("Yes") //using destructuring; convention of function is setVarName (isImportant in this case)
+export default function App(){ let [isImportant, setIsImportant] = React.useState("Yes") //using destructuring; convention of function is setVarName (isImportant in this case)
 
     function handleClick() {
         setIsImportant("Definitely")
@@ -696,7 +695,6 @@ export default function App(){
         </main>
     )
 }
-
 ```
 React limits the number of re-renders to prevent an infinite loop
 
@@ -710,4 +708,6 @@ function add() {
     setCount(prevCount => prevCount + 1)
 }
 ```
+- rule: Never directly modify state in React
+    Nonos: arr.push(newElement), count ++
 
