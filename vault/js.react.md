@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1742764595162
+updated: 1743732218030
 created: 1667248557067
 ---
 Refs: 
@@ -710,4 +710,39 @@ function add() {
 ```
 - rule: Never directly modify state in React
     Nonos: arr.push(newElement), count ++
+
+### React Forms
+- 6:26:20 Zirolli 'tube
+- React 19 handles forms much better than previous versions. Uses built-in browser 
+- ref: [React dox: forms](https://react.dev/reference/react-dom/components/form)
+
+index.jsx
+```jsx
+//...
+
+function App() {
+    function handleSubmit(event){
+        event.preventDefault()
+        const formElement = event.currentTarget
+        const formData = new FormData(formElement)
+        const email = formData.get("email")
+        console.log(email)
+        formElement.reset()
+    }
+
+    return (
+        <section>
+        <h1>singup form</h1>
+        <form onSubmit={handleSubmit} method="POST">
+            <label htmlFor="email">Mail o E</label>
+            <input id="email" type="email" placeholder="e@e.com" />
+        </section>
+    )
+}
+
+
+<form>
+    <input type="email" name="email">
+
+```
 
