@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1743732218030
+updated: 1743785310178
 created: 1667248557067
 ---
 Refs: 
@@ -720,23 +720,42 @@ index.jsx
 ```jsx
 //...
 
+//Refactor: Declaritive form submission; Evolving of handling forms in React versions from in reverse
+function App() {
+
+    function signUp(formData) {
+        const email = formData.get("email")
+    }
+    return (
+        <section>
+        <h1>Signup form with declaritive form submission </h1>
+        <form action={signUp}>
+        <label htmlFor="email" >Email:</label>{/*Note: specifying function in form action overrides method or encType*/}
+        <input id="email" type="email" name="emain" placeholder="e@mail.com" />
+        <br />
+    )
+}
+
+//Form Submission - post, get methods & query strings
 function App() {
     function handleSubmit(event){
-        event.preventDefault()
+        event.preventDefault() // prevent full page refresh
         const formElement = event.currentTarget
         const formData = new FormData(formElement)
         const email = formData.get("email")
-        console.log(email)
+        console.log(email) //Submit form to a backend
         formElement.reset()
     }
 
     return (
+        <>
         <section>
-        <h1>singup form</h1>
-        <form onSubmit={handleSubmit} method="POST">
+        <h1>signup form</h1>
+        <form action="phpfile.php" onSubonSubmit={handleSubmit} method="POST"> {/*action can take {} */}
             <label htmlFor="email">Mail o E</label>
             <input id="email" type="email" placeholder="e@e.com" />
         </section>
+        </>
     )
 }
 
