@@ -2,13 +2,14 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1742311711807
+updated: 1743970245670
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
 https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms
 
-Resources: 
+Resources:
+
 - [Mayanwolfe Ultimate Guide to Js Algos Course 10.12.22](https://www.twitch.tv/mayanwolfe)
 - [Codevolution Js Algos](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiRYB4-HHKHblh3_bQNJTMa)
 - [Know Thy Complexities](https://www.bigocheatsheet.com/)
@@ -52,7 +53,7 @@ Properties
 Considerations for efficiency:
 
 - time complexity (execution time of an operation)
- - amount of time taken by an algorithm to run as a function of input size
+- amount of time taken by an algorithm to run as a function of input size
 - space complexity (memory usage of an operation)
   - amount of memory taken by an algorithm to run as a function of input size
 
@@ -74,7 +75,7 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
 ## Algorithmic Efficency
 
 - priori analysis - theorectical evaluation. Factors such as processor speed are assumed to be constant, not impacting algorithmic implementation
-  - Asymptotic notation is std of expressing algo in terms of time and space complexity. 
+  - Asymptotic notation is std of expressing algo in terms of time and space complexity.
     - Most common is David Knuth's Big O Notation. aka upper bound of an algorithm or worst case complexity indicates func won't exceed or take more than specific time to execute irrespective of value of input(n); uses algebraic terms
       - expressed in terms of the input
       - focuses on the bigger pic w/o getting caught up in minute details
@@ -131,9 +132,11 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
       const nums = [1,2,3,4,5]
       const sumOfArray = sumContiguousArray(nums)
       ```
-  - O(N^2) - Quadratic
+  - O(N^2) - Quadratic 
+  ref: https://jarednielsen.com/big-o-quadratic-time-complexity/
 
-    - example: nested for loops
+    - The number of operations algo performs scales in proportion to the *square* of the input. (Quadratic means squaring the root. (*quadrus* is latin for square))
+    - example: nested for loops, bubble sort algo
 
     ```js
     const hasDupes = function(nums){
@@ -152,10 +155,10 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
     hasDupes(nums) //true
     ```
   - O(LOG N) - logarithmic time
+  - algo is proportional to the logarithm of the input size; log10 1000 = 3 (log of 1000 to base 10)
 
-    - as you loop, operations are halved
     - can be efficient especially with large amts of inputs
-    - example: divide and conquer
+    - example: divide and conquer, binary search algo
   - for small # of inputs, linear complexities could maybe be better
 
     - optimize for readability rather than efficiency
@@ -236,56 +239,59 @@ Modern apps are data-driven: accept, store, process, and output data. SWE's resp
 [[algorithms#math-algorithms]]
 
 ## Frontend Masters, Bianca Gandolfo
+
 https://frontendmasters.com/courses/practical-algorithms/introducing-space-time-complexity/
-With respect to input size and assuming worst case scenarios: 
+With respect to input size and assuming worst case scenarios:
+
 - space complexity - how much memory is used
 - time complexity - how we reason about the speed of an algo; how many primitive operations
 
 Big pic estimation, so drop non-significant nums that are not in major time-space complexity
 
-slow|---|to|---|fast |   
----|---|---|---|---|  
-constant|logarithmic|linear|quadratic|exponential|
-O(1)|O(logn)|O(n)| O(n^2)| O(k^n)|
-
-
-
+| slow     | ---         | to     | ---       | fast        |
+| -------- | ----------- | ------ | --------- | ----------- |
+| constant | logarithmic | linear | quadratic | exponential |
+| O(1)     | O(logn)     | O(n)   | O(n^2)    | O(k^n)      |
 
 - Sometimes need tradeoffs
-- For log solns, it grows and then tapers off
+- For logn solns, it grows and then tapers off
 - Time complexity not so key when data set small: focus on readability
 - Implement for space-time complexity when data set is large and  performance lags. Avoid pre-optimization
 
-Function with multiple expressions  
+Function with multiple expressions
 - Not inside of loop: add together. Ex: constant time: 1+1+1
-- Inside of loop: multiply. Ex: linear: n * n * n (depends on methods used inside of loop)
+- Inside of loop: multiply by n. Ex: linear: n * n * n (also depends on methods used inside of loop)
 
-Logarithmic time 
--  different bases (base 10, bAse 2)
-- As input increases, # of operations that need to be done decrease by fraction
+O(logn) Logarithmic time
+- different bases (base 10, bAse 2)
+- As input increases, # of operations that need to be done decrease by fraction (divide by base (/bAse2 or /basen))
 
-N Log N
+N Log N - linear & logarithmic: nlog n
+
 - have linear, cutting in half
 
 ### Complexity of Common Operations
-Complexity | Operation
----|---
-O(1) Constant | math, lookups, saving(in js)
-O(logn) Logarithmic | Loop that cuts in half every iteration
-O(n) Linear|Looping through vals of an arr
-O(n^2) Quadratic| Double nested loops
-O(n^3) | Triple nested loops
 
-- Be mindful of what is n. What is data set that's growing. 
+| Complexity          | Operation                              |
+| ------------------- | -------------------------------------- |
+| O(1) Constant       | running statement, math, lookups, saving(in js)           |
+| O(logn) Logarithmic | Loop that cuts problem in half for every iteration |
+| O(n) Linear         | Looping through vals of an arr         |
+| O(n^2) Quadratic    | Double nested loops                    |
+| O(n^3)              | Triple nested loops                    |
+
+- Be mindful of what is n. What is the data set that's growing?
+- If data set of more than 1 length, will need to take in to consideration
 
 ## Space Complexity
-- Space taken up in memory
-- Making new data structure: how often in comparison to input
+
+- Space taken up in memory - how much more space taking up? creating new arrs?
+- Making new data structure? how often in comparison to input
 - Consider call stack. Recursion takes up space in memory
 
 ### Asymptotic Notations
-- [Types of Asymptotic Notations in Complexity Analysis of Alogorithms](https://www.geeksforgeeks.org/types-of-asymptotic-notations-in-complexity-analysis-of-algorithms/)
+
+- [Types of Asymptotic Notations in Complexity Analysis of Algoorithms](https://www.geeksforgeeks.org/types-of-asymptotic-notations-in-complexity-analysis-of-algorithms/)
 - Big-O - represents the upper bound of running time of an algo; worst-case time complexity
 - Omega - represents the lower bound of algo's time complexity; provides best case complexity
 - Theta - Used for analyzing average case complexity of an algorithm
-
