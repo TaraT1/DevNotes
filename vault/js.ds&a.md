@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1743970245670
+updated: 1743974119157
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
@@ -295,3 +295,50 @@ N Log N - linear & logarithmic: nlog n
 - Big-O - represents the upper bound of running time of an algo; worst-case time complexity
 - Omega - represents the lower bound of algo's time complexity; provides best case complexity
 - Theta - Used for analyzing average case complexity of an algorithm
+
+`str.length` - constant time; object lookup in js
+
+## Faster Algorithms
+- breadcrumbs method - keeping track of things already seen; caching
+```javascript
+//O(n^2). Comparing 2 loops 
+const isUnique = (arr) => {
+  let result = true
+
+  for(let i=0; i < arr.length; i++) {
+    console.log(`~~~ OUTER LOOP ~~~ i === ${i}`)
+
+    for(let j= 0; j < arr.length; j++) {
+      console.log(`~~~ OUTER LOOP ~~~ j === ${j}`)
+      if(i !== j && arr[i] === arr[j]) {
+        result = false
+      }
+    }
+  }
+  return result
+}
+console.log(isUnique([1,2,3]) === true)
+console.log(isUnique([1,1,3]) === false)
+
+//breadcrumb method - caching; keeping track of things, can do property lookup; turns quadratic time complexity to linear
+isUnique = (arr) => {
+  const breadcrumbs = {}
+  let result = true;
+
+  for(let i=0; i < arr.length; i++) {
+    console.log(`~~~ LOOP ~~~ i === ${i}`)
+    if (breadcrumbs[arr[i]]) {
+      result = false
+    } else {
+      breadcrumbs[arr[i]] = true
+    }
+}
+
+return result
+}
+
+console.log(isUnique([1,2,3]) === true)
+console.log(isUnique([1,1,3]) === false)
+```
+### Unique Sort Exercise
+- https://frontendmasters.com/courses/practical-algorithms/unique-sort-exercise/
