@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1743974119157
+updated: 1745372374795
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
@@ -342,3 +342,17 @@ console.log(isUnique([1,1,3]) === false)
 ```
 ### Unique Sort Exercise
 - https://frontendmasters.com/courses/practical-algorithms/unique-sort-exercise/
+```javascript
+const uniqSort = function (arr) {
+  const breadcrumbs = {}
+  const result = []
+  for (let i=0; i < arr.length; i++) {
+    if(!breadcrumbs(arr[i])) {
+      results.push(arr[i])
+      breadcrumbs[arr[i]] = true
+    }
+  }
+  return result.sort((a,b) => a-b)
+}
+uniqSort([4,2,2,3,2,2,2]) //[2,3,4]
+```
