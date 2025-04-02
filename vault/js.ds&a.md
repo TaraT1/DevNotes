@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1745372374795
+updated: 1745374134444
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
@@ -356,3 +356,56 @@ const uniqSort = function (arr) {
 }
 uniqSort([4,2,2,3,2,2,2]) //[2,3,4]
 ```
+### Caching
+- saving something into array or object
+  - http request (browser execution environment)
+
+factorial: n!
+- 5! = 5*4*3*2*1
+- calculate recursive function 
+  - factorial(35)
+  - factorial (36) = factorial (35) * 36
+  - caching takes up more space
+
+### Memoization
+- caching value that function returns
+  - type of caching
+```javascript
+//write function times10. Takes n multiplies n * 10
+//Use object to cache results of times10
+const cache = {}
+const times10 = (n) => {n*10}
+const memoTimes10 = n => {
+  if(n in cache) {
+    return cache[n]
+  } else {
+    let result = times10(n)
+    cache[n] = result //Object caches results of times10; Note: [] not . - n is var
+    return result
+  }
+}
+```
+### Closure
+- function that retains access to outer function's variables
+  - inner function remembers environment
+  - enables private variables
+  - enables preserving state between function calls
+```javascript
+//memoize with closure - Use closure to return function that can be called later
+const memoizedClosureTimes10 = () => {
+  let cache = {} //private to function scope
+  return n => {
+    if(n in cache) {
+      return cache[n]
+    } else {
+      console.log('Calculating')
+      let result = n*10
+      cache[n] = result
+      return result
+    }
+  }
+}
+```
+
+
+
