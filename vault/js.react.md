@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1743785310178
+updated: 1745713946943
 created: 1667248557067
 ---
 Refs: 
@@ -709,7 +709,7 @@ function add() {
 }
 ```
 - rule: Never directly modify state in React
-    Nonos: arr.push(newElement), count ++
+    No-nos: arr.push(newElement), count ++
 
 ### React Forms
 - 6:26:20 Zirolli 'tube
@@ -720,20 +720,90 @@ index.jsx
 ```jsx
 //...
 
-//Refactor: Declaritive form submission; Evolving of handling forms in React versions from in reverse
+//Refactor: Declarative form submission; Evolving of handling forms in React versions from in reverse
 function App() {
 
-    function signUp(formData) {
-        const email = formData.get("email")
+    function signUp(formData){
+        const data = Object.fromEntries(formData)
+        const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+
+        const allData = {
+            ...data,
+            dietaryRestrictions // dietaryRestrictions: dietaryRestrictions 
+        }
+    }
+    // function signUp(formData) {
+    //     const email = formData.get("email")
+    //     const password = formData.get("password")
+    //     const emplStatus = formData.get("emplStatus")
+    //     const dietaryRestrictions = formData.getAll("dietaryRestrictions") //.getAll gets all
+
     }
     return (
         <section>
-        <h1>Signup form with declaritive form submission </h1>
-        <form action={signUp}>
-        <label htmlFor="email" >Email:</label>{/*Note: specifying function in form action overrides method or encType*/}
-        <input id="email" type="email" name="emain" placeholder="e@mail.com" />
-        <br />
+            <h1>Signup form with declarative form submission </h1>
+            <form action={signUp}>
+            <label htmlFor="email" >Email:</label>{/*Note: specifying function in form action overrides method or encType*/}
+            <input id="email" defaultValue="e@mail.com" type="email" name="email" placeholder="e@mail.com" /> <br />
+
+            <label htmlFor="password">pWord:</label>
+            <input id=password defaultValue="password123" type="password" name="password">
+
+            <label htmlFor="description">Description:</label>
+            <textarea id="description name="description" defaultValue="Describe"></textarea>
+
+            <fieldset>
+                <legend>Employment status:</legend>
+                <label>
+                    <input type="radio" name="employmentStatus" value="unemployed" />
+                    Unemployed
+                </label>
+                <label>
+                    <input type="radio" name="employmentStatus" value="part-time" />
+                    Part-time
+                </label>
+                <label>
+                    <input type="full-time" name="employmentStatus" defaultChecked={true} value="full-time" />
+                    Full-time
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dietary Restrictions:</legend>
+                <label>
+                    <input type="checkbox" name="dietaryRestrictions" value="religious" />
+                    Religious
+                </label>
+                <label>
+                    <input type="checkbox" name="dietaryRestrictions"
+                    value="plant-based" />
+                    Plant-based
+                </label>
+                <label>
+                    <input type="checkbox" name="dietaryRestrictions"
+                    defaultChecked={true} value="none" />
+                    None
+                </label>
+            </fieldset>
+
+            <label htmlFor="favColor">What color are you into?</label>
+            <select id="favColor" name="favColor" defaultValue="indigo">
+                <option value="" disabled>Choose a color</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="indigo">Indigo</option>
+                <option value="violet">Violet</option>
+        </select>
+
+        <button>Submit</button>
+
+    </form>
+    </section>
     )
+
 }
 
 //Form Submission - post, get methods & query strings
@@ -751,7 +821,7 @@ function App() {
         <>
         <section>
         <h1>signup form</h1>
-        <form action="phpfile.php" onSubonSubmit={handleSubmit} method="POST"> {/*action can take {} */}
+        <form action="phpfile.php" onSubmit} method="POST"> {/*action can take {} */}
             <label htmlFor="email">Mail o E</label>
             <input id="email" type="email" placeholder="e@e.com" />
         </section>
@@ -759,9 +829,5 @@ function App() {
     )
 }
 
-
-<form>
-    <input type="email" name="email">
-
 ```
-
+- Object.fromEntries(formData) grabs all the data from the form
