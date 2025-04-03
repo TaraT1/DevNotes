@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1745713946943
+updated: 1745856934214
 created: 1667248557067
 ---
 Refs: 
@@ -787,7 +787,7 @@ function App() {
             </fieldset>
 
             <label htmlFor="favColor">What color are you into?</label>
-            <select id="favColor" name="favColor" defaultValue="indigo">
+            <select id="favColor" name="favColor" defaultValue="indigo" required>
                 <option value="" disabled>Choose a color</option>
                 <option value="red">Red</option>
                 <option value="orange">Orange</option>
@@ -831,3 +831,82 @@ function App() {
 
 ```
 - Object.fromEntries(formData) grabs all the data from the form
+
+## Conditional Rendering
+- render parts of page based on condition. 
+    - true: renders
+    - false: won't be rendered. Won't be added to document
+```javascript
+export default function Joke(props) {
+    /**
+     * challenge1:
+     * - create state `isShown` (boolean, default: `false`)
+     * - add btn that toggles val back and forth
+     */
+    const [isShown, setIsShown] = React.useState(false)
+
+    function toggleShown() {
+        setIsShown(prevShown => !prevShown)
+    }
+
+    /**
+     * Challenge2
+     * Display punchline p only if `isShown` is true
+     */
+    return(
+        <div>
+            {props.setup && <h3>{props.setup}</h3>} //if truthy val, show setup
+            {isShown && <p>{props.punchline}</p>}//isShown === true &&
+            <button onClick={toggleShown}>Show punchline</button>
+            <hr />
+        </div>
+    )
+}
+```
+- proj22 conditional rendering in first-react
+- && short-circuit - quickly display or not display
+```javascript
+export default function App(){
+    const [unreadMessages, setUnreadMessages] = React.useState(['a', 'b'])
+    /**
+     * challenge1: display <h1> if there are unread msgs
+     * challenge2: if 0 unread msgs, display p saying You have no unread messages
+     */
+    
+    return (
+        <div>
+            { unreadMessages && <h1>Always true even if arr is blank </h1>}
+
+            { 
+                unreadMessages.length > 0 && 
+            <h1> You got {unreadMessages.length} unread messages </h1>
+            }
+
+            {
+                unreadMessages.length === 0 &&
+                <p>You have no unread messages</p>
+            }
+        </div>
+        
+    )
+    
+}
+
+```
+
+- Using &&, setting explicit boolean not just truthy avoids bugs
+- ternary option avoids potential bug `{isShown ?<p>{props.punchline}</p> : null}
+
+### Quiz
+1. What is conditional rendering
+Only display based on conditon
+
+2. When use &&
+Either display or not
+
+3. When use ternary
+Decide if 2 things
+
+4. What if need more than 2 options to display
+if...else if...else conditional or switch. Nested ternary is kinda messy
+
