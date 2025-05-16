@@ -2,7 +2,7 @@
 id: 3kqsaly41wz3amyuczdy1uc
 title: DS&A
 desc: '100devs'
-updated: 1747357198501
+updated: 1747358320179
 created: 1666456198768
 ---
 [Scotch.io Ultimate Algorithms Course](http://web.archive.org/web/20210616161653/https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms)
@@ -527,6 +527,17 @@ function joinElements(array, joinString) {
 }
     joinElements(['s', 'cr', 't cod', ' :) :)'], 'e')
 
+function joinElementsIteratively(array, joinString) {
+  let resultSoFar = ''
+
+  for(let i = 0; i <= array.length -1; i++) {
+    resultSoFar += array[i] + joinString
+  }
+
+  return resultSoFar + array[array.length - 1]
+}
+
+joinElementsIteratively(['s', 'cr', 't cod', ' :) :)'], 'e') //secret code :) :)
 ```
 
 
