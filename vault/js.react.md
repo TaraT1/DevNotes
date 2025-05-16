@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1751765501499
+updated: 1752613088717
 created: 1667248557067
 ---
 Refs:
@@ -1033,3 +1033,16 @@ const styles = {
 }
 <button style={styles}>
 ```
+
+## Derived State 
+- Setting state based on the initial value of the incoming props
+- c.f. https://github.com/scrimba/learn-react/tree/main/03.%20React%20State/48.%20Sound%20pads%20challenge%20-%20part%204.1%20-%20local%20state first-react proj29; 'tube 8:44
+- Can end up with multiple sources of truth
+- better to have unified source of truth
+
+## Scribma Learning Summary
+I. Event listeners
+II. State
+III. Conditional Rendering
+IV. Forms
+V. State Mgt Strategies
