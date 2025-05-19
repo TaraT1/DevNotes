@@ -2,7 +2,7 @@
 id: nalge7cvyf34kel7u1ygp45
 title: Journal
 desc: ''
-updated: 1736119478966
+updated: 1736951335429
 created: 1664210390975
 ---
 ## 100Devs
@@ -177,3 +177,19 @@ Hey Guys, I took some notes on the tea spill today. There is quite a bit because
 
 ## 1.5.2025
 - revise pr for mintocsv
+
+## 1.13.2025
+- [x] coding challenges (with focus on getting taxes done.)
+- fH
+  - research UX for fH input
+  - [ ] fix fH healthInfo BE for input
+
+## 1.14.2025 
+- fH
+  - research UX for fH input
+  - [ ] fix fH healthInfo BE for input
+
+## 1.15.2025 
+- fH
+  - research UX for fH input
+  - [ ] fix fH healthInfo BE for input
