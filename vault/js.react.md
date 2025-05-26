@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1752613088717
+updated: 1756751294178
 created: 1667248557067
 ---
 Refs:
@@ -1041,8 +1041,8 @@ const styles = {
 - better to have unified source of truth
 
 ## Scribma Learning Summary
-I. Event listeners
-II. State
-III. Conditional Rendering
-IV. Forms
-V. State Mgt Strategies
+I. Event listeners  
+II. State  
+III. Conditional Rendering  
+IV. Forms  
+V. State Mgt **Strategies**  
