@@ -1052,8 +1052,17 @@ V. State Mgt **Strategies**
 - immutability - props are immutable as is state. (State is not directly changed. Setter function is used to make changes)
 - components should avoid side effects; should not affect outside system
 
+### Effects vs EventS - Logic Inside React Components
+- rendering code - take props & state, transform them & return jsx on screen. Only calculates result - renders.
+- Event handlers - nested functions inside components that do things. E.g., update input field. 
+    - Contain side effects since they can change program's state
+
+- Effects let one specify side effects caused by rendering rather than a particular event. 
+    - Sending message is an event. User clicks button
+    - Setting up server connection is an Effect. (It happens no matter which interaction caused component to appear). Effects run at the end of a commit after screen updates
+
 ### outside effects - React can't handle
-- React doesn't automatically connect to outside effects 
+- React doesn't automatically connect to outside Effects 
     - local storage
     - API/db interactions
     - subscriptions (e.g. websocket connections)
@@ -1061,3 +1070,31 @@ V. State Mgt **Strategies**
 ## useEffect()
 - provides escape hatch
 - https://react.dev/learn/synchronizing-with-effects
+- c.f. ~tarat/React/fetchData
+
+### syntax
+```useEffect(function(), [dependecies?])```
+- dependencies arr (optional) - array of values. Function running depends on value changing in dependencies array. ; provides escape hatch
+
+### Integrating (Quiz)
+1. In what way are React components meant to be "pure functions"
+- components when given same props should return same user interface that gets rendered on the page. (pure functions same input yields same ouput.) 
+- Rendering and re-rendering a component will never have any kind of side effect on an outside system
+- Functional programming review: Props are immutable. State is not directly changed. (setter function is used to make changes). Components should avoid side effects (should not affect outside system)
+
+2. What is a side effect in React? Examples 
+- Side effect in React is any code that affects or interacts with an outside system. 
+- local storage, API interactions, db interactions, manual DOM manipulation, web socket connections
+
+3. What is NOT a side effect in React? Examples
+- Anything that React is in charge of.
+- Maintaining state, keeping the UI in sync with data, rendering DOM elements
+
+4. When does React run useEffect function? When does it not run effect function?
+- React runs useEffect as soon as component renders for the first time. 
+- React runs useEffect on every re-render assuming no dependencies array
+- Will not run effect when values of the dependecies in the array stay the same between renders
+
+5. Explain dependencies array
+- Dependencies array is the second parameter of the useEffect function
+- Dependencies array is an escape hatch for useEffect. It's a way for React to know whether or not to re-run the effect function
