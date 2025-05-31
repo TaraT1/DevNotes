@@ -1071,6 +1071,7 @@ V. State Mgt **Strategies**
 - provides escape hatch
 - https://react.dev/learn/synchronizing-with-effects
 - c.f. ~tarat/React/fetchData
+- can't use async await with useEffect()
 
 ### syntax
 ```useEffect(function(), [dependecies?])```
