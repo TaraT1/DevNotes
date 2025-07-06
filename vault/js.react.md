@@ -2,7 +2,7 @@
 id: 0391rxitz6qnq99vicdht7w
 title: React
 desc: ''
-updated: 1751569981685
+updated: 1751765501499
 created: 1667248557067
 ---
 Refs:
@@ -1020,3 +1020,16 @@ export default function App(){
 - Solns for passing data include passing down through props. React tool context; 3rd party libraries redux, zoostand
 - proj 25 /03.43 git
 - Best practice is to to keep state locally defined. If state is global, other soln is called for 
+
+### Inline Styles in React
+Use for more dynamic styling
+`<button style={{}}>`
+- {}: signals to evaluate js in jsx; {{}} is for inline style expression
+- React css is written in camelcase (like DOM)
+- also: 
+```
+const styles = {
+    backgroundColor: turquosise;
+}
+<button style={styles}>
+```
