@@ -5,6 +5,19 @@ desc: ''
 updated: 1713462129924
 created: 1713460027323
 ---
+# Types of Authorization
+- RBAC - Role Based Access Control
+  - e.g. admin, editor, viewer roles. Used in admin panels, CMS tools
+- ABAC - Attribute Based Access Control - access is based on user or resource attributes or contextual factors like time or location
+  - ex: restrict access by dept, limit actions to certain hours
+- ACL - Access Control Lists - each resource has its own list of permissions for users or groups
+  - google drive file has its own ACL 
+
+### Refs
+- ref article: https://levelup.gitconnected.com/authentication-explained-when-to-use-basic-bearer-oauth2-jwt-sso-c3fb0aa083ef
+- video https://youtu.be/9JPnN1Z_iSY
+
+## Authentication vs Authorization
 Authorization governs what the user has access to. Authentication makes sure user is who they say the are.
 
 - An OAuth 2 application delegates the authentication to services that host a user account and asks for (limited) authorization from those services, after the user has given consent.  
