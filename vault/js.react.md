@@ -1046,3 +1046,18 @@ II. State
 III. Conditional Rendering  
 IV. Forms  
 V. State Mgt **Strategies**  
+
+### Important functional programming concepts for React
+- pure function - given same inputs produces same outputs
+- immutability - props are immutable as is state. (State is not directly changed. Setter function is used to make changes)
+- components should avoid side effects; should not affect outside system
+
+### outside effects - React can't handle
+- React doesn't automatically connect to outside effects 
+    - local storage
+    - API/db interactions
+    - subscriptions (e.g. websocket connections)
+
+## useEffect()
+- provides escape hatch
+- https://react.dev/learn/synchronizing-with-effects
