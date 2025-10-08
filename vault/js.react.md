@@ -1074,10 +1074,10 @@ V. State Mgt **Strategies**
 - can't use async await with useEffect()
 
 ### syntax
-```useEffect(function(), [dependecies?])```
+```useEffect(function(), [dependecies array])```
 - dependencies arr (optional) - array of values. Function running depends on value changing in dependencies array. ; provides escape hatch
 
-### Integrating (Quiz)
+## Integrating (Quiz)
 1. In what way are React components meant to be "pure functions"
 - components when given same props should return same user interface that gets rendered on the page. (pure functions same input yields same ouput.) 
 - Rendering and re-rendering a component will never have any kind of side effect on an outside system
@@ -1099,3 +1099,8 @@ V. State Mgt **Strategies**
 5. Explain dependencies array
 - Dependencies array is the second parameter of the useEffect function
 - Dependencies array is an escape hatch for useEffect. It's a way for React to know whether or not to re-run the effect function
+
+## Refs
+- used when want a component to remember some information but don't want that info to trigger new renders https://react.dev/learn/referencing-values-with-refs
+- similar to state except: can mutate directly & changing doesn't cause re-render
+- commonly used for accessing DOM nodes without needing to assign ids to elements
